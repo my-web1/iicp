@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Sachin Ambekar's Industry Institute Connecting Platform (IICP) empowers students to bridge the gap to industry success with career-focused services.">
+  <meta name="keywords" content="IICP, industry readiness, job alerts, career support, student placement">
+  <title>Dr. Sachin Ambekar's IICP - Industry Institute Connecting Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* Custom animations */
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Hide mobile menu by default */
+    #mobile-menu {
+      display: none;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-blue-900 text-white p-5 sticky top-0 z-10 shadow-lg" role="navigation" aria-label="Main navigation">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl sm:text-3xl font-serif font-bold">
+        <i class="fas fa-graduation-cap mr-2"></i>IICP
+      </h1>
+      <div class="hidden md:flex space-x-6 text-lg" id="desktop-menu">
+        <a href="#home" class="hover:text-yellow-400 transition" aria-label="Home"><i class="fas fa-home mr-1"></i>Home</a>
+        <a href="#services" class="hover:text-yellow-400 transition" aria-label="Services"><i class="fas fa-briefcase mr-1"></i>Services</a>
+        <a href="#testimonials" class="hover:text-yellow-400 transition" aria-label="Testimonials"><i class="fas fa-quote-left mr-1"></i>Testimonials</a>
+        <a href="#contact" class="hover:text-yellow-400 transition" aria-label="Contact"><i class="fas fa-envelope mr-1"></i>Contact</a>
+      </div>
+      <button class="md:hidden text-2xl focus:outline-none focus:ring-2 focus:ring-yellow-400" id="menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    <div class="md:hidden bg-blue-900" id="mobile-menu">
+      <div class="flex flex-col space-y-4 p-4 text-lg">
+        <a href="#home" class="hover:text-yellow-400 transition" aria-label="Home"><i class="fas fa-home mr-1"></i>Home</a>
+        <a href="#services" class="hover:text-yellow-400 transition" aria-label="Services"><i class="fas fa-briefcase mr-1"></i>Services</a>
+        <a href="#testimonials" class="hover:text-yellow-400 transition" aria-label="Testimonials"><i class="fas fa-quote-left mr-1"></i>Testimonials</a>
+        <a href="#contact" class="hover:text-yellow-400 transition" aria-label="Contact"><i class="fas fa-envelope mr-1"></i>Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 sm:py-24 fade-in">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-6">
+        Dr. Sachin Ambekar's IICP
+      </h2>
+      <p class="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Empowering Students to Bridge the Gap to Industry Success with Confidence and Opportunities
+      </p>
+      <a
+        href="#contact"
+        class="bg-yellow-400 text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-yellow-300 hover:scale-105 transition transform focus:ring-2 focus:ring-yellow-400"
+        aria-label="Join IICP now"
+      >
+        <i class="fas fa-rocket mr-2"></i>Join Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 sm:py-20 bg-white fade-in">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-center text-blue-900 mb-12">
+        <i class="fas fa-star mr-2"></i>Our Services
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <i class="fas fa-handshake text-4xl text-yellow-400 mb-4"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-blue-900 mb-4">Industry Readiness</h3>
+          <ul class="list-disc pl-5 space-y-2 text-gray-700">
+            <li>Interview Techniques: Build confidence to ace interviews</li>
+            <li>Aptitude Test Practices: Master problem-solving skills</li>
+            <li>CV Building: Craft professional resumes that stand out</li>
+          </ul>
+        </div>
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <i class="fas fa-bell text-4xl text-yellow-400 mb-4"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-blue-900 mb-4">Job Vacancies Alerts</h3>
+          <p class="text-gray-700">
+            Stay ahead with refined job alerts delivered via WhatsApp and email, tailored to your career goals.
+          </p>
+        </div>
+        <div class="bg-gray-50 p-6 sm:p-8 rounded-xl shadow-xl hover:shadow-2xl transition">
+          <i class="fas fa-comments text-4xl text-yellow-400 mb-4"></i>
+          <h3 class="text-xl sm:text-2xl font-semibold text-blue-900 mb-4">WhatsApp Support</h3>
+          <p class="text-gray-700">
+            Get instant guidance and resolve doubts about the interview process with our dedicated WhatsApp support.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-16 sm:py-20 bg-gray-100 fade-in">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-center text-blue-900 mb-12">
+        <i class="fas fa-quote-right mr-2"></i>What Our Students Say
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+          <p class="italic text-gray-600 mb-4">
+            "IICP's interview techniques sessions helped me land my dream job!"
+          </p>
+          <p class="font-semibold text-blue-900">- Priya S., Placed at TechCorp</p>
+        </div>
+        <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+          <p class="italic text-gray-600 mb-4">
+            "The WhatsApp job alerts kept me updated, and the CV building tips were a game-changer."
+          </p>
+          <p class="font-semibold text-blue-900">- Rohan K., Software Engineer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 sm:py-20 bg-blue-900 text-white fade-in">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold mb-6">
+        <i class="fas fa-paper-plane mr-2"></i>Get Started with IICP
+      </h2>
+      <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
+        Ready to kickstart your career? Connect with us today!
+      </p>
+      <div class="flex flex-col justify-center space-y-6">
+        <div>
+          <a
+            href="https://wa.me/919284157202?text=Hello%2C%20I%27m%20interested%20in%20joining%20IICP!"
+            class="bg-green-500 text-white px-6 sm:px-8 py-3 sm:py-3 rounded-full font-semibold text-base sm:text-lg hover:bg-green-400 hover:scale-105 transition transform focus:ring-2 focus:ring-green-400"
+            aria-label="Message IICP via WhatsApp"
+          >
+            <i class="fab fa-whatsapp text-lg mr-2"></i>Message Us
+          </a>
+        </div>
+        <div class="text-lg font-bold">or</div>
+        <form
+          action="https://formsubmit.co/sachinambekar@outlook.com"
+          method="POST"
+          class="w-full sm:w-1/2 mx-auto bg-gray-50 p-6 rounded-xl text-blue-900"
+        >
+          <input type="hidden" name="_subject" value="IICP Contact Form Submission">
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="mb-4">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-label="Your Name"
+            >
+          </div>
+          <div class="mb-4">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              required
+              class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-label="Subject"
+            >
+          </div>
+          <div class="mb-4">
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              required
+              class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-label="Phone Number"
+            >
+          </div>
+          <div class="mb-4">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+              rows="4"
+              class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              aria-label="Your Message"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-semibold text-base hover:bg-yellow-300 hover:scale-105 transition transform focus:ring-2 focus:ring-yellow-400 w-full"
+            aria-label="Submit Contact Form"
+          >
+            <i class="fas fa-paper-plane mr-2"></i>Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto text-center px-4">
+      <p class="mb-4">© <span id="current-year"></span> Dr. Sachin Ambekar's IICP. All rights reserved.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com" class="hover:text-yellow-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
+        <a href="https://x.com" class="hover:text-yellow-400 transition" aria-label="X Platform"><i class="fab fa-x-twitter text-2xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for mobile menu toggle and dynamic year -->
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.style.display = mobileMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
