@@ -100,6 +100,9 @@
               <h3>Address</h3>
               <p>Nigdi, Pimpri-Chinchwad<br>Pune, Maharashtra 411044</p>
             </div>
+            <div class="map-container mt-4">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.797389664787!2d73.79249861507464!3d18.64577918744712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1b4b5b5b5b5%3A0x1234567890abcdef!2sNigdi%2C%20Pimpri-Chinchwad%2C%20Pune%2C%20Maharashtra%20411044!5e0!3m2!1sen!2sin!4v1623456789!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
           </div>
           <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
@@ -237,6 +240,7 @@
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
+
       fetch('https://formsubmit.co/ajax/info@iicp.in', {
         method: 'POST',
         body: formData,
@@ -245,7 +249,7 @@
       .then(response => response.json())
       .then(data => {
         loading.style.display = 'none';
-        if (data.success) {
+        if (data.success === "true") {
           sentMessage.style.display = 'block';
           form.reset();
         } else {
