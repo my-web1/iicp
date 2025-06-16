@@ -135,13 +135,8 @@
 
         </div>
 
-        <div class="row gy-4 mt-1">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30242.26900233828!2d73.76733511883617!3d18.651264377915002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8377fbdeab3%3A0x2c4265dab1a7a0f8!2sPimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1750076088415!5m2!1sen!2sin" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div><!-- End Google Maps -->
-
-          <div class="col-lg-6">
-  <form action="https://formsubmit.co/equimedia3@gmail.com" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+       <div class="col-lg-6">
+  <form action="https://formsubmit.co/ajax/equimedia3@gmail.com" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
     <div class="row gy-4">
       <div class="col-md-6">
         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -163,14 +158,51 @@
         <div class="error-message"></div>
         <div class="sent-message">Your message has been sent. Thank you!</div>
         <input type="hidden" name="_subject" value="New Contact Form Submission from IICP">
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true">
+        <!-- Removed _next for AJAX; re-add if using default submission -->
         <button type="submit">Send Message</button>
       </div>
     </div>
   </form>
 </div>
+<script>
+  document.querySelector('.php-email-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let form = this;
+    let formData = new FormData(form);
+    let sentMessage = document.querySelector('.sent-message');
+    let errorMessage = document.querySelector('.error-message');
+    let loading = document.querySelector('.loading');
 
+    loading.style.display = 'block';
+    errorMessage.style.display = 'none';
+    sentMessage.style.display = 'none';
+
+    fetch('https://formsubmit.co/ajax/equimedia3@gmail.com', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(data => {
+      loading.style.display = 'none';
+      if (data.success) {
+        sentMessage.style.display = 'block';
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Form submission failed');
+      }
+    })
+    .catch(error => {
+      loading.style.display = 'none';
+      console.error('Error:', error);
+      errorMessage.style.display = 'block';
+      errorMessage.textContent = 'Failed to submit the form. Please try again.';
+    });
+  });
+</script>
        <!-- End Contact Form -->
 
         </div>
