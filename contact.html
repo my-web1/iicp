@@ -26,13 +26,11 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="contact-page">
 
   <header id="header" class="header sticky-top">
-
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
@@ -53,7 +51,6 @@
         <a href="index.html" class="logo d-flex align-items-center">
           <img src="assets/img/logo.png" alt="IICP Logo">
         </a>
-
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -71,12 +68,9 @@
         </nav>
       </div>
     </div>
-
   </header>
 
   <main class="main">
-
-    <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="heading">
         <div class="container">
@@ -97,7 +91,6 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
     <section id="contact" class="contact section cp-dark-background">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
@@ -107,25 +100,22 @@
               <h3>Address</h3>
               <p>Nigdi, Pimpri-Chinchwad<br>Pune, Maharashtra 411044</p>
             </div>
-          </div><!-- End Info Item -->
-
+          </div>
           <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone"></i>
               <h3>Contact</h3>
               <p>Phone: +919284157202<br>Email: info@iicp.in</p>
             </div>
-          </div><!-- End Info Item -->
-
+          </div>
           <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-clock"></i>
               <h3>Opening Hours</h3>
               <p>Mon-Sat: 11AM - 23PM<br>Sunday: Closed</p>
             </div>
-          </div><!-- End Info Item -->
+          </div>
         </div>
-
         <div class="row gy-4">
           <div class="col-lg-6">
             <form action="https://formsubmit.co/ajax/info@iicp.in" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
@@ -158,7 +148,6 @@
         </div>
       </div>
     </section><!-- /Contact Section -->
-
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -172,7 +161,6 @@
             <p>Pune, Maharashtra 411044</p>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
@@ -183,7 +171,6 @@
             </p>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
@@ -194,7 +181,6 @@
             </p>
           </div>
         </div>
-
         <div class="col-lg-3 col-md-6">
           <h4>Follow Us</h4>
           <div class="social-links d-flex">
@@ -206,7 +192,6 @@
         </div>
       </div>
     </div>
-
     <div class="container">
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
@@ -221,16 +206,12 @@
         <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy policy</a></li>
       </ul>
     </div>
-
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">IICP</strong> <span>All Rights Reserved</span></p>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
   <div id="preloader"></div>
   <noscript>
     <style>
@@ -238,18 +219,13 @@
     </style>
   </noscript>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Form Submission Script -->
   <script>
     document.querySelector('.php-email-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -258,17 +234,13 @@
       let sentMessage = document.querySelector('.sent-message');
       let errorMessage = document.querySelector('.error-message');
       let loading = document.querySelector('.loading');
-
       loading.style.display = 'block';
       errorMessage.style.display = 'none';
       sentMessage.style.display = 'none';
-
       fetch('https://formsubmit.co/ajax/info@iicp.in', {
         method: 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       })
       .then(response => response.json())
       .then(data => {
@@ -287,7 +259,5 @@
       });
     });
   </script>
-
 </body>
-
 </html>
