@@ -104,24 +104,8 @@
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.797389664787!2d73.79249861507464!3d18.64577918744712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1b4b5b5b5b5%3A0x1234567890abcdef!2sNigdi%2C%20Pimpri-Chinchwad%2C%20Pune%2C%20Maharashtra%20411044!5e0!3m2!1sen!2sin!4v1623456789!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Contact</h3>
-              <p>Phone: +919284157202<br>Email: info@iicp.in</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-clock"></i>
-              <h3>Opening Hours</h3>
-              <p>Mon-Sat: 11AM - 23PM<br>Sunday: Closed</p>
-            </div>
-          </div>
-        </div>
-        <div class="row gy-4">
           <div class="col-lg-6">
-            <form action="https://formsubmit.co/ajax/info@iicp.in" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <form action="https://formsubmit.co/ajax/equimedia3@gmail.com" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required>
@@ -230,7 +214,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
-    document.querySelector('.php-email-form').addEventListener('submit', function(e) {
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       let form = this;
       let formData = new FormData(form);
@@ -246,7 +230,12 @@
         body: formData,
         headers: { 'Accept': 'application/json' }
       })
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then(data => {
         loading.style.display = 'none';
         if (data.success === "true") {
@@ -259,7 +248,8 @@
       .catch(error => {
         loading.style.display = 'none';
         errorMessage.style.display = 'block';
-        errorMessage.textContent = error.message || 'Failed to submit the form. Please try again later.';
+        errorMessage.textContent = 'An error occurred. Please try again later.';
+        console.error('Error:', error);
       });
     });
   </script>
