@@ -104,68 +104,37 @@
     <section id="consultation-form" class="admission-form section consultation-form">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="cta-wrapper">
-          <div class="row align-items-center">
-            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-              <div class="cta-content">
-                <h2>Join IICPS: Your Path to Excellence</h2>
-
-                <div class="cta-stats">
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="0" class="purecounter">1000</span>+</span>
-                    <span class="text">Students Enrolled</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="0" class="purecounter">95</span>%</span>
-                    <span class="text">Placement Rate</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">10</span>+</span>
-                    <span class="text">Years of Excellence</span>
-                  </div>
-                </div>
-              </div>
+        <form action="https://formsubmit.co/equimedia3@gmail.com" method="POST" role="form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
             </div>
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-              <div class="cta-form">
-                <h3>Admission Inquiry</h3>
-                <p>Fill out the form below, and our admissions team will contact you within 24 hours.</p>
-                <form action="https://formsubmit.co/equimedia3@gmail.com" method="POST" class="php-email-form">
-                  <input type="hidden" name="_subject" value="IICPS Admission Inquiry">
-                  <input type="hidden" name="_captcha" value="false">
-                  <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Your Full Name" required="">
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="tel" class="form-control" name="phone" placeholder="Your Phone (10 digits)" required="" pattern="[0-9]{10}">
-                  </div>
-                  <div class="form-group mt-3">
-                    <select class="form-control" name="program" required="">
-                      <option value="" disabled="" selected="">Select Program</option>
-                      <option value="undergraduate">Undergraduate Program</option>
-                      <option value="postgraduate">Postgraduate Program</option>
-                      <option value="diploma">Diploma Course</option>
-                      <option value="certificate">Certificate Course</option>
-                    </select>
-                  </div>
-                  <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your inquiry has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit">Submit Inquiry</button>
-                  </div>
-                </form>
-              </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
             </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="text" name="course" class="form-control" id="course" placeholder="Course Name" required="">
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" style="background-color: #007bff; color: white; padding: 12px 24px; border: none; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+              Submit Admission Request
+            </button>
+          </div>
+        </form>
       </div>
+      <input type="hidden" name="_subject" value="IICP Admission Form Submission">
+      <input type="hidden" name="_captcha" value="false">
+
     </section><!-- /Consultation Form Section -->
 
   </main>
