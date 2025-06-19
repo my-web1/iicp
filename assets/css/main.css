@@ -533,12 +533,12 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 15px;
-  bottom: -15px;
+  bottom: 15px;
   z-index: 99999;
   background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
   transition: all 0.4s;
 }
 
@@ -556,63 +556,41 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
 }
 
 /*--------------------------------------------------------------
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  --default-color: var(--contrast-color);
-  --background-color: var(--accent-color);
-  --heading-color: var(--contrast-color);
   color: var(--default-color);
   background-color: var(--background-color);
+  padding: 120px 0;
+  text-align: center;
   position: relative;
 }
 
-.page-title .heading {
-  padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.page-title .heading h1 {
-  font-size: 38px;
+.page-title h1 {
+  font-size: 42px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.page-title nav {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, black 5%);
-  padding: 20px 0;
-}
-
-.page-title nav a {
-  color: var(--default-color);
-}
-
-.page-title nav ol {
+.page-title .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: center;
+  padding: 0;
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
-.page-title nav ol li+li {
+.page-title .breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.page-title nav ol li+li::before {
+.page-title .breadcrumbs ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -643,38 +621,35 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
+  text-align: center;
   padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
-  padding: 0;
-  line-height: 1px;
-  margin: 0;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  position: relative;
-}
-
-.section-title h2::after {
-  content: "";
-  width: 120px;
-  height: 1px;
-  display: inline-block;
-  background: var(--accent-color);
-  margin: 4px 10px;
-}
-
-.section-title p {
-  color: var(--heading-color);
-  margin: 0;
-  font-size: 36px;
+  font-size: 13px;
+  letter-spacing: 1px;
   font-weight: 700;
-  font-family: var(--nav-font);
+  padding: 8px 20px;
+  margin: 0;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  display: inline-block;
   text-transform: uppercase;
+  border-radius: 50px;
+  font-family: var(--default-font);
+}
+
+.section-title div {
+  color: var(--heading-color);
+  margin: 10px 0 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+}
+
+.section-title div .description-title {
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------

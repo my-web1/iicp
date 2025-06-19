@@ -22,37 +22,34 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
+  text-align: center;
   padding-bottom: 60px;
   position: relative;
 
   h2 {
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0;
-    line-height: 1px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
     margin: 0;
-    letter-spacing: 1.5px;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    color: var(--accent-color);
+    display: inline-block;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 120px;
-      height: 1px;
-      display: inline-block;
-      background: var(--accent-color);
-      margin: 4px 10px;
-    }
+    border-radius: 50px;
+    font-family: var(--default-font);
   }
 
-  p {
+  div {
     color: var(--heading-color);
-    margin: 0;
-    font-size: 36px;
+    margin: 10px 0 0 0;
+    font-size: 32px;
     font-weight: 700;
-    font-family: var(--nav-font);
-    text-transform: uppercase;
+    font-family: var(--heading-font);
+
+    .description-title {
+      color: var(--accent-color);
+    }
   }
 }
 
