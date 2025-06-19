@@ -3,6 +3,8 @@
 # Features 2 Section
 --------------------------------------------------------------*/
 .features-2 {
+  --contrast-color: rgba(245, 18, 18, 0.2);
+
   .feature-item {
     padding: 30px;
     background: color-mix(in srgb, var(--accent-color), transparent 96%);
