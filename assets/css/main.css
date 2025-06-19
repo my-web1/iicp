@@ -16,7 +16,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #3d85c6; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #fb1301; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -24,17 +24,17 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #3d85c6; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #fb1301; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #3d85c6; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #fb1301; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
+  --background-color: rgba(245, 18, 18, 0.2);
   --surface-color: #ffffff;
 }
 
@@ -138,62 +138,10 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
   transition: all 0.5s;
   z-index: 997;
-  background-color: var(--background-color);
-}
-
-.header .topbar {
-  background-color: var(--background-color);
-  height: 40px;
-  padding: 0;
-  font-size: 14px;
-  transition: all 0.5s;
-}
-
-.header .topbar .contact-info i {
-  font-style: normal;
-  color: var(--contrast-color);
-}
-
-.header .topbar .contact-info i a,
-.header .topbar .contact-info i span {
-  padding-left: 5px;
-  color: var(--contrast-color);
-}
-
-@media (max-width: 575px) {
-
-  .header .topbar .contact-info i a,
-  .header .topbar .contact-info i span {
-    font-size: 13px;
-  }
-}
-
-.header .topbar .contact-info i a {
-  line-height: 0;
-  transition: 0.3s;
-}
-
-.header .topbar .contact-info i a:hover {
-  color: var(--contrast-color);
-  text-decoration: underline;
-}
-
-.header .topbar .social-links a {
-  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
-  line-height: 0;
-  transition: 0.3s;
-  margin-left: 20px;
-}
-
-.header .topbar .social-links a:hover {
-  color: var(--contrast-color);
-}
-
-.header .branding {
-  min-height: 60px;
-  padding: 10px 0;
 }
 
 .header .logo {
@@ -212,14 +160,41 @@ h6 {
   color: var(--heading-color);
 }
 
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
-.scrolled .header .topbar {
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .btn-getstarted {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 15px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+.scrolled .header {
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
@@ -458,7 +433,7 @@ h6 {
   }
 
   .blue-border {
-    border: 2px solid blue;
+    border: 2px solid rgb(255, 30, 0);
     padding: 5px 10px;
     /* Optional: Adds some padding for better appearance */
   }
@@ -1613,18 +1588,13 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# About 2 Section
 --------------------------------------------------------------*/
-.about {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.about .content-wrapper {
+.about-2 .content-wrapper {
   position: relative;
 }
 
-.about .content-wrapper .section-badge {
+.about-2 .content-wrapper .section-badge {
   display: inline-block;
   padding: 8px 16px;
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -1636,46 +1606,46 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .content-wrapper .section-badge:hover {
+.about-2 .content-wrapper .section-badge:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 85%);
   transform: translateY(-2px);
 }
 
-.about .content-wrapper h3 {
+.about-2 .content-wrapper h3 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--heading-color);
 }
 
-.about .content-wrapper p {
+.about-2 .content-wrapper p {
   font-size: 16px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 30px;
 }
 
-.about .skills-wrapper .skill-item {
+.about-2 .skills-wrapper .skill-item {
   margin-bottom: 25px;
 }
 
-.about .skills-wrapper .skill-item .skill-info {
+.about-2 .skills-wrapper .skill-item .skill-info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
 }
 
-.about .skills-wrapper .skill-item .skill-info .skill-name {
+.about-2 .skills-wrapper .skill-item .skill-info .skill-name {
   color: var(--heading-color);
   font-weight: 500;
 }
 
-.about .skills-wrapper .skill-item .skill-info .skill-percentage {
+.about-2 .skills-wrapper .skill-item .skill-info .skill-percentage {
   color: var(--accent-color);
   font-weight: 600;
 }
 
-.about .skills-wrapper .skill-item .progress-bar-wrapper {
+.about-2 .skills-wrapper .skill-item .progress-bar-wrapper {
   background: color-mix(in srgb, var(--accent-color), transparent 92%);
   height: 8px;
   border-radius: 4px;
@@ -1683,7 +1653,7 @@ section,
   position: relative;
 }
 
-.about .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar {
+.about-2 .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar {
   position: absolute;
   left: 0;
   top: 0;
@@ -1693,26 +1663,26 @@ section,
   transition: width 1.5s ease-in-out;
 }
 
-.about .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="92"] {
-  width: 92%;
-}
-
-.about .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="88"] {
-  width: 88%;
-}
-
-.about .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="95"] {
+.about-2 .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="95"] {
   width: 95%;
 }
 
-.about .timeline-wrapper {
+.about-2 .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="90"] {
+  width: 90%;
+}
+
+.about-2 .skills-wrapper .skill-item .progress-bar-wrapper .progress-bar[data-width="88"] {
+  width: 88%;
+}
+
+.about-2 .timeline-wrapper {
   position: relative;
   padding-top: 60px;
   padding-left: 30px;
   margin: 40px 0;
 }
 
-.about .timeline-wrapper::before {
+.about-2 .timeline-wrapper::before {
   content: "";
   position: absolute;
   left: 0;
@@ -1722,26 +1692,26 @@ section,
   background: linear-gradient(to bottom, transparent, var(--accent-color) 10%, var(--accent-color) 90%, transparent);
 }
 
-.about .timeline-wrapper .timeline-item {
+.about-2 .timeline-wrapper .timeline-item {
   position: relative;
   padding-bottom: 30px;
   padding-left: 30px;
 }
 
-.about .timeline-wrapper .timeline-item:hover .timeline-marker {
+.about-2 .timeline-wrapper .timeline-item:hover .timeline-marker {
   background: var(--accent-color);
   transform: scale(1.1);
 }
 
-.about .timeline-wrapper .timeline-item:hover .timeline-marker i {
+.about-2 .timeline-wrapper .timeline-item:hover .timeline-marker i {
   color: var(--contrast-color);
 }
 
-.about .timeline-wrapper .timeline-item:hover .timeline-content {
+.about-2 .timeline-wrapper .timeline-item:hover .timeline-content {
   transform: translateX(5px);
 }
 
-.about .timeline-wrapper .timeline-item .timeline-marker {
+.about-2 .timeline-wrapper .timeline-item .timeline-marker {
   position: absolute;
   left: -18px;
   top: 0;
@@ -1755,30 +1725,30 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .timeline-wrapper .timeline-item .timeline-marker i {
+.about-2 .timeline-wrapper .timeline-item .timeline-marker i {
   color: var(--accent-color);
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.about .timeline-wrapper .timeline-item .timeline-content {
+.about-2 .timeline-wrapper .timeline-item .timeline-content {
   transition: transform 0.3s ease;
 }
 
-.about .timeline-wrapper .timeline-item .timeline-content h4 {
+.about-2 .timeline-wrapper .timeline-item .timeline-content h4 {
   color: var(--heading-color);
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.about .timeline-wrapper .timeline-item .timeline-content p {
+.about-2 .timeline-wrapper .timeline-item .timeline-content p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 15px;
   line-height: 1.6;
 }
 
-.about .value-card {
+.about-2 .value-card {
   background: var(--surface-color);
   padding: 30px;
   border-radius: 15px;
@@ -1789,7 +1759,7 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.about .value-card::before {
+.about-2 .value-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1801,25 +1771,25 @@ section,
   transition: opacity 0.3s ease;
 }
 
-.about .value-card:hover {
+.about-2 .value-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.about .value-card:hover::before {
+.about-2 .value-card:hover::before {
   opacity: 1;
 }
 
-.about .value-card:hover .icon-wrapper {
+.about-2 .value-card:hover .icon-wrapper {
   background: var(--accent-color);
 }
 
-.about .value-card:hover .icon-wrapper i {
+.about-2 .value-card:hover .icon-wrapper i {
   color: var(--contrast-color);
   transform: rotateY(360deg);
 }
 
-.about .value-card .icon-wrapper {
+.about-2 .value-card .icon-wrapper {
   width: 60px;
   height: 60px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -1831,20 +1801,20 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .value-card .icon-wrapper i {
+.about-2 .value-card .icon-wrapper i {
   font-size: 28px;
   color: var(--accent-color);
   transition: all 0.6s ease;
 }
 
-.about .value-card h4 {
+.about-2 .value-card h4 {
   font-size: 20px;
   font-weight: 600;
   color: var(--heading-color);
   margin-bottom: 15px;
 }
 
-.about .value-card p {
+.about-2 .value-card p {
   font-size: 15px;
   line-height: 1.6;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1852,26 +1822,26 @@ section,
 }
 
 @media (max-width: 991.98px) {
-  .about .content-wrapper {
+  .about-2 .content-wrapper {
     margin-bottom: 40px;
   }
 
-  .about .content-wrapper h3 {
+  .about-2 .content-wrapper h3 {
     font-size: 32px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .about .content-wrapper h3 {
+  .about-2 .content-wrapper h3 {
     font-size: 28px;
   }
 
-  .about .timeline-wrapper {
+  .about-2 .timeline-wrapper {
     padding-left: 40px;
     margin: 0;
   }
 
-  .about .value-card {
+  .about-2 .value-card {
     margin-bottom: 20px;
   }
 }
