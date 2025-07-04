@@ -2,7 +2,7 @@
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Navmenu - Desktop */
+/* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -22,7 +22,8 @@
     a,
     a:focus {
       color: var(--nav-color);
-      padding: 18px 15px;
+      padding: 10px 15px;
+      margin-left: 2px;
       font-size: 16px;
       font-family: var(--nav-font);
       font-weight: 400;
@@ -40,29 +41,25 @@
       }
     }
 
-    li:last-child a {
-      padding-right: 0;
-    }
-
     li:hover>a,
     .active,
     .active:focus {
-      color: var(--nav-hover-color);
+      color: var(--contrast-color);
+      background-color: var(--nav-hover-color);
     }
 
     .dropdown {
       ul {
         margin: 0;
-        padding: 10px 0;
+        padding: 0;
         background: var(--nav-dropdown-background-color);
         display: block;
         position: absolute;
         visibility: hidden;
-        left: 14px;
+        left: 2px;
         top: 130%;
         opacity: 0;
         transition: 0.3s;
-        border-radius: 4px;
         z-index: 99;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 
@@ -72,6 +69,7 @@
 
         a {
           padding: 10px 20px;
+          margin: 0;
           font-size: 15px;
           text-transform: none;
           color: var(--nav-dropdown-color);
@@ -84,7 +82,8 @@
         a:hover,
         .active:hover,
         li:hover>a {
-          color: var(--nav-dropdown-hover-color);
+          color: var(--contrast-color);
+          background-color: var(--nav-hover-color);
         }
       }
 
@@ -112,7 +111,7 @@
   }
 }
 
-/* Navmenu - Mobile */
+/* Mobile Navigation */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -136,11 +135,10 @@
       margin: 0;
       border-radius: 6px;
       background-color: var(--nav-mobile-background-color);
-      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-      box-shadow: none;
       overflow-y: auto;
       transition: 0.3s;
       z-index: 9998;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
     }
 
     a,
@@ -197,6 +195,8 @@
         padding: 10px 0;
         margin: 10px 20px;
         background-color: var(--nav-dropdown-background-color);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        box-shadow: none;
         transition: all .5s ease-in-out;
 
         ul {
@@ -215,7 +215,7 @@
     overflow: hidden;
 
     .mobile-nav-toggle {
-      color: #fff;
+      color: #000000;
       position: absolute;
       font-size: 32px;
       top: 15px;
@@ -235,11 +235,5 @@
         display: block;
       }
     }
-  }
-
-  .blue-border {
-    border: 2px solid rgb(255, 30, 0);
-    padding: 5px 10px;
-    /* Optional: Adds some padding for better appearance */
   }
 }

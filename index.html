@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - iicp</title>
+  <title>IICP</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -25,1217 +25,1037 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <!-- Font Awesome 4.7.0 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
-  }
 
-  .whatsapp-float a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-  }
-
-  .call-btn {
-    background-color: #007bff;
-  }
-
-  .call-btn:hover {
-    background-color: #0056b3;
-  }
-
-  .whatsapp-btn {
-    background-color: #25D366;
-  }
-
-  .whatsapp-btn:hover {
-    background-color: #1DA851;
-  }
-
-  .whatsapp-float i {
-    color: white;
-    font-size: 24px;
-    display: inline-block !important; /* Ensure visibility */
-  }
-
-  .quick-support-text {
-    font-size: 14px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-</style>
-
-<div class="whatsapp-float">
-  <span class="quick-support-text">Quick Support</span>
-  <a href="tel:+919284157202" class="call-btn" title="Call Us">
-    <i class="fa fa-phone"></i>
-  </a>
-  <a href="https://wa.me/919284157202" class="whatsapp-btn" title="Chat on WhatsApp" target="_blank">
-    <i class="fa fa-whatsapp"></i>
-  </a>
-</div>
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <header id="header" class="header position-relative">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-88888-014-37</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
 
-      </a>
+    <div class="branding d-flex align-items-cente">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html" class="active">Home<br></a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="https://i.ibb.co/0pcVh9ZG/final-Logo.png" alt="">
 
-          <li><a href="admission.html">Admission</a></li>
+        </a>
 
-          <li><a href="contact.html" class="blue-border">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+              <a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="pg-courses.html">PG Courses</a></li>
+                <li><a href="it-courses.html">IT Courses</a></li>
+                <li><a href="graduate-courses.html">Graduate Courses</a></li>
+                <li><a href="diploma-courses.html">Diploma Courses</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="exam.html">Exam</a></li>
+                <li><a href="placement.html">Placement</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html" class="blue-border">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-      <a class="btn-getstarted" href="admission.html">Get Started</a>
+      </div>
 
     </div>
+
   </header>
 
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    <section id="hero" class="hero section">
 
-      <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h1>Empowering Careers, Transforming Futures</h1>
+          <p>Advance your professional journey with IICP’s flexible, industry-relevant Management and IT certification programs. Learn online, upskill at your pace, and unlock new career opportunities—anytime, anywhere.</p>
+          <div class="cta-buttons">
+            <a href="admission.html" class="btn-apply">Apply Now</a>
+            <a href=#certifications class="btn-tour">Explore Programs</a>
 
-        <div class="carousel-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiskRpcUqK47Siaf4Yk09Di0ZE6NmbGMxuMgC4RDSTWO5HEBBRLqMHOFcY-9ixcm8dUk4NFx1hxNc5R43M7fRVSFZAqZ97vEyxYCg3vRnRoIeCOGEr7twBFlo_j69vTRPuDqm-7KSGy_FxXH-iz8FrdCL4RnHcOKhW_J5ITw3m7am1wKMM18Bueuwcd9COu/s16000/FJP_BP.png" alt="">
-          <div class="carousel-container">
-            <h2>Skyrocket Your Career with IICP</h2>
-            <p>Master in-demand skills to unlock exciting career opportunities.
-              Gain confidence with tools and job alerts tailored for success.</p>
-            <a href="admission.html" class="btn-get-started">Get Started</a>
+
           </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbGnxKRWa73Z0HhlRBeIS0Vj1EZr1TGKBxs2UyZ1sMmP71wLVOVgGPT_FRHQZwYj9mT4S2a0GUGyEKTjMZaggWmdIq3FWcceSy8_0BDb9fngSxHOMiK4jVlfwfbKjAvv0Kq9muaJdw4HRWMpYMobBRqxcUEEAQQLXYBEaHdvEMiZaPPwYVipKglazVm9i0/s16000/wmremove-transformed%20(2).jpeg" alt="">
-          <div class="carousel-container">
-            <h2>Transform with Tailored Learning</h2>
-            <p>Leverage exclusive IICP materials to boost your professional edge.
-              Become a leader in your industry with practical knowledge.</p>
-            <a href="admission.html" class="btn-get-started">Get Started</a>
+          <div class="announcement">
+            <div class="announcement-badge">Now Open</div>
+            <p>Admissions Open for Current Year&nbsp; – Enroll Early to Secure Your Spot!</p>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
+      </div>
 
-        <div class="carousel-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjCzuk7fSaHyNJqGisNlSKDUiJuZCRVQAVqVgUzKQ7QxCg90EZpaLNUhFH5052SZxqBoswxk-v26l6Dbn0XfWEn6XQuyROoxN3CMeQtu9DI90YUV6fhnLUeRKREmkBy3xx6age98eyhMM6AEpwQf1Q_KCL-YIG_-fR7HIWn0v0wtb3xXi_cT6XTQXguvsQe/s16000/selection.jpeg" alt="">
-          <div class="carousel-container">
-            <h2>Achieve Professional Excellence</h2>
-            <p>Acquire expertise through curated courses to stand out in your field.
-              Build a strong foundation for lifelong career growth.</p>
-            <a href="admission.html" class="btn-get-started">Get Started</a>
+      <div class="highlights-container container">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <div class="highlight-item">
+              <div class="icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>100% Online &amp; Flexible</h3>
+              <p>Study at your own pace with self-directed online learning and expert support.</p>
+            </div>
           </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgekw7CD1t4wwq9s5QL0w0pAr-SvbK6y7ZYztAgGsuCd-Jp2_Oz56Pn5Ky6AQidDAab_a4xOG05cCzUpgjR0QHDywqZerLYfF1ExFCeRpXsqLxBf0w4K4GJZ4cH5blaB4LKQPFuNso9kP-ls_KrvDy9cu2DVEQZUYR71JYUyrMH3gYxqP5mMOL7EwX3Ye3G/s16000/together.jpeg" alt="">
-          <div class="carousel-container">
-            <h2>Excel in Every Interaction</h2>
-            <p>Hone soft skills and body language to impress employers.
-              Secure your dream job with personalized career insights.</p>
-            <a href="admission.html" class="btn-get-started">Get Started</a>
+          <div class="col-md-4">
+            <div class="highlight-item">
+              <div class="icon">
+                <i class="bi bi-briefcase-fill"></i>
+              </div>
+              <h3>Career-Focused Programs</h3>
+              <p>Industry-aligned courses designed for real-world skills and job readiness.</p>
+            </div>
           </div>
-        </div><!-- End Carousel Item -->
-
-        <div class="carousel-item active">
-          <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwMM4MfiuscphEfT5ju7lcbE4oh3nba4qcqdyz5AFN91w5hycfH37CLRYgQGheGjcKZbagY5tqwBk7JIxYfNN2XCiO9sYzrgIqoEonAJF2U_YvS6h4WTvwmI2uWGQOiOS38Tc5ctf9ckCRAWWPY0fc8hNY11SQCWLlZMfCNoCvWFOjiK9jhuEpa7A5KlKT/s16000/iicp%20(1).jpg" alt="">
-          <div class="carousel-container">
-            <h2>Start Winning Today</h2>
-            <p>Thrive with IICP’s seamless platform designed for career triumph.
-              Turn aspirations into reality with skills that employers value.</p>
-            <a href="admission.html" class="btn-get-started">Get Started</a>
+          <div class="col-md-4">
+            <div class="highlight-item">
+              <div class="icon">
+                <i class="bi bi-award-fill"></i>
+              </div>
+              <h3>Recognized Certification</h3>
+              <p>Earn valued certificates that enhance your employability and career growth.</p>
+            </div>
           </div>
-        </div><!-- End Carousel Item -->
+        </div>
+      </div>
 
-        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-        </a>
-
-        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-        </a>
-
-        <ol class="carousel-indicators"></ol>
-
+      <div class="event-banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-2">
+              <div class="event-date">
+                <span class="month">Every Month</span>
+                <span class="day">On 15th&nbsp;</span>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h3>Virtual Open House</h3>
+              <p>Discover our online learning platform, meet our expert faculty, and explore how IICP can help you achieve your career goals.</p>
+            </div>
+            <div class="col-md-2">
+              <a href="admission.html" class="btn-register">Register</a>
+            </div>
+          </div>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
 
-    <!-- Hero 2 Section -->
-    <section id="hero-2" class="hero-2 section">
-
-      <img src="assets/img/bg/abstract-bg-2.webp" alt="IICP Career Platform Background">
-
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-7 col-lg-9 text-center">
-            <h1>Welcome to IICP</h1>
-            <p>Your gateway to a thriving career with industry-integrated training and unmatched opportunities!</p>
-          </div>
-        </div>
-        <div class="text-center">
-          <a href="admission.html" class="btn-get-started">Start Your Journey</a>
-        </div>
-
-        <div class="row gy-4 mt-5">
-          <div class="col-md-6 col-lg-3">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-book-fill"></i></div>
-              <h4 class="title"><a href="">Excellent Learning</a></h4>
-              <p class="description">Master in-demand skills with cutting-edge, industry-aligned courses designed for success.</p>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-briefcase-fill"></i></div>
-              <h4 class="title"><a href="">Job Placement Support</a></h4>
-              <p class="description">Land your dream job with our dedicated placement assistance and employer connections.</p>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-people-fill"></i></div>
-              <h4 class="title"><a href="">Industry Connections</a></h4>
-              <p class="description">Network with top companies and gain real-world insights from industry experts.</p>
-            </div>
-          </div><!--End Icon Box -->
-
-          <div class="col-md-6 col-lg-3">
-            <div class="icon-box">
-              <div class="icon"><i class="bi bi-star-fill"></i></div>
-              <h4 class="title"><a href="">Structured Career Advancement</a></h4>
-              <p class="description">Advance your career with structured YouTube courses and expert-led guidance programs tailored to your goals.</p>
-            </div>
-          </div><!--End Icon Box -->
-
-        </div>
-      </div>
-
-    </section><!-- /Hero 2 Section -->
-
-    <!-- Testimonials 3 Section -->
-    <section id="testimonials-3" class="testimonials section testimonials-3">
+    <!-- About Section -->
+    <section id="about" class="welcome section about">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>Testimonials</h2>
-        <div><span>What Our&nbsp;</span> <span class="description-title">Student's Says&nbsp;</span></div>
+        <h2>Welcome</h2>
+        <div><span>Welcome to</span> <span class="description-title">International Institute of Career Progression (IICP)</span></div>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="testimonials-slider swiper init-swiper">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6">
+            <div class="content">
+
+              <p class="description">
+                In a rapidly changing world, professional success demands adaptability, expertise, and lifelong learning. At IICP, we deliver flexible, industry-relevant online programs in management and IT, empowering ambitious individuals to balance work, study, and personal growth. Our courses blend practical skills with academic rigor, preparing you to excel in dynamic industries and seize emerging opportunities.
+              </p>
+
+              <div class="benefits">
+                <div class="benefit-item">
+                  <div class="icon">
+                    <i class="bi bi-laptop"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Flexible Online Learning</h4>
+                    <p>Study at your own pace with self-directed online programs designed for working professionals and aspiring leaders.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="icon">
+                    <i class="bi bi-person-check-fill"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Industry-Relevant Curriculum</h4>
+                    <p>Engage with up-to-date content and real-world projects that reflect current industry needs and future trends.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="icon">
+                    <i class="bi bi-people-fill"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Supportive Learning Environment</h4>
+                    <p>Benefit from expert faculty, peer collaboration, and a vibrant alumni network to enhance your educational journey.</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="icon">
+                    <i class="bi bi-rocket-takeoff-fill"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Career Advancement</h4>
+                    <p>Unlock new opportunities with recognized certifications and strong industry connections that boost your employability.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta">
+                        <a href=#certifications class="btn-tour">Explore Programs</a>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="image">
+              <img src="assets/img/education/students-1.webp" alt="IICP Students" class="img-fluid">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Testimonials</h2>
+        <div><span>Check Our</span> <span class="description-title">Testimonials</span></div>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
-              "speed": 800,
+              "speed": 600,
               "autoplay": {
                 "delay": 5000
               },
-              "slidesPerView": 1,
-              "spaceBetween": 30,
+              "slidesPerView": "auto",
               "pagination": {
                 "el": ".swiper-pagination",
                 "type": "bullets",
                 "clickable": true
               },
               "breakpoints": {
-                "768": {
-                  "slidesPerView": 2
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
                 },
                 "1200": {
-                  "slidesPerView": 3
+                  "slidesPerView": 3,
+                  "spaceBetween": 10
                 }
               }
             }
           </script>
           <div class="swiper-wrapper">
+
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The training was transformative, equipping me with skills to excel in my career.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl1.png" class="testimonial-img" alt="Portrait of Aarti Sharma">
+                <h3>Aarti Sharma</h3>
+                <h4>Project Manager at Infosys</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl1.png" alt="Portrait of Pallavi Deshmukh">
-                    <div>
-                      <h3>Pallavi Deshmukh</h3>
-                      <h4>Software Engineer at Softweb Solutions</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The online MBA at IICP gave me the leadership skills to advance at Infosys.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    Amazing mentorship! It gave me the confidence to land my dream job.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy1.png" class="testimonial-img" alt="Portrait of Mohit Verma">
+                <h3>Mohit Verma</h3>
+                <h4>Data Analyst at FinEdge Solutions</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy1.png" alt="Portrait of Rahul Patil">
-                    <div>
-                      <h3>Rahul Patil</h3>
-                      <h4>Data Analyst at TCS</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>IICP’s Data Science program helped me land my dream job as a Data Analyst in a fintech startup.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The course was well-structured, and the support team was always helpful.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl2.png" class="testimonial-img" alt="Portrait of Priya Nair">
+                <h3>Priya Nair</h3>
+                <h4>HR Compliance Officer at Larsen &amp; Toubro</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl2.png" alt="Portrait of Shruti Kulkarni">
-                    <div>
-                      <h3>Shruti Kulkarni</h3>
-                      <h4>UX Designer at Thinkitive Technologies</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The PGDLL course gave me the expertise to manage HR compliance at L&amp;T.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    Practical training that helped me secure a top position in my field.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy2.png" class="testimonial-img" alt="Portrait of Saurabh Mishra">
+                <h3>Saurabh Mishra</h3>
+                <h4>Marketing Analyst at BrandNest</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy2.png" alt="Portrait of Aditya More">
-                    <div>
-                      <h3>Aditya More</h3>
-                      <h4>DevOps Engineer at Accenture</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The BBA program at IICP was flexible and practical. I landed my first job at a marketing agency.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    Hands-on projects gave me the edge to succeed in my career.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl3.png" class="testimonial-img" alt="Portrait of Riya Kulkarni">
+                <h3>Riya Kulkarni</h3>
+                <h4>Software Engineer at Wipro</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl3.png" alt="Portrait of Neha Jadhav">
-                    <div>
-                      <h3>Neha Jadhav</h3>
-                      <h4>Product Manager at Cognizant</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Full Stack Developer course at IICP helped me join Wipro as a Software Engineer.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The program was a game-changer, boosting my technical skills.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy3.png" class="testimonial-img" alt="Portrait of Amit Singh">
+                <h3>Amit Singh</h3>
+                <h4>Corporate Trainer at SkillEdge</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy3.png" alt="Portrait of Vikram Shinde">
-                    <div>
-                      <h3>Vikram Shinde</h3>
-                      <h4>Cloud Engineer at Codezap Technologies</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The PGTND program gave me the confidence to conduct corporate trainings across India.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    Exceptional guidance that prepared me for real-world challenges.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl4.png" class="testimonial-img" alt="Portrait of Sneha Patil">
+                <h3>Sneha Patil</h3>
+                <h4>Junior Developer at CodeNest</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl4.png" alt="Portrait of Anjali Pawar">
-                    <div>
-                      <h3>Anjali Pawar</h3>
-                      <h4>Business Analyst at Tech Mahindra</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The BCA course at IICP was hands-on—I’m now a Junior Developer at CodeNest.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The course content was spot-on, and the instructors were fantastic.
-                  </p>
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy4.png" alt="Portrait of Siddhant Bhosale">
-                    <div>
-                      <h3>Siddhant Bhosale</h3>
-                      <h4>Full Stack Developer at L&amp;T Infotech</h4>
-                    </div>
-                  </div>
-                </div>
+                <img src="assets/img/testimonials/boy4.png" class="testimonial-img" alt="Portrait of Rajeev Menon">
+                <h3>Rajeev Menon</h3>
+                <h4>Operations Manager at Reliance Retail</h4>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>I completed the Executive MBA while working full-time. The practical insights helped me get promoted at Reliance Retail.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    A truly rewarding experience that enhanced my professional skills.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl5.png" class="testimonial-img" alt="Portrait of Anuja Desai">
+                <h3>Anuja Desai</h3>
+                <h4>IT Support at SmallBiz IT Solutions</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl5.png" alt="Portrait of Pooja Chavan">
-                    <div>
-                      <h3>Pooja Chavan</h3>
-                      <h4>AI Engineer at Nexlify Solutions</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The DCA program was a great start to my IT career. The support team was always there for me.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The practical approach made learning engaging and effective.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy5.png" class="testimonial-img" alt="Portrait of Karan Gupta">
+                <h3>Karan Gupta</h3>
+                <h4>Business Analyst at Capgemini</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy5.png" alt="Portrait of Pranav Gaikwad">
-                    <div>
-                      <h3>Pranav Gaikwad</h3>
-                      <h4>Cybersecurity Analyst at Deloitte</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The PGDBM at IICP was practical and industry-focused. I secured a business analyst role at Capgemini soon after completion.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    Invaluable training that opened doors to new opportunities.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl6.png" class="testimonial-img" alt="Portrait of Ritu Jain">
+                <h3>Ritu Jain</h3>
+                <h4>International Business Consultant at TCS</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl6.png" alt="Portrait of Swati Nikam">
-                    <div>
-                      <h3>Swati Nikam</h3>
-                      <h4>Data Scientist at IntelliSense Technologies</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Masters in International Business gave me a global outlook. Now I work with clients worldwide at TCS.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The program’s focus on real-world skills was outstanding.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy6.png" class="testimonial-img" alt="Portrait of Deepak Rane">
+                <h3>Deepak Rane</h3>
+                <h4>IT Project Lead at Hexaware</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy6.png" alt="Portrait of Rohit Salunkhe">
-                    <div>
-                      <h3>Rohit Salunkhe</h3>
-                      <h4>Network Engineer at Cisco</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>IICP’s Management of Computer Applications program helped me bridge IT and business, leading to a promotion at Hexaware.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    A well-designed course that boosted my career prospects.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl7.png" class="testimonial-img" alt="Portrait of Meenal Joshi">
+                <h3>Meenal Joshi</h3>
+                <h4>HR Manager at GreenLeaf Foods</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl7.png" alt="Portrait of Rupali Thombre">
-                    <div>
-                      <h3>Rupali Thombre</h3>
-                      <h4>Marketing Analyst at WebMob Technologies</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Specialized PG Diploma in HR helped me land a role as HR Manager at a fast-growing SME.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The instructors were knowledgeable, and the content was relevant.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy7.png" class="testimonial-img" alt="Portrait of Nikhil Pawar">
+                <h3>Nikhil Pawar</h3>
+                <h4>App Developer (Freelance)</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy7.png" alt="Portrait of Kunal Kadam">
-                    <div>
-                      <h3>Kunal Kadam</h3>
-                      <h4>Software Developer at Oracle</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Java and Python courses were up-to-date and practical. I now develop apps for a US-based client.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    A fantastic learning experience that I’d recommend to anyone.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl8.png" class="testimonial-img" alt="Portrait of Shweta Deshpande">
+                <h3>Shweta Deshpande</h3>
+                <h4>Founder at StratEdge Consulting</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl8.png" alt="Portrait of Manisha Raut">
-                    <div>
-                      <h3>Manisha Raut</h3>
-                      <h4>Project Manager at Persistent Systems</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Advanced Diploma in Business Management gave me the edge to start my own consulting firm.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The training was thorough and helped me excel in my role.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy8.png" class="testimonial-img" alt="Portrait of Pranav Gaikwad">
+                <h3>Pranav Gaikwad</h3>
+                <h4>Cybersecurity Analyst at Deloitte</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy8.png" alt="Portrait of Amar Sawant">
-                    <div>
-                      <h3>Amar Sawant</h3>
-                      <h4>System Administrator at Techment Technology</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Cyber Security course was practical and hands-on. I’m now a Security Analyst at Deloitte.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The course provided practical insights that were invaluable.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl9.png" class="testimonial-img" alt="Portrait of Sneha Mhatre">
+                <h3>Sneha Mhatre</h3>
+                <h4>Digital Marketing Specialist at Creative Pulse</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl9.png" alt="Portrait of Sneha Mhatre">
-                    <div>
-                      <h3>Sneha Mhatre</h3>
-                      <h4>Quality Analyst at Hexaware</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The PG Diploma in Digital Marketing helped me build a solid portfolio and get hired by a creative agency.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    A top-notch program that prepared me for industry demands.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy9.png" class="testimonial-img" alt="Portrait of Arjun Shetty">
+                <h3>Arjun Shetty</h3>
+                <h4>Graduate, Small Business Owner</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy9.png" alt="Portrait of Nikhil Ghorpade">
-                    <div>
-                      <h3>Nikhil Ghorpade</h3>
-                      <h4>Mobile Developer at Zensar</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The online learning platform was user-friendly and the faculty support was outstanding.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The training was engaging and highly relevant to my career.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/girl10.png" class="testimonial-img" alt="Portrait of Trupti Bhonsle">
+                <h3>Trupti Bhonsle</h3>
+                <h4>Data Analyst at Cognizant</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/girl10.png" alt="Portrait of Trupti Bhonsle">
-                    <div>
-                      <h3>Trupti Bhonsle</h3>
-                      <h4>UI Developer at Mphasis</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>The Power BI and Data Analytics course gave me the skills to join a data team at Cognizant.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
             <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    The course gave me the tools to succeed in a competitive industry.
-                  </p>
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/boy10.png" class="testimonial-img" alt="Portrait of Sanket Wagh">
+                <h3>Sanket Wagh</h3>
+                <h4>Backend Developer at Synechron</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy10.png" alt="Portrait of Sanket Wagh">
-                    <div>
-                      <h3>Sanket Wagh</h3>
-                      <h4>Backend Developer at Synechron</h4>
-                    </div>
-                  </div>
-                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>IICP’s placement support helped me prepare for interviews and secure my first job after graduation.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
               </div>
             </div><!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-card">
-                <div class="testimonial-content">
-                  <p>
-                    <i class="bi bi-quote quote-icon"></i>
-                    An excellent program that enhanced my professional capabilities.
-                  </p>
-                </div>
-                <div class="testimonial-profile">
-                  <div class="rating">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-                  <div class="profile-info">
-                    <img src="assets/img/testimonials/boy11.jpg" alt="Portrait of Vinayak Mane">
-                    <div>
-                      <h3>Vinayak Mane</h3>
-                      <h4>Database Administrator at NTT Data</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
 
-    </section><!-- /Testimonials 3 Section -->
+    </section><!-- /Testimonials Section -->
 
-    <!-- Features Section -->
-    <section id="features" class="features section">
+    <!-- Services 4 Section -->
+    <section id="services-4" class="services-4 section">
 
+      <!-- Section Title -->
+<div id="certifications" class="container section-title">
       <div class="container section-title">
-        <h2 class="">Certifications</h2>
-        <p>Courses</p>
-      </div>
+        <h2>Certifications&nbsp;</h2>
+        <div><span>Courses</span> <span class="description-title">Certfications</span></div>
+      </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="row g-4">
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-bar-chart" style="color: #ffbb2c;"></i>
-              <h3><a href="courses.html" class="stretched-link">Power BI</a></h3>
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <h3>MBA Program</h3>
+              <p>Industry-aligned MBA with diverse specializations, ideal for working professionals seeking leadership roles.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-bug" style="color: #5578ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Manual Testing</a></h3>
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-globe"></i>
+              </div>
+              <h3>Global Executive MBA (eMBA)</h3>
+              <p>Globally focused MBA with dual specializations, designed for strategic leadership and international business.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-graph-up" style="color: #e80368;"></i>
-              <h3><a href="courses.html" class="stretched-link">Data Science</a></h3>
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-person-badge"></i>
+              </div>
+              <h3>Executive MBA (EMBA)</h3>
+              <p>Tailored for experienced professionals to enhance leadership and decision-making skills in real-world scenarios.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-bootstrap" style="color: #e361ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Spring Boot</a></h3>
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-journal-text"></i>
+              </div>
+              <h3>Post Graduate Diploma in Business Management (PGDBM)</h3>
+              <p>Practical training in core business and management principles for career advancement.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-code-slash" style="color: #47aeff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Java</a></h3>
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <h3>Specialized PG Diplomas</h3>
+              <p>Focused programs for rapid career growth in niche management and IT fields.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-node-plus" style="color: #ffa76e;"></i>
-              <h3><a href="courses.html" class="stretched-link">Node.js</a></h3>
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-globe-americas"></i>
+              </div>
+              <h3>Masters in International Business (MIB) &amp; Management Studies (MMS)</h3>
+              <p>In-depth expertise in global business and advanced management disciplines.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-cloud-upload" style="color: #11dbcf;"></i>
-              <h3><a href="courses.html" class="stretched-link">AWS DevOps</a></h3>
+          <!-- Card 7 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-file-earmark-text"></i>
+              </div>
+              <h3>Post Graduate Diploma in Labour Laws (PGDLL)</h3>
+              <p>Comprehensive one-year program covering labor laws, employee rights, and workplace safety.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-terminal" style="color: #4233ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Linux</a></h3>
+          <!-- Card 8 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-person-lines-fill"></i>
+              </div>
+              <h3>Post Graduate Program in Training and Development (PGTND)</h3>
+              <p>Specialized training in instructional design and organizational learning for HR professionals and trainers.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-calculator" style="color: #b2904f;"></i>
-              <h3><a href="courses.html" class="stretched-link">Financial Analyst</a></h3>
+          <!-- Card 9 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-mortarboard"></i>
+              </div>
+              <h3>Bachelor of Business Administration (BBA) / BBM</h3>
+              <p>Foundational business programs designed for freshers and working learners in marketing, finance, and entrepreneurship.</p>
+              <div class="card-links">
+                <a href="graduate-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-diagram-3" style="color: #b20969;"></i>
-              <h3><a href="courses.html" class="stretched-link">System Design</a></h3>
+          <!-- Card 10 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-journal-bookmark"></i>
+              </div>
+              <h3>Executive &amp; Advanced Diplomas in Business Management</h3>
+              <p>Short-term courses to build essential business skills and accelerate early career growth.</p>
+              <div class="card-links">
+                <a href="graduate-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-database" style="color: #ff5828;"></i>
-              <h3><a href="courses.html" class="stretched-link">SQL</a></h3>
+          <!-- Card 11 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>Bachelor of Computer Applications (BCA) / Diploma in Computer Applications (DCA)</h3>
+              <p>Core IT training in programming, software development, and computer systems for beginners and professionals.</p>
+              <div class="card-links">
+                <a href="graduate-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-shield-lock" style="color: #29cc61;"></i>
-              <h3><a href="courses.html" class="stretched-link">SOC Analyst</a></h3>
+          <!-- Card 12 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-gear"></i>
+              </div>
+              <h3>Management of Computer Application</h3>
+              <p>Integration of IT expertise with business management skills to prepare for leadership roles in tech-driven organizations.</p>
+              <div class="card-links">
+                <a href="pg-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-cloud" style="color: #ffbb2c;"></i>
-              <h3><a href="courses.html" class="stretched-link">AWS</a></h3>
+          <!-- Card 13 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item">
+              <div class="icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
+              <h3>Professional IT Training Programs</h3>
+              <p>Cutting-edge courses in Data Science, Digital Marketing, Java, Python, AWS, Cyber Security, Machine Learning, and more.</p>
+              <div class="card-links">
+                <a href="it-courses.html" class="link-item">
+                  Learn More
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-braces" style="color: #5578ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">CSS</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-cpu" style="color: #e80368;"></i>
-              <h3><a href="courses.html" class="stretched-link">C Programming</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-hdd-stack" style="color: #e361ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Data Engineer</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-table" style="color: #47aeff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Excel</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-server" style="color: #ffa76e;"></i>
-              <h3><a href="courses.html" class="stretched-link">DBMS</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-javascript" style="color: #11dbcf;"></i>
-              <h3><a href="courses.html" class="stretched-link">JavaScript</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-kanban" style="color: #4233ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Project Manager</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-robot" style="color: #b2904f;"></i>
-              <h3><a href="courses.html" class="stretched-link">Machine Learning</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-code" style="color: #b20969;"></i>
-              <h3><a href="courses.html" class="stretched-link">Django</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-shield-check" style="color: #ff5828;"></i>
-              <h3><a href="courses.html" class="stretched-link">Cyber Security</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-boxes" style="color: #29cc61;"></i>
-              <h3><a href="courses.html" class="stretched-link">OOPS</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-python" style="color: #ffbb2c;"></i>
-              <h3><a href="courses.html" class="stretched-link">Python</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-briefcase" style="color: #5578ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Business Analyst</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-cloud-fog" style="color: #e80368;"></i>
-              <h3><a href="courses.html" class="stretched-link">Azure</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-stack" style="color: #e361ff;"></i>
-              <h3><a href="courses.html" class="stretched-link">Full Stack Developer</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-cpu-fill" style="color: #47aeff;"></i>
-              <h3><a href="courses.html" class="stretched-link">C++</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="features-item">
-              <i class="bi bi-pie-chart" style="color: #ffa76e;"></i>
-              <h3><a href="courses.html" class="stretched-link">Data Analyst</a></h3>
-            </div>
-          </div><!-- End Feature Item -->
+          </div><!-- End Service Item -->
 
         </div>
 
       </div>
 
-    </section><!-- /Features Section -->
+    </section><!-- /Services 4 Section -->
 
-    <!-- Features 2 Section -->
-    <section id="features-2" class="features-2 section">
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
 
+      <!-- Section Title -->
       <div class="container section-title">
-        <h2 class="">Why IICP</h2>
-        <p>Features</p>
-      </div>
+        <h2>Sample certfiate</h2>
+        <div><span>Sample</span> <span class="description-title">Certificates</span></div>
+      </div><!-- End Section Title -->
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
 
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-bell-fill"></i>
-                </div>
-                <div class="content">
-                  <h3>Job Alerts via WhatsApp</h3>
-                  <p>Receive real-time job notifications tailored to your skills through WhatsApp and other platforms, sourced from trusted online job boards.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/GvdKvZS8/4.png">
+                <img src="https://i.ibb.co/GvdKvZS8/4.png" class="img-fluid" alt="4">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-clipboard-check"></i>
-                </div>
-                <div class="content">
-                  <h3>Aptitude &amp; Technical Tests</h3>
-                  <p>Access curated online aptitude and technical test resources, including YouTube tutorials and practice notes, to enhance your skills.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/N6YkxxfP/3.png">
+                <img src="https://i.ibb.co/N6YkxxfP/3.png" class="img-fluid" alt="3">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-person-rolodex"></i>
-                </div>
-                <div class="content">
-                  <h3>Soft Skills Development</h3>
-                  <p>Learn communication and interpersonal skills through expertly selected YouTube videos and downloadable study notes.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/GvdKvZS8/4.png">
+                <img src="https://i.ibb.co/GvdKvZS8/4.png" class="img-fluid" alt="4">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-file-earmark-person"></i>
-                </div>
-                <div class="content">
-                  <h3>Resume &amp; CV Builder</h3>
-                  <p>Build professional resumes using online templates and YouTube guides, with tips from top career resources.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/0jH13g3B/2.png">
+                <img src="https://i.ibb.co/0jH13g3B/2.png" class="img-fluid" alt="2">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-play-btn-fill"></i>
-                </div>
-                <div class="content">
-                  <h3>Interview Q&amp;A Videos</h3>
-                  <p>Prepare with YouTube playlists covering technical and HR interview questions, paired with concise study notes.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/N6yHmYx0/1.png">
+                <img src="https://i.ibb.co/N6yHmYx0/1.png" class="img-fluid" alt="1">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-camera-video"></i>
-                </div>
-                <div class="content">
-                  <h3>Online Interview Prep</h3>
-                  <p>Master virtual interviews with YouTube tutorials on techniques, body language, and self-introduction, plus online resources.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <a class="glightbox" data-gallery="images-gallery" href="https://i.ibb.co/GvdKvZS8/4.png">
+                <img src="https://i.ibb.co/GvdKvZS8/4.png" class="img-fluid" alt="4">
+              </a>
             </div>
-          </div><!-- End Integration Item -->
+          </div>
 
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-chat-dots-fill"></i>
-                </div>
-                <div class="content">
-                  <h3>Extensive Online Support</h3>
-                  <p>Get guidance through WhatsApp and email with access to a vast library of online career resources and notes.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-book-half"></i>
-                </div>
-                <div class="content">
-                  <h3>Curated Learning Resources</h3>
-                  <p>Access a collection of high-quality YouTube videos, articles, and notes from trusted online sources for self-paced learning.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Integration Item -->
-
-          <div class="col-xl-4 col-lg-6">
-            <div class="feature-item">
-              <div class="feature-content">
-                <div class="icon">
-                  <i class="bi bi-graph-up"></i>
-                </div>
-                <div class="content">
-                  <h3>Career Progress Tracker</h3>
-                  <p>Monitor your learning and job application progress with online tools and tips from YouTube career coaches.</p>
-                  <a href="admission.html" class="feature-link">Get Started <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Integration Item -->
-
+          <div class="swiper-pagination"></div>
         </div>
 
       </div>
 
-    </section><!-- /Features 2 Section -->
+    </section><!-- /Gallery Section -->
+
+    <!-- Hero 3 Section -->
+    <section id="hero-3" class="hero-3 section">
+
+      <div class="container">
+
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-12 mb-4 mb-lg-0">
+            <div class="badge-wrapper mb-3">
+              <div class="d-inline-flex align-items-center rounded-pill border border-accent-light">
+                <div class="icon-circle me-2">
+                  <i class="bi bi-mortarboard"></i>
+                </div>
+                <span class="badge-text me-3">Why Choose Us</span>
+              </div>
+            </div>
+
+            <h1 class="hero-title mb-4">Shape Your Future with IICP</h1>
+
+            <p class="hero-description mb-4">
+              Discover the IICP advantage: flexible, self-paced online and distance learning, trending management and IT specializations, and a curriculum regularly updated to match industry demands. Enjoy 24/7 support, affordable fees, and free study material delivery—plus 100% placement support and a strong alumni network to guide your professional journey.
+            </p>
+
+            <div class="cta-wrapper">
+                    <a href=#certifications class="btn-tour">Explore Programs</a>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row feature-boxes">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-journal-check"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Diverse Learning Resources</h3>
+                <p class="feature-text">
+                  Access eBooks, study notes, video tutorials, practice exams, and more for comprehensive, flexible learning. Enjoy free study material delivery upon enrollment.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-globe"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Industry-Relevant &amp; Trending</h3>
+                <p class="feature-text">
+                  Choose from up-to-date management and IT specializations. Our curriculum is regularly refreshed to reflect the latest market trends and employer needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-people"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Placement &amp; Support</h3>
+                <p class="feature-text">
+                  100% placement support with job alerts, resume building, interview prep, and a strong alumni network. Benefit from 24/7 assistance via WhatsApp, email, and digital resources.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row feature-boxes mt-4">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-file-earmark-text"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Online Exams &amp; Mock Tests</h3>
+                <p class="feature-text">
+                  Convenient online assessments and mock tests help you track your progress and prepare effectively for real-world challenges.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Affordable Fees</h3>
+                <p class="feature-text">
+                  Flexible payment plans and cost-effective tuition make high-quality education accessible to everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="feature-box">
+              <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <div class="feature-content">
+                <h3 class="feature-title">Flexible Study Options</h3>
+                <p class="feature-text">
+                  Study at your own pace with self-paced online and distance learning, tailored to fit your schedule and career goals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero 3 Section -->
 
     <!-- Stats Section -->
     <section id="stats" class="stats section">
@@ -1397,7 +1217,7 @@
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer position-relative dark-background">
 
     <div class="container">
       <div class="row gy-3">
@@ -1416,7 +1236,7 @@
           <div>
             <h4>Contact</h4>
             <p>
-              <strong>Phone:</strong> <span>+919284157202</span><br>
+              <strong>Phone:</strong> <span>+91-8888-014-37</span><br>
               <strong>Email:</strong> <span>info@iicp.in</span><br>
             </p>
           </div>
@@ -1449,10 +1269,8 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
-        <li class="nav-item"><a href="trainers.html" class="nav-link">Trainers</a></li>
-        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
         <li class="nav-item"><a href="terms.html" class="nav-link">Terms of service</a></li>
@@ -1461,7 +1279,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">IICP</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">IICP&nbsp;Business School</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>

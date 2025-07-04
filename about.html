@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - iicp</title>
+  <title>About - iicp2</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -30,39 +30,72 @@
 
 <body class="about-page">
 
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+  <header id="header" class="header position-relative">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-88888-014-37</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
 
-      </a>
+    <div class="branding d-flex align-items-cente">
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="courses.html">Courses</a></li>
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="https://i.ibb.co/0pcVh9ZG/final-Logo.png" alt="">
 
-          <li><a href="admission.html">Admission</a></li>
+        </a>
 
-          <li><a href="contact.html" class="blue-border">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li class="dropdown">
+              <a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="pg-courses.html">PG Courses</a></li>
+                <li><a href="it-courses.html">IT Courses</a></li>
+                <li><a href="graduate-courses.html">Graduate Courses</a></li>
+                <li><a href="diploma-courses.html">Diploma Courses</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="exam.html">Exam</a></li>
+                <li><a href="placement.html">Placement</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+            </li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="contact.html" class="blue-border">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-      <a class="btn-getstarted" href="admission.html">Get Started</a>
+      </div>
 
     </div>
+
   </header>
 
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title light-background position-relative">
-      <div class="container">
+    <div class="page-title dark-background" style="background-image: url(assets/img/bg/bg-7.webp);">
+      <div class="container position-relative">
         <h1>About&nbsp; IICP</h1>
+        <p>Empowering careers through industry-aligned learning and comprehensive support.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -74,124 +107,119 @@
 
     <!-- About 2 Section -->
     <section id="about-2" class="about-2 section">
-
       <div class="container">
-
-        <div class="row g-5">
+        <div class="row align-items-center g-5">
           <div class="col-lg-6">
-            <div class="content-wrapper">
-              <div class="section-badge">About Our Platform</div>
-              <h3>Transforming Careers with Industry-Integrated Learning</h3>
-              <p>IICP bridges the gap between education and employment by offering cutting-edge, industry-aligned courses and robust career support tailored to your goals.</p>
+            <div class="about-content">
+              <h2>About Us</h2>
+              <p>
+                <strong>The International Institute of Career Progression (IICP)</strong> is a privately run, fully autonomous training center dedicated to delivering high-quality, industry-relevant education in management and information technology. We specialize in flexible, certification-based programs designed to empower learners at every stage of their professional journey.
+              </p>
+              <h3>Who We Are</h3>
+              <p>
+                Founded with a mission to make professional education accessible and practical, IICP offers a wide range of certificate programs for individuals who may have missed traditional higher education or are seeking to upskill for career advancement. Our curriculum is crafted by experienced faculty and industry experts, ensuring every course is aligned with current market needs and global best practices.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image">
+              <img src="assets/img/education/campus-5.webp" alt="Campus" class="img-fluid rounded">
+            </div>
+          </div>
+        </div>
 
-              <div class="skills-wrapper">
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span class="skill-name">Career Preparation</span>
-                    <span class="skill-percentage">95%</span>
-                  </div>
-                  <div class="progress-bar-wrapper">
-                    <div class="progress-bar" data-width="95"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span class="skill-name">Industry Alignment</span>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress-bar-wrapper">
-                    <div class="progress-bar" data-width="90"></div>
-                  </div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-info">
-                    <span class="skill-name">Job Placement</span>
-                    <span class="skill-percentage">88%</span>
-                  </div>
-                  <div class="progress-bar-wrapper">
-                    <div class="progress-bar" data-width="88"></div>
-                  </div>
-                </div>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="vision-mission-philosophy">
+              <div class="vision mb-4">
+                <h3><i class="bi bi-eye"></i> Our Vision</h3>
+                <p>
+                  To be a leading global institute recognized for excellence in management and IT education, fostering innovation, practical skills, and lifelong learning for a rapidly changing world.
+                </p>
+              </div>
+              <div class="mission mb-4">
+                <h3><i class="bi bi-bullseye"></i> Our Mission</h3>
+                <ul>
+                  <li>To reach, educate, inspire, and nurture today’s generation of professionals.</li>
+                  <li>To integrate cutting-edge business and technology practices into every course.</li>
+                  <li>To promote enterprise, innovation, and leadership through accessible, flexible learning.</li>
+                </ul>
+              </div>
+              <div class="philosophy">
+                <h3><i class="bi bi-lightbulb"></i> Our Philosophy</h3>
+                <ul>
+                  <li><strong>Flexible:</strong> Study at your own pace, anywhere, anytime, with comprehensive learning materials and online support.</li>
+                  <li><strong>Practical:</strong> Programs focus on real-world application, preparing students for immediate impact in their chosen fields.</li>
+                  <li><strong>Accessible:</strong> We welcome learners from diverse backgrounds, offering affordable options and open enrollment.</li>
+                  <li><strong>Innovative:</strong> Our curriculum is regularly updated to reflect the latest industry trends and employer expectations.</li>
+                </ul>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-6">
-            <div class="timeline-wrapper w-100">
-              <div class="timeline-item">
-                <div class="timeline-marker">
-                  <i class="bi bi-rocket-takeoff"></i>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="what-we-offer">
+              <h3 class="text-center mb-4">What We Offer</h3>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <h4>Certificate Programs</h4>
+                    <p>Industry-recognized certifications in management and IT, designed for both freshers and working professionals.</p>
+                  </div>
                 </div>
-                <div class="timeline-content">
-                  <h4>Platform Launched</h4>
-                  <p>IICP was founded to empower individuals with industry-relevant skills and career opportunities through innovative eLearning solutions.</p>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-person-badge"></i>
+                    </div>
+                    <h4>Expert Faculty</h4>
+                    <p>Courses developed and delivered by seasoned professionals and academic leaders.</p>
+                  </div>
                 </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-marker">
-                  <i class="bi bi-graph-up-arrow"></i>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h4>Career-Focused Learning</h4>
+                    <p>Emphasis on skill development, employability, and practical knowledge.</p>
+                  </div>
                 </div>
-                <div class="timeline-content">
-                  <h4>Expanded Offerings</h4>
-                  <p>Introduced comprehensive career tools, including job alerts, resume builders, and curated learning resources to support career growth.</p>
-                </div>
-              </div>
-
-              <div class="timeline-item">
-                <div class="timeline-marker">
-                  <i class="bi bi-trophy"></i>
-                </div>
-                <div class="timeline-content">
-                  <h4>Industry Recognition</h4>
-                  <p>Gained recognition for connecting learners with top employers and providing impactful, skill-focused training programs.</p>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <h4>Supportive Environment</h4>
+                    <p>Dedicated student support, online resources, and flexible assessment options.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row g-4 mt-5">
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="icon-wrapper">
-                <i class="bi bi-lightbulb"></i>
-              </div>
-              <h4>Skill-Focused Learning</h4>
-              <p>Our platform delivers cutting-edge courses designed to equip learners with in-demand skills for today’s job market.</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="icon-wrapper">
-                <i class="bi bi-people"></i>
-              </div>
-              <h4>Career Support</h4>
-              <p>We provide personalized tools and resources, from resume builders to job alerts, to accelerate your career journey.</p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="value-card">
-              <div class="icon-wrapper">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <h4>Industry Connections</h4>
-              <p>Partnering with top employers, we ensure our training aligns with real-world opportunities for your success.</p>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="important-note">
+              <h3 class="text-center mb-3"><i class="bi bi-exclamation-triangle"></i> Important Note</h3>
+              <p>
+                As an autonomous training institute, IICP does not award degrees or diplomas but provides certificates upon successful course completion. These certifications are highly valued in the private sector for their practical orientation and relevance to today’s job market. Our open learning model allows you to progress at your own pace, supported by expert faculty and comprehensive study materials.
+              </p>
             </div>
           </div>
         </div>
-
       </div>
-
     </section><!-- /About 2 Section -->
 
   </main>
 
-  <footer id="footer" class="footer dark-background">
+  <footer id="footer" class="footer position-relative dark-background">
 
     <div class="container">
       <div class="row gy-3">
@@ -210,7 +238,7 @@
           <div>
             <h4>Contact</h4>
             <p>
-              <strong>Phone:</strong> <span>+919284157202</span><br>
+              <strong>Phone:</strong> <span>+91-8888-014-37</span><br>
               <strong>Email:</strong> <span>info@iicp.in</span><br>
             </p>
           </div>
@@ -243,10 +271,8 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="courses.html" class="nav-link">Courses</a></li>
-        <li class="nav-item"><a href="trainers.html" class="nav-link">Trainers</a></li>
-        <li class="nav-item"><a href="events.html" class="nav-link">Events</a></li>
-        <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
         <li class="nav-item"><a href="terms.html" class="nav-link">Terms of service</a></li>
@@ -255,7 +281,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">IICP</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">IICP&nbsp;Business School</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>
