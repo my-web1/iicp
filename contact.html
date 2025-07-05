@@ -144,7 +144,86 @@
           </div>
 
           <div class="col-lg-7">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezo6ZzKRJp55WvdMyAcuhffErckBq9HP_vJQ7UQ3-ip-y74w/viewform?embedded=true" width="700" height="1020" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!-- Contact Form using FormSubmit (formsubmit.co) -->
+<form action="https://formsubmit.co/equimedia3@gmail.com" method="POST" class="contact-form" autocomplete="off">
+  <div class="form-group">
+    <label for="name">Name<span>*</span></label>
+    <input type="text" id="name" name="name" required placeholder="Your Name">
+  </div>
+  <div class="form-group">
+    <label for="mobile">Mobile<span>*</span></label>
+    <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10,15}" placeholder="Your Mobile Number">
+  </div>
+  <div class="form-group">
+    <label for="email">Email ID<span>*</span></label>
+    <input type="email" id="email" name="email" required placeholder="Your Email Address">
+  </div>
+  <div class="form-group">
+    <label for="message">Message<span>*</span></label>
+    <textarea id="message" name="message" rows="4" required placeholder="Type your message"></textarea>
+  </div>
+  <!-- Optional: Prevent spam -->
+  <input type="hidden" name="_captcha" value="false">
+  <!-- Optional: Redirect after submit -->
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+<style>
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.contact-form .form-group {
+  margin-bottom: 1.2rem;
+}
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #0056b3;
+}
+.contact-form label span {
+  color: #e63946;
+  margin-left: 2px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  background: #f8f9fa;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+  background: #fff;
+}
+.contact-form .submit-btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  background: #0056b3;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form .submit-btn:hover {
+  background: #003f7d;
+}
+</style>
           </div>
         </div>
 
