@@ -1,0 +1,300 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services {
+  background: #fff;
+  padding: 2rem 0;
+}
+
+.services .service-card {
+  background: var(--surface-color, #f8f9fa);
+  border-radius: 20px;
+  padding: 35px 25px;
+  height: 100%;
+  position: relative;
+  border: 1px solid color-mix(in srgb, var(--default-color, #222), transparent 92%);
+  transition: box-shadow 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    border-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.services .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent-color, #0056b3), transparent 95%), transparent);
+  transition: left 0.5s ease;
+  z-index: 1;
+}
+
+.services .service-card .service-number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color, #0056b3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--contrast-color, #fff);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color, #0056b3), transparent 60%);
+  z-index: 2;
+}
+
+.services .service-card .service-icon-wrapper {
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.services .service-card .service-icon-wrapper .service-icon {
+  width: 70px;
+  height: 70px;
+  background: color-mix(in srgb, var(--accent-color, #0056b3), transparent 90%);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.services .service-card .service-icon-wrapper .service-icon i {
+  font-size: 32px;
+  color: var(--accent-color, #0056b3);
+  transition: color 0.3s;
+}
+
+.services .service-card .service-content {
+  position: relative;
+  z-index: 2;
+}
+
+.services .service-card .service-content h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--heading-color, #222);
+}
+
+.services .service-card .service-content p {
+  color: color-mix(in srgb, var(--default-color, #222), transparent 25%);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.services .service-card .service-content .service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.services .service-card .service-content .service-list li {
+  padding: 6px 0 6px 20px;
+  color: color-mix(in srgb, var(--default-color, #222), transparent 15%);
+  font-size: 14px;
+  position: relative;
+}
+
+.services .service-card .service-content .service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color, #0056b3);
+  border-radius: 50%;
+}
+
+.services .service-card .service-content .service-pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color, #222), transparent 92%);
+}
+
+.services .service-card .service-content .service-pricing .price-tag {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color, #0056b3);
+  position: relative;
+}
+
+.services .service-card .service-content .service-pricing .price-tag::before {
+  content: 'From ';
+  font-size: 12px;
+  font-weight: 400;
+  color: color-mix(in srgb, var(--default-color, #222), transparent 40%);
+  position: absolute;
+  left: -45px;
+  top: 5px;
+}
+
+.services .service-card .service-content .service-pricing .service-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--accent-color, #0056b3), transparent 70%);
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--accent-color, #0056b3);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.services .service-card .service-content .service-pricing .service-btn i {
+  transition: transform 0.3s;
+}
+
+.services .service-card .service-content .service-pricing .service-btn:hover {
+  background: var(--accent-color, #0056b3);
+  color: var(--contrast-color, #fff);
+  border-color: var(--accent-color, #0056b3);
+}
+
+.services .service-card .service-content .service-pricing .service-btn:hover i {
+  transform: translateX(3px);
+}
+
+.services .service-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color, #222), transparent 85%);
+  border-color: var(--accent-color, #0056b3);
+}
+
+.services .service-card:hover::before {
+  left: 100%;
+}
+
+.services .service-card:hover .service-icon-wrapper .service-icon {
+  background: var(--accent-color, #0056b3);
+  transform: rotate(5deg) scale(1.1);
+}
+
+.services .service-card:hover .service-icon-wrapper .service-icon i {
+  color: var(--contrast-color, #fff);
+}
+
+/* Remove preselected/featured card styling */
+.services .service-card.featured {
+  background: var(--surface-color, #f8f9fa);
+  border-color: color-mix(in srgb, var(--default-color, #222), transparent 92%);
+  transform: none;
+}
+
+.services .service-card.featured .service-number {
+  background: var(--accent-color, #0056b3);
+  color: var(--contrast-color, #fff);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color, #0056b3), transparent 60%);
+}
+
+.services .service-card.featured .service-icon-wrapper .service-icon {
+  background: color-mix(in srgb, var(--accent-color, #0056b3), transparent 90%);
+}
+
+.services .service-card.featured .service-icon-wrapper .service-icon i {
+  color: var(--accent-color, #0056b3);
+}
+
+.services .service-card.featured .service-content h4 {
+  color: var(--heading-color, #222);
+}
+
+.services .service-card.featured .service-content p {
+  color: color-mix(in srgb, var(--default-color, #222), transparent 25%);
+}
+
+.services .service-card.featured .service-content .service-list li {
+  color: color-mix(in srgb, var(--default-color, #222), transparent 15%);
+}
+
+.services .service-card.featured .service-content .service-list li::before {
+  background: var(--accent-color, #0056b3);
+}
+
+.services .service-card.featured .service-content .service-pricing {
+  border-top-color: color-mix(in srgb, var(--default-color, #222), transparent 92%);
+}
+
+.services .service-card.featured .service-content .service-pricing .price-tag {
+  color: var(--accent-color, #0056b3);
+}
+
+.services .service-card.featured .service-content .service-pricing .price-tag::before {
+  color: color-mix(in srgb, var(--default-color, #222), transparent 40%);
+}
+
+.services .service-card.featured .service-content .service-pricing .service-btn {
+  background: transparent;
+  color: var(--accent-color, #0056b3);
+  border-color: color-mix(in srgb, var(--accent-color, #0056b3), transparent 70%);
+}
+
+.services .service-card.featured .service-content .service-pricing .service-btn:hover {
+  background: var(--accent-color, #0056b3);
+  color: var(--contrast-color, #fff);
+  border-color: var(--accent-color, #0056b3);
+}
+
+@media (max-width: 992px) {
+  .services .service-card {
+    padding: 30px 20px;
+  }
+
+  .services .service-card .service-number {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .services .service-card .service-icon-wrapper .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .services .service-card .service-icon-wrapper .service-icon i {
+    font-size: 28px;
+  }
+
+  .services .service-card .service-content h4 {
+    font-size: 20px;
+  }
+
+  .services .service-card .service-content .service-pricing .price-tag {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services .service-card {
+    padding: 25px 15px;
+  }
+
+  .services .service-card .service-content .service-pricing {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .services .service-card .service-content .service-pricing .service-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
