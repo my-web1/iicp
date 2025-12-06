@@ -45,7 +45,8 @@
         transform: rotateY(180deg);
 
         i {
-          transform: rotateY(180deg);
+          transform: rotateY(-180deg);
+          /* Fixed: counter-rotate icon */
         }
       }
 
@@ -72,25 +73,72 @@
     transition: all 0.5s ease;
 
     i {
-      font-size: 2rem;
+      font-size: 1.8rem;
+      /* Slightly smaller for better fit */
       transition: transform 0.5s ease;
     }
   }
 
-  // Service content styling
+  // Service content styling - UPDATED FOR PROGRAM LISTS
   .service-content {
     flex-grow: 1;
+    width: 100%;
 
+    /* Ensure full width for lists */
     h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
       font-weight: 700;
       color: var(--heading-color);
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
     }
 
     p {
       margin-bottom: 1.25rem;
       color: color-mix(in srgb, var(--default-color), transparent 20%);
+      line-height: 1.6;
+    }
+
+    /* NEW: Styling for program lists */
+    ul {
+      margin: 0 0 1.25rem 0;
+      padding-left: 1.2em;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      /* Single column by default */
+      gap: 0.5rem;
+
+      li {
+        position: relative;
+        padding-left: 0.5rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: color-mix(in srgb, var(--default-color), transparent 15%);
+
+        &::before {
+          content: "•";
+          color: var(--accent-color);
+          position: absolute;
+          left: -0.8em;
+          font-weight: bold;
+        }
+
+        &:hover {
+          color: var(--heading-color);
+          transform: translateX(3px);
+          transition: all 0.2s ease;
+        }
+      }
     }
   }
 
@@ -102,6 +150,7 @@
     font-weight: 600;
     text-decoration: none;
     transition: color 0.3s ease;
+    margin-top: 0.5rem;
 
     span {
       margin-right: 0.5rem;
@@ -109,6 +158,7 @@
 
     i {
       transition: transform 0.3s ease;
+      font-size: 0.9rem;
     }
 
     &:hover {
@@ -116,17 +166,27 @@
     }
   }
 
-  // Responsive styles
+  // Responsive styles - UPDATED FOR PROGRAM LISTS
+  @media (max-width: 991.98px) {
+    .service-content {
+      ul {
+        // Two columns for tablets
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem 1.5rem;
+      }
+    }
+  }
+
   @media (max-width: 767.98px) {
     .service-item {
-      padding: 1.5rem;
+      padding: 1.75rem;
       margin-bottom: 1rem;
     }
 
     .service-icon {
       width: 60px;
       height: 60px;
-      margin-right: 1rem;
+      margin-right: 1.25rem;
 
       i {
         font-size: 1.5rem;
@@ -135,14 +195,30 @@
 
     .service-content {
       h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        margin-bottom: 0.85rem;
       }
 
       p {
-        margin-bottom: 1rem;
+        margin-bottom: 1.1rem;
         font-size: 0.95rem;
       }
+
+      ul {
+        // Back to single column on mobile
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+        margin-bottom: 1.1rem;
+
+        li {
+          font-size: 0.9rem;
+          padding-left: 0.4rem;
+        }
+      }
+    }
+
+    .service-link {
+      font-size: 0.95rem;
     }
   }
 
@@ -150,6 +226,7 @@
     .service-item {
       flex-direction: column;
       text-align: center;
+      padding: 1.5rem;
 
       &::before {
         width: 100%;
@@ -166,10 +243,39 @@
     .service-icon {
       margin-right: 0;
       margin-bottom: 1.25rem;
+      align-self: center;
+    }
+
+    .service-content {
+      text-align: center;
+
+      ul {
+        text-align: left;
+        padding-left: 0;
+        margin-left: 0;
+
+        li {
+          padding-left: 1em;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
     }
 
     .service-link {
       justify-content: center;
+      margin-top: 0.75rem;
+    }
+  }
+
+  // Special adjustments for HR Programs (longest list)
+  @media (min-width: 768px) and (max-width: 991.98px) {
+
+    // For HR programs specifically, you might want single column
+    .service-content ul:has(li:nth-child(10)) {
+      grid-template-columns: 1fr;
     }
   }
 }

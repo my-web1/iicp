@@ -16,7 +16,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #3d85c6; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #3ba7f9; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -24,11 +24,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #3d85c6; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #3ba7f9; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #3d85c6; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #3ba7f9; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1467,7 +1467,8 @@ section,
 }
 
 .services-5 .service-item:hover .service-icon i {
-  transform: rotateY(180deg);
+  transform: rotateY(-180deg);
+  /* Fixed: counter-rotate icon */
 }
 
 .services-5 .service-item:hover .service-link i {
@@ -1489,12 +1490,16 @@ section,
 }
 
 .services-5 .service-icon i {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  /* Slightly smaller for better fit */
   transition: transform 0.5s ease;
 }
 
 .services-5 .service-content {
   flex-grow: 1;
+  width: 100%;
+  /* Ensure full width for lists */
+  /* NEW: Styling for program lists */
 }
 
 .services-5 .service-content h3 {
@@ -1504,9 +1509,52 @@ section,
   color: var(--heading-color);
 }
 
+.services-5 .service-content h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.services-5 .service-content h3 a:hover {
+  color: var(--accent-color);
+}
+
 .services-5 .service-content p {
   margin-bottom: 1.25rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.6;
+}
+
+.services-5 .service-content ul {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.2em;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Single column by default */
+  gap: 0.5rem;
+}
+
+.services-5 .service-content ul li {
+  position: relative;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+.services-5 .service-content ul li::before {
+  content: "•";
+  color: var(--accent-color);
+  position: absolute;
+  left: -0.8em;
+  font-weight: bold;
+}
+
+.services-5 .service-content ul li:hover {
+  color: var(--heading-color);
+  transform: translateX(3px);
+  transition: all 0.2s ease;
 }
 
 .services-5 .service-link {
@@ -1516,6 +1564,7 @@ section,
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
+  margin-top: 0.5rem;
 }
 
 .services-5 .service-link span {
@@ -1524,22 +1573,30 @@ section,
 
 .services-5 .service-link i {
   transition: transform 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .services-5 .service-link:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+@media (max-width: 991.98px) {
+  .services-5 .service-content ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem 1.5rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .services-5 .service-item {
-    padding: 1.5rem;
+    padding: 1.75rem;
     margin-bottom: 1rem;
   }
 
   .services-5 .service-icon {
     width: 60px;
     height: 60px;
-    margin-right: 1rem;
+    margin-right: 1.25rem;
   }
 
   .services-5 .service-icon i {
@@ -1547,12 +1604,27 @@ section,
   }
 
   .services-5 .service-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.85rem;
   }
 
   .services-5 .service-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .services-5 .service-content ul {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .services-5 .service-content ul li {
+    font-size: 0.9rem;
+    padding-left: 0.4rem;
+  }
+
+  .services-5 .service-link {
     font-size: 0.95rem;
   }
 }
@@ -1561,6 +1633,7 @@ section,
   .services-5 .service-item {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
   }
 
   .services-5 .service-item::before {
@@ -1577,10 +1650,36 @@ section,
   .services-5 .service-icon {
     margin-right: 0;
     margin-bottom: 1.25rem;
+    align-self: center;
+  }
+
+  .services-5 .service-content {
+    text-align: center;
+  }
+
+  .services-5 .service-content ul {
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .services-5 .service-content ul li {
+    padding-left: 1em;
+  }
+
+  .services-5 .service-content ul li::before {
+    left: 0;
   }
 
   .services-5 .service-link {
     justify-content: center;
+    margin-top: 0.75rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .services-5 .service-content ul:has(li:nth-child(10)) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -5601,6 +5700,7 @@ section,
 # Course Detailsundefinedundefined 2 Section
 --------------------------------------------------------------*/
 .course-detailsundefinedundefined-2 {
+  padding-top: 60px;
   --accent-color: #141413;
   --heading-color: #222b45;
   --default-color: #535c68;
@@ -5609,6 +5709,7 @@ section,
   background: var(--surface-color);
   color: var(--default-color);
   font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 60px;
   /* Responsive Improvements */
 }
 
@@ -6915,164 +7016,114 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Departments Section
 --------------------------------------------------------------*/
-.services .service-item {
-  display: flex;
-  background-color: var(--surface-color);
-  border-radius: 12px;
-  padding: 2rem;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+.departments .department-card {
+  text-align: center;
+  padding: 60px 40px;
   transition: all 0.4s ease;
 }
 
-.services .service-item::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 4px;
-  background-color: var(--accent-color);
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+@media (max-width: 768px) {
+  .departments .department-card {
+    padding: 40px 20px;
+  }
 }
 
-.services .service-item:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transform: translateY(-5px);
+.departments .department-card:hover {
+  transform: translateY(-8px);
 }
 
-.services .service-item:hover::before {
-  transform: scaleY(1);
+.departments .department-card:hover .department-icon {
+  transform: scale(1.1);
 }
 
-.services .service-item:hover .service-icon {
-  background-color: var(--accent-color);
+.departments .department-card:hover .department-icon i {
   color: var(--contrast-color);
-  transform: rotateY(180deg);
 }
 
-.services .service-item:hover .service-icon i {
-  transform: rotateY(180deg);
+.departments .department-card:hover .department-icon::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.services .service-item:hover .service-link i {
-  transform: translateX(5px);
+.departments .department-card:hover .department-link i {
+  transform: translateX(8px);
 }
 
-.services .service-icon {
-  flex-shrink: 0;
-  width: 70px;
-  height: 70px;
-  border-radius: 12px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+.departments .department-card .department-icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 1.5rem;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
-.services .service-icon i {
-  font-size: 2rem;
-  transition: transform 0.5s ease;
+.departments .department-card .department-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
-.services .service-content {
-  flex-grow: 1;
+.departments .department-card .department-icon i {
+  font-size: 36px;
+  color: var(--accent-color);
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
-.services .service-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
+.departments .department-card h3 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
   color: var(--heading-color);
+  font-family: var(--heading-font);
+  letter-spacing: -0.4px;
 }
 
-.services .service-content p {
-  margin-bottom: 1.25rem;
+.departments .department-card p {
+  font-size: 16px;
+  line-height: 1.7;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 30px;
 }
 
-.services .service-link {
+.departments .department-card .department-link {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 400;
   color: var(--accent-color);
-  font-weight: 600;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.services .service-link span {
-  margin-right: 0.5rem;
+.departments .department-card .department-link span {
+  font-family: var(--heading-font);
+  letter-spacing: 0.5px;
 }
 
-.services .service-link i {
+.departments .department-card .department-link i {
+  font-size: 14px;
   transition: transform 0.3s ease;
 }
 
-.services .service-link:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
-
-@media (max-width: 767.98px) {
-  .services .service-item {
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .services .service-icon {
-    width: 60px;
-    height: 60px;
-    margin-right: 1rem;
-  }
-
-  .services .service-icon i {
-    font-size: 1.5rem;
-  }
-
-  .services .service-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .services .service-content p {
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .services .service-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .services .service-item::before {
-    width: 100%;
-    height: 4px;
-    transform: scaleX(0);
-    transform-origin: left;
-  }
-
-  .services .service-item:hover::before {
-    transform: scaleX(1);
-  }
-
-  .services .service-icon {
-    margin-right: 0;
-    margin-bottom: 1.25rem;
-  }
-
-  .services .service-link {
-    justify-content: center;
-  }
+.departments .department-card .department-link:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
 /*--------------------------------------------------------------
