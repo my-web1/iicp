@@ -74,6 +74,19 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Animation on scroll function and init
+   */
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  window.addEventListener('load', aosInit);
+
+  /**
    * Init swiper sliders
    */
   function initSwiper() {
@@ -103,18 +116,6 @@
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
-const btn = document.getElementById('connectNowBtn');
-const options = document.getElementById('connectOptions');
-
-btn.addEventListener('click', () => {
-  options.style.display = (options.style.display === 'flex') ? 'none' : 'flex';
-});
-
-window.addEventListener('click', function (e) {
-  if (!document.getElementById('connectNowContainer').contains(e.target)) {
-    options.style.display = 'none';
-  }
-});
 
   /**
    * Frequently Asked Questions Toggle

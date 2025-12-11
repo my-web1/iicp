@@ -6,17 +6,19 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  // Service item styling
-  .service-item {
+  // Service item styling - RENAMED TO PROGRAM-CARD
+  .program-card {
     display: flex;
+    flex-direction: column;
     background-color: var(--surface-color);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 0;
     height: 100%;
     position: relative;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
     transition: all 0.4s ease;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 
     &::before {
       content: '';
@@ -25,32 +27,34 @@
       top: 0;
       height: 100%;
       width: 4px;
-      background-color: var(--accent-color);
+      background: linear-gradient(to bottom, var(--accent-color), #6f42c1);
       transform: scaleY(0);
       transform-origin: bottom;
       transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
     }
 
     &:hover {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
 
       &::before {
         transform: scaleY(1);
       }
 
-      .service-icon {
+      .program-icon {
         background-color: var(--accent-color);
         color: var(--contrast-color);
-        transform: rotateY(180deg);
+        transform: scale(1.05);
 
         i {
-          transform: rotateY(-180deg);
-          /* Fixed: counter-rotate icon */
+          transform: scale(1.1);
         }
       }
 
-      .service-link {
+      .program-link {
+        background-color: var(--accent-color);
+
         i {
           transform: translateX(5px);
         }
@@ -58,99 +62,240 @@
     }
   }
 
-  // Service icon styling
-  .service-icon {
+  // Program header styling
+  .program-header {
+    background: linear-gradient(135deg, var(--accent-color) 0%, #2c3e50 100%);
+    color: white;
+    padding: 1.75rem;
+    position: relative;
     flex-shrink: 0;
-    width: 70px;
-    height: 70px;
+  }
+
+  // Program icon styling
+  .program-icon {
+    width: 60px;
+    height: 60px;
     border-radius: 12px;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1.5rem;
+    margin-bottom: 1rem;
     transition: all 0.5s ease;
 
     i {
-      font-size: 1.8rem;
-      /* Slightly smaller for better fit */
+      font-size: 1.6rem;
       transition: transform 0.5s ease;
     }
   }
 
-  // Service content styling - UPDATED FOR PROGRAM LISTS
-  .service-content {
-    flex-grow: 1;
-    width: 100%;
+  .program-header h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    color: white;
 
-    /* Ensure full width for lists */
-    h3 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      color: var(--heading-color);
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
 
-      a {
-        color: inherit;
-        text-decoration: none;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: var(--accent-color);
-        }
-      }
-    }
-
-    p {
-      margin-bottom: 1.25rem;
-      color: color-mix(in srgb, var(--default-color), transparent 20%);
-      line-height: 1.6;
-    }
-
-    /* NEW: Styling for program lists */
-    ul {
-      margin: 0 0 1.25rem 0;
-      padding-left: 1.2em;
-      list-style-type: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      /* Single column by default */
-      gap: 0.5rem;
-
-      li {
-        position: relative;
-        padding-left: 0.5rem;
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: color-mix(in srgb, var(--default-color), transparent 15%);
-
-        &::before {
-          content: "•";
-          color: var(--accent-color);
-          position: absolute;
-          left: -0.8em;
-          font-weight: bold;
-        }
-
-        &:hover {
-          color: var(--heading-color);
-          transform: translateX(3px);
-          transition: all 0.2s ease;
-        }
+      &:hover {
+        color: rgba(255, 255, 255, 0.9);
+        text-decoration: underline;
       }
     }
   }
 
-  // Service link styling
-  .service-link {
+  .program-level {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+
+  // Program content styling
+  .program-content {
+    padding: 1.75rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    .program-description {
+      margin-bottom: 1.25rem;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+  }
+
+  // Specializations styling
+  .specializations {
+    margin: 1rem 0 1.25rem 0;
+
+    h6 {
+      color: var(--heading-color);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+  }
+
+  .specialization-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .spec-item {
+    background: color-mix(in srgb, var(--surface-color), transparent 30%);
+    padding: 0.85rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent-color);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: color-mix(in srgb, var(--accent-color), transparent 95%);
+      transform: translateX(3px);
+    }
+
+    h5 {
+      font-size: 0.9rem;
+      margin: 0 0 0.25rem 0;
+      color: var(--heading-color);
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.8rem;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      margin: 0;
+    }
+  }
+
+  .spec-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .spec-badge {
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--accent-color);
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: white;
+    }
+  }
+
+  .program-list {
+    margin: 0.5rem 0;
+    padding-left: 1.2em;
+    list-style-type: none;
+
+    li {
+      position: relative;
+      padding-left: 0.5rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      margin-bottom: 0.4rem;
+
+      &::before {
+        content: "✓";
+        color: var(--accent-color);
+        position: absolute;
+        left: -0.8em;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  // Program features styling
+  .program-features {
+    margin: 0.75rem 0 1.25rem 0;
+
+    h6 {
+      color: var(--heading-color);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: color-mix(in srgb, var(--default-color), transparent 15%);
+      display: flex;
+      align-items: flex-start;
+    }
+
+    i {
+      color: #28a745;
+      margin-right: 0.5rem;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+  }
+
+  // Program details styling
+  .program-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+
+    i {
+      color: var(--accent-color);
+      font-size: 0.9rem;
+    }
+  }
+
+  // Program link styling
+  .program-link {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
     color: var(--accent-color);
-    font-weight: 600;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
     text-decoration: none;
-    transition: color 0.3s ease;
-    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+    width: fit-content;
 
     span {
       margin-right: 0.5rem;
@@ -158,76 +303,101 @@
 
     i {
       transition: transform 0.3s ease;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     &:hover {
-      color: color-mix(in srgb, var(--accent-color), transparent 25%);
+      background-color: var(--accent-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
   }
 
-  // Responsive styles - UPDATED FOR PROGRAM LISTS
+  // Responsive styles
   @media (max-width: 991.98px) {
-    .service-content {
-      ul {
-        // Two columns for tablets
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem 1.5rem;
+    .program-content {
+      .specialization-grid {
+        grid-template-columns: 1fr;
       }
     }
   }
 
   @media (max-width: 767.98px) {
-    .service-item {
-      padding: 1.75rem;
+    .program-card {
       margin-bottom: 1rem;
     }
 
-    .service-icon {
-      width: 60px;
-      height: 60px;
-      margin-right: 1.25rem;
+    .program-header {
+      padding: 1.5rem;
+    }
+
+    .program-icon {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 0.85rem;
 
       i {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
     }
 
-    .service-content {
-      h3 {
-        font-size: 1.25rem;
-        margin-bottom: 0.85rem;
+    .program-header h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-level {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.65rem;
+    }
+
+    .program-content {
+      padding: 1.5rem;
+    }
+
+    .program-description {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .spec-item {
+      padding: 0.75rem;
+
+      h5 {
+        font-size: 0.85rem;
       }
 
       p {
-        margin-bottom: 1.1rem;
-        font-size: 0.95rem;
-      }
-
-      ul {
-        // Back to single column on mobile
-        grid-template-columns: 1fr;
-        gap: 0.4rem;
-        margin-bottom: 1.1rem;
-
-        li {
-          font-size: 0.9rem;
-          padding-left: 0.4rem;
-        }
+        font-size: 0.75rem;
       }
     }
 
-    .service-link {
-      font-size: 0.95rem;
+    .spec-badge {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+    }
+
+    .program-list li {
+      font-size: 0.85rem;
+    }
+
+    .program-features li {
+      font-size: 0.85rem;
+    }
+
+    .detail-item {
+      font-size: 0.8rem;
+    }
+
+    .program-link {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
     }
   }
 
   @media (max-width: 575.98px) {
-    .service-item {
-      flex-direction: column;
-      text-align: center;
-      padding: 1.5rem;
-
+    .program-card {
       &::before {
         width: 100%;
         height: 4px;
@@ -240,42 +410,132 @@
       }
     }
 
-    .service-icon {
-      margin-right: 0;
-      margin-bottom: 1.25rem;
-      align-self: center;
-    }
-
-    .service-content {
+    .program-header {
       text-align: center;
-
-      ul {
-        text-align: left;
-        padding-left: 0;
-        margin-left: 0;
-
-        li {
-          padding-left: 1em;
-
-          &::before {
-            left: 0;
-          }
-        }
-      }
     }
 
-    .service-link {
+    .program-icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .program-content {
+      text-align: center;
+    }
+
+    .spec-item {
+      text-align: left;
+    }
+
+    .spec-badges {
       justify-content: center;
-      margin-top: 0.75rem;
+    }
+
+    .program-list {
+      text-align: left;
+    }
+
+    .program-features ul {
+      text-align: left;
+    }
+
+    .program-details {
+      justify-content: center;
+    }
+
+    .program-link {
+      align-self: center;
     }
   }
 
-  // Special adjustments for HR Programs (longest list)
-  @media (min-width: 768px) and (max-width: 991.98px) {
+  // Delivery method styling
+  .delivery-method {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 3rem;
 
-    // For HR programs specifically, you might want single column
-    .service-content ul:has(li:nth-child(10)) {
-      grid-template-columns: 1fr;
+    h4 {
+      color: var(--heading-color);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 700;
+    }
+  }
+
+  .delivery-content {
+    h5 {
+      color: var(--heading-color);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      li {
+        margin-bottom: 0.75rem;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          color: var(--accent-color);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  // Compliance notice styling
+  .compliance-notice {
+    background: #e8f4fd;
+    border: 1px solid #b6d4fe;
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .compliance-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+
+    i {
+      font-size: 1.5rem;
+      color: #0d6efd;
+    }
+
+    h5 {
+      color: #0a58ca;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+
+  .compliance-content {
+    ul {
+      margin: 0.75rem 0;
+      padding-left: 1.2em;
+
+      li {
+        margin-bottom: 0.5rem;
+        color: #333;
+        font-size: 0.9rem;
+      }
+    }
+
+    .small {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 1rem;
+      font-style: italic;
     }
   }
 }

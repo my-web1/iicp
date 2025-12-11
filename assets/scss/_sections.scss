@@ -27,34 +27,49 @@ section,
   position: relative;
 
   h2 {
-    font-size: 13px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 8px 20px;
-    margin: 0;
-    background: color-mix(in srgb, var(--accent-color), transparent 90%);
-    color: var(--accent-color);
-    display: inline-block;
-    text-transform: uppercase;
-    border-radius: 50px;
-    font-family: var(--default-font);
-  }
-
-  div {
-    color: var(--heading-color);
-    margin: 10px 0 0 0;
     font-size: 32px;
     font-weight: 700;
-    font-family: var(--heading-font);
+    position: relative;
 
-    .description-title {
-      color: var(--accent-color);
+    &:before,
+    &:after {
+      content: '';
+      width: 50px;
+      height: 2px;
+      background: var(--accent-color);
+      display: inline-block;
+    }
+
+    &:before {
+      margin: 0 15px 10px 0;
+    }
+
+    &:after {
+      margin: 0 0 10px 15px;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @media(max-width: 768px) {
+    h2 {
+      font-size: 20px;
+
+      &:before,
+      &:after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background: var(--accent-color);
+        display: inline-block;
+      }
     }
   }
 }
 
 @import './sections/_hero-2.scss';
-@import './sections/_features-3.scss';
 @import './sections/_about.scss';
 @import './sections/_testimonials-2.scss';
 @import './sections/_services-5.scss';
@@ -70,15 +85,6 @@ section,
 @import './sections/_faq.scss';
 @import './sections/_about-3.scss';
 @import './sections/_features-2.scss';
-@import './sections/_course-details.scss';
-@import './sections/_course-details-2.scss';
-@import './sections/_course-detailsundefined.scss';
-@import './sections/_course-detailsundefined-2.scss';
-@import './sections/_course-detailsundefinedundefined.scss';
-@import './sections/_course-detailsundefinedundefined-2.scss';
-@import './sections/_course-details-3.scss';
-@import './sections/_course-detailsundefined-3.scss';
-@import './sections/_course-detailsundefinedundefined-3.scss';
 @import './sections/_about-4.scss';
 @import './sections/_departments.scss';
 @import './sections/_about-5.scss';

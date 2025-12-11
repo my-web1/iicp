@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Placement - IICP-Institute</title>
+  <title>Career Support - IICP-Institute</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -29,15 +30,15 @@
 
 </head>
 
-<body class="placement-page">
+<body class="career-support-page">
 
   <header id="header" class="header position-relative">
 
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-87-939-333-47</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com"> info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-8793933347</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -53,7 +54,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="https://i.ibb.co/j9G65V56/finallogo.png" alt="">
+          <img src="assets/img/logo.webp" alt="">
 
         </a>
 
@@ -63,18 +64,18 @@
             <!-- 1. HOME -->
             <li><a href="index.html">Home</a></li>
 
-           <!-- 2. ABOUT -->
-            <li>  <a href="about.html"><span>About</span> </a> </li>
+            <!-- 2. ABOUT -->
+            <li><a href="about.html">About</a></li>
 
             <!-- 3. COURSES -->
-            <li><a href="program.html">Courses</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
 
             <!-- 4. STUDENT -->
             <li class="dropdown">
-              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <a href="#"><span>Learning Support</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="exam.html">Exam</a></li>
-                <li><a href="placement.html" class="active">Placement</a></li>
+                <li><a href="career-support.html" class="active">Career Guidance</a></li>
                 <li><a href="faq.html">FAQ</a></li>
               </ul>
             </li>
@@ -86,7 +87,7 @@
             <li><a href="admission.html">Admission</a></li>
 
             <!-- 7. CONTACT -->
-            <li><a class="btn-getstarted" href="contact.html">Contact</a></li>
+            <li><a class="btn-getstarted" href="contact.html">Contact Us</a></li>
 
           </ul>
 
@@ -103,14 +104,14 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/bg/bg-7.webp);">
+    <div class="page-title dark-background position-relative" data-aos="fade" style="background-image: url(assets/img/bg/bg-7.webp);">
       <div class="container position-relative">
-        <h1>Placement</h1>
+        <h1>Careeer Support</h1>
 
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Placement</li>
+            <li class="current">careeer support</li>
           </ol>
         </nav>
       </div>
@@ -120,16 +121,16 @@
     <section id="about-3" class="about-3 section">
 
       <!-- Section Title -->
-      <div class="container section-title">
+      <div class="container section-title" data-aos="fade-up">
         <h2>careeer support</h2>
-        <div><span>Placement&nbsp;</span> <span class="description-title">Support</span></div>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="row gy-5">
 
-          <div class="content col-xl-5 d-flex flex-column">
+          <div class="content col-xl-5 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
             <h3>Empowering Your Career Journey</h3>
             <p>
               At IICP, we are dedicated to supporting your professional growth with a robust, technology-driven placement assistance program. Our approach combines real-time job alerts, curated learning resources, and personalized support to help you succeed in today’s job market.
@@ -137,7 +138,7 @@
             <a href="contact.html" class="about-btn align-self-center align-self-xl-start"><span>More Details </span> <i class="bi bi-chevron-right"></i></a>
           </div>
 
-          <div class="col-xl-7">
+          <div class="col-xl-7" data-aos="fade-up" data-aos-delay="200">
             <div class="row gy-4">
 
               <div class="col-md-6 icon-box position-relative">
@@ -215,24 +216,19 @@
 
   <footer id="footer" class="footer position-relative dark-background">
 
+    <!-- Professional Compliance Section -->
     <section id="steps-2" class="steps-2 section">
-
-      <slot type="section-title"></slot>
-
-      <div class="container">
-
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="steps-wrapper">
-
-          <div class="step-item">
+          <div class="step-item" data-aos="fade-right" data-aos-delay="200">
             <div class="step-content">
-
+              <div class="step-info">
+                <p><b>Industry Integrated Career Platform delivers professional skill development through structured digital learning. We focus on practical capability building aligned with current industry requirements, helping professionals advance their careers through accessible, relevant learning experiences designed for today's workplace.</b></p>
+              </div>
             </div>
-<div class="step-info">
-  <p style="text-align: justify; text-justify: inter-word; line-height: 1.6;"><b>"International Institute of Career Progression (IICP) is an autonomous training institute offering professional certification programs. Our courses are developed independently to meet industry skill requirements and are designed for career advancement. These certifications are professional development credentials and are not equivalent to UGC/AICTE recognized degrees or diplomas. They are valued within the private sector for their practical, application-oriented curriculum."</b></p>
-</div>
-
+          </div>
+        </div>
       </div>
-
     </section>
 
     <div class="container">
@@ -242,18 +238,15 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
-            <h4>Location</h4>
+            <h4>Our Development Center</h4>
             <p><b>
-                Near Kohinoor ArcadeOld Mumbai - Pune Hwy, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
+                Near Kohinoor Arcade, Old Mumbai-Pune Highway, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
             </p>
-            <p style="font-size:0.98em; color:#3498db; margin-top:8px;">
-              <i class="bi bi-laptop"></i><b>&nbsp;100% Online | Accessible Anytime, Anywhere
-              </b>
+            <p style="font-size:0.98em; color:#2ecc71; margin-top:8px;">
+              <i class="bi bi-laptop"></i><b>&nbsp;100% Digital Learning | Accessible Nationwide</b>
             </p>
-            <div><b><br></b></div>
-            <p></p>
             <p class="footer-note"><b>
-                All Programs &amp; Services are Delivered Virtually to ensure Nationwide accessibility, Global reach, and maximum flexibility.
+                All professional development programs are delivered digitally, ensuring consistent learning quality and maximum flexibility for professionals across India.
               </b></p>
           </div>
         </div>
@@ -262,11 +255,11 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
-            <h4>Contact</h4>
+            <h4>Contact &amp; Support</h4>
             <p>
-              <b>Phone/WhatsApp: <span>+91-87-939-333-47</span><br></b>
-              <strong>Email:</strong> <span>info@iicp.in</span><br>
-              <strong>Website:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#3498db;"><b>www.iicp.in</b></a>
+              <b>Professional Guidance: <span>+91-87-939-333-47</span><br></b>
+              <strong>Email Support:</strong> <span>info@iicp.in</span><br>
+              <strong>Digital Platform:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#2ecc71;"><b>www.iicp.in</b></a>
             </p>
           </div>
         </div>
@@ -275,23 +268,24 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Learning Support Hours</h4>
             <p>
-              <strong>Mon–Sat:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
-              <b>Sunday: <span>Closed</span></b>
+              <strong>Monday–Saturday:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
+              <b>Digital Learning Access: <span>24/7 Materials Available</span></b>
             </p>
           </div>
         </div>
 
         <!-- Social Links -->
         <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
+          <h4>Join Our Learning Community</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="linkedin" title="Professional Network"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="twitter" title="Industry Updates"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook" title="Learning Community"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram" title="Learning Insights"><i class="bi bi-instagram"></i></a>
           </div>
+          <p class="community-note"><small><b>Connect with fellow professionals</b></small></p>
         </div>
       </div>
     </div>
@@ -301,48 +295,17 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="terms.html" class="nav-link">Terms</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Commitment</a></li>
+        <li class="nav-item"><a href="refund.html" class="nav-link">refund</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
-        <li class="nav-item"><a href="terms.html" class="nav-link">Terms of Service</a></li>
-        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
       </ul>
     </div>
 
     <!-- Copyright -->
     <div class="container copyright text-center mt-4">
-      <p><b>© <span>Copyright</span> <span class="px-1 sitename">IICP </span>&nbsp;<span>All Rights Reserved</span></b></p>
-    </div>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect Now Button</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <div id="connectNowContainer">
-      <button id="connectNowBtn">
-        <i class="fa fa-comments"></i>
-        Connect Now
-      </button>
-      <div id="connectOptions">
-        <a href="https://wa.me/918793933347" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp"></i>
-          WhatsApp Chat
-        </a>
-        <a href="https://wa.me/918793933347?text=Please%20call%20me%20back" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-reply"></i>
-          Request Call Back
-        </a>
-        <a href="mailto:info@iicp.in">
-          <i class="fa fa-envelope"></i>
-          Email: info@iicp.in
-        </a>
-        <a href="tel:+918793933347">
-          <i class="fa fa-phone"></i>
-          Call: +918793933347
-        </a>
-      </div>
+      <p><b>© <span>2024</span> <span class="px-1 sitename">Industry Integrated Career Platform</span>&nbsp;<span>All Rights Reserved<br><br>Grievance Officer:&nbsp;info@iicp.in, Ph: +91-8793933347 (response within 24 h)<br><br></span></b></p>
+      <p class="small mt-2"><b>Advancing professional capabilities through digital learning</b></p>
     </div>
 
   </footer>
@@ -353,6 +316,7 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

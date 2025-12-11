@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -36,8 +37,8 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-87-939-333-47</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com"> info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-8793933347</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -53,7 +54,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="https://i.ibb.co/j9G65V56/finallogo.png" alt="">
+          <img src="assets/img/logo.webp" alt="">
 
         </a>
 
@@ -63,18 +64,18 @@
             <!-- 1. HOME -->
             <li><a href="index.html">Home</a></li>
 
-         <!-- 2. ABOUT -->
-            <li>  <a href="about.html"><span>About</span> </a> </li>
+            <!-- 2. ABOUT -->
+            <li><a href="about.html">About</a></li>
 
             <!-- 3. COURSES -->
-            <li><a href="program.html">Courses</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
 
             <!-- 4. STUDENT -->
             <li class="dropdown">
-              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <a href="#"><span>Learning Support</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="exam.html">Exam</a></li>
-                <li><a href="placement.html">Placement</a></li>
+                <li><a href="career-support.html">Career Guidance</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
               </ul>
             </li>
@@ -86,7 +87,7 @@
             <li><a href="admission.html">Admission</a></li>
 
             <!-- 7. CONTACT -->
-            <li><a class="btn-getstarted" href="contact.html">Contact</a></li>
+            <li><a class="btn-getstarted" href="contact.html">Contact Us</a></li>
 
           </ul>
 
@@ -103,7 +104,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background position-relative" style="background-image: url(assets/img/bg/bg-7.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/bg/bg-7.webp);">
       <div class="container position-relative">
         <h1>FAQ</h1>
         <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
@@ -119,259 +120,257 @@
     <!-- Faq Section -->
     <section id="faq" class="faq section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-start gy-4">
-          <div class="col-lg-5">
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
             <div class="faq-sidebar">
               <div class="faq-image">
-                <img src="assets/img/illustration/illustration-5.webp" alt="FAQ Image" class="img-fluid" loading="lazy">
+                <img src="assets/img/illustration/learning-support.webp" alt="Professional Learning Support" class="img-fluid" loading="lazy">
               </div>
               <div class="contact-box">
-                <h3><i class="bi bi-headset"></i> Need Assistance?</h3>
-                <p>Have more questions? Our support team is here to help you at every step of your learning journey with IICP.</p>
-                <a href="contact.html" class="btn-contact">Connect with Support</a>
+                <h3><i class="bi bi-headset"></i> Professional Learning Support</h3>
+                <p>Have more questions about professional development paths? Our team is here to guide you through your skill enhancement journey.</p>
+                <a href="contact.html" class="btn-contact">Get Professional Guidance</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-7">
             <div class="faq-tabs">
-              <ul class="nav nav-pills mb-4" id="faqTabs-iicp" role="tablist">
+              <ul class="nav nav-pills mb-4" id="faqTabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="general-tab-iicp" data-bs-toggle="pill" data-bs-target="#general-faq-iicp" type="button" role="tab" aria-controls="general-faq-iicp" aria-selected="true">General Inquiries</button>
+                  <button class="nav-link active" id="general-tab" data-bs-toggle="pill" data-bs-target="#general-faq" type="button" role="tab" aria-controls="general-faq" aria-selected="true">General Information</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="admission-tab-iicp" data-bs-toggle="pill" data-bs-target="#admission-faq-iicp" type="button" role="tab" aria-controls="admission-faq-iicp" aria-selected="false" tabindex="-1">Admissions &amp; Exams</button>
+                  <button class="nav-link" id="enrollment-tab" data-bs-toggle="pill" data-bs-target="#enrollment-faq" type="button" role="tab" aria-controls="enrollment-faq" aria-selected="false" tabindex="-1">Enrollment &amp; Learning</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="payment-tab-iicp" data-bs-toggle="pill" data-bs-target="#payment-faq-iicp" type="button" role="tab" aria-controls="payment-faq-iicp" aria-selected="false" tabindex="-1">Payments &amp; Certification</button>
+                  <button class="nav-link" id="certification-tab" data-bs-toggle="pill" data-bs-target="#certification-faq" type="button" role="tab" aria-controls="certification-faq" aria-selected="false" tabindex="-1">Certification &amp; Support</button>
                 </li>
               </ul>
 
-              <div class="tab-content" id="faqTabsContent-iicp">
-                <!-- General Inquiries -->
-                <div class="tab-pane fade show active" id="general-faq-iicp" role="tabpanel" aria-labelledby="general-tab-iicp">
-                  <div class="accordion" id="generalAccordion-iicp">
-                    <div class="faq-item">
-                      <h3>What is IICP?</h3>
+              <div class="tab-content" id="faqTabsContent">
+                <!-- General Information -->
+                <div class="tab-pane fade show active" id="general-faq" role="tabpanel" aria-labelledby="general-tab">
+                  <div class="accordion" id="generalAccordion">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                      <h3>What is Industry Integrated Career Platform?</h3>
                       <div class="faq-content">
-                        <p>IICP is an autonomous institute offering flexible, industry-focused management and IT education through online and distance learning for working professionals and graduates.</p>
+                        <p>We are a professional skill development initiative offering structured learning paths in management and IT domains through flexible digital delivery for career-focused professionals.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What support does IICP provide?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                      <h3>What learning support do you provide?</h3>
                       <div class="faq-content">
-                        <p>Comprehensive support includes study notes, e-content, online video references, assignments, assessments, and 24/7 access to an online portal for queries and resources.</p>
+                        <p>Comprehensive support includes organized study materials, digital resources, practical assignments, and access to guidance for your professional development journey.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-
-                      <i class="bi bi-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-item">
-                      <h3>Is classroom attendance required?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                      <h3>Are your certifications recognized professionally?</h3>
                       <div class="faq-content">
-                        <p>No. Programs are self-paced via online or distance learning, with optional contact classes.</p>
+                        <p>Our professional certifications are designed to validate industry-relevant skills and are valued for their practical focus and workplace application in the professional sector.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What is distance education at IICP?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                      <h3>Is physical attendance required?</h3>
                       <div class="faq-content">
-                        <p>Study remotely with online materials, video references, and assignments—ideal for working professionals.</p>
+                        <p>No. All learning is delivered through structured digital materials designed for flexible, self-paced professional development.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Does IICP provide study materials?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                      <h3>What is your learning delivery approach?</h3>
                       <div class="faq-content">
-                        <p>Yes, materials are sent via courier or accessible via the student portal, email, or WhatsApp.</p>
+                        <p>We provide organized digital learning materials accessible anytime, making professional development achievable alongside work commitments.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item faq-active">
-                      <h3>Is IICP accredited by AICTE/UGC?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                      <h3>Do you provide study materials?</h3>
                       <div class="faq-content">
-                        <p>
-                          IICP operates independently and is not affiliated with AICTE or UGC.
-                          As a fully autonomous institute,
-
-                          Our programs are designed with a strong emphasis on practical skills, industry relevance, and global learning standards, making them highly valued in the private and professional sectors, both in India and internationally.
-                        </p>
+                        <p>Yes, comprehensive learning materials are provided digitally through accessible channels for systematic skill development.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>How many branches does IICP have?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+                      <h3>Are you affiliated with educational regulatory bodies?</h3>
                       <div class="faq-content">
-                        <p>IICP is an online institute with globally accessible resources and support available from anywhere. It operates primarily online, with physical coordination from Pune-PCMC.</p>
+                        <p>We focus on professional skill development through structured learning paths. Our certifications are designed for career advancement and skill validation, not as formal academic degrees recognized by educational regulatory authorities.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Can I take exams from home?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                      <h3>How is learning delivered?</h3>
                       <div class="faq-content">
-                        <p>Yes, many exams are open-book, emphasizing case studies and practical application.</p>
+                        <p>All learning resources are provided digitally, making professional development accessible from anywhere with structured guidance available online.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Why doesn’t IICP advertise in print media?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="550">
+                      <h3>How are learning assessments conducted?</h3>
                       <div class="faq-content">
-                        <p>We prioritize student support and career enhancement.</p>
+                        <p>Assessments focus on practical application and understanding, with flexible submission options that emphasize real-world skill demonstration.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
                   </div>
                 </div>
-                <!-- Admissions & Exams -->
-                <div class="tab-pane fade" id="admission-faq-iicp" role="tabpanel" aria-labelledby="admission-tab-iicp">
-                  <div class="accordion" id="admissionAccordion-iicp">
-                    <div class="faq-item">
-                      <h3>How do I apply for IICP courses?</h3>
+                <!-- Enrollment & Learning -->
+                <div class="tab-pane fade" id="enrollment-faq" role="tabpanel" aria-labelledby="enrollment-tab">
+                  <div class="accordion" id="enrollmentAccordion">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                      <h3>How do I begin a professional development path?</h3>
                       <div class="faq-content">
-                        <p>Apply online or submit a completed form with payment. Admission is direct for eligible candidates.</p>
+                        <p>Start by exploring our learning paths and completing the enrollment process online. Guidance is available throughout to help you choose the right development focus.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What are the examination modes?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                      <h3>What are the learning assessment methods?</h3>
                       <div class="faq-content">
-                        <p>Exams are case-study, email, or center-based, held quarterly (March, June, September, December).</p>
+                        <p>Assessments include practical applications, case analysis, and skill demonstration exercises designed to validate professional competency development.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>How are study materials distributed?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                      <h3>How are learning materials accessed?</h3>
                       <div class="faq-content">
-                        <p>Sent via email and WhatsApp to your registered email address and phone number or accessible online.</p>
+                        <p>Materials are delivered through organized digital channels to your registered contact information for convenient access throughout your learning journey.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What is the passing percentage?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                      <h3>What is the completion requirement?</h3>
                       <div class="faq-content">
-                        <p>Overall passing percentage is 50%.</p>
+                        <p>Successful demonstration of practical understanding and application of the covered professional concepts.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>When can I take exams?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                      <h3>When can learning assessments be completed?</h3>
                       <div class="faq-content">
-                        <p>Quarterly exams, with early exam options via a pre-exam fee.</p>
+                        <p>Flexible assessment timelines accommodate different learning paces while maintaining structured development progress.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Can I take exams before 6 months?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                      <h3>How many specializations are available?</h3>
                       <div class="faq-content">
-                        <p>Yes, with a pre-examination fee.</p>
+                        <p>Multiple professional development paths across management, IT, HR, finance, and marketing domains tailored to diverse career goals.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Can I pursue extra specializations?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+                      <h3>Can I focus on multiple skill areas?</h3>
                       <div class="faq-content">
-                        <p>Yes, with an additional fee per specialization.</p>
+                        <p>Yes, you can pursue complementary skill development paths to broaden your professional capabilities.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>When are exam results declared?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                      <h3>How are learning outcomes evaluated?</h3>
                       <div class="faq-content">
-                        <p>Results and certificates are issued within 7-10 working days post-submission.</p>
+                        <p>Through practical application exercises and skill demonstration, with feedback provided to support continued professional growth.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>When will I receive study materials?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="550">
+                      <h3>When will I receive learning materials?</h3>
                       <div class="faq-content">
-                        <p>Within 4-7 working days of enrollment.</p>
+                        <p>Access to organized learning materials begins shortly after enrollment confirmation, with ongoing resources provided throughout your development journey.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                  
-                    <div class="faq-item">
-                      <h3>How do I get a duplicate ID card?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                      <h3>How long do development paths typically take?</h3>
                       <div class="faq-content">
-                        <p>Request a duplicate ID card for a fee of Rs. 250.</p>
+                        <p>Duration varies by complexity, with structured timelines designed for systematic skill development while accommodating individual learning paces.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>How many  specializations does IICP offer?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="650">
+                      <h3>Are accelerated learning options available?</h3>
                       <div class="faq-content">
-                        <p>Over 70 management specializations tailored to diverse career goals.</p>
-                      </div>
-                      <i class="bi bi-chevron-down faq-toggle"></i>
-                    </div>
-                    <div class="faq-item">
-                      <h3>Can I change my specialization?</h3>
-                      <div class="faq-content">
-                        <p>Yes, with a request and applicable fee.</p>
+                        <p>Structured learning paths with focused content delivery options are available for experienced professionals seeking targeted skill enhancement.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
                   </div>
                 </div>
-                <!-- Payments & Certification -->
-                <div class="tab-pane fade" id="payment-faq-iicp" role="tabpanel" aria-labelledby="payment-tab-iicp">
-                  <div class="accordion" id="paymentAccordion-iicp">
-                    <div class="faq-item">
-                      <h3>How can I pay for my course?</h3>
+                <!-- Certification & Support -->
+                <div class="tab-pane fade" id="certification-faq" role="tabpanel" aria-labelledby="certification-tab">
+                  <div class="accordion" id="certificationAccordion">
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                      <h3>What investment options are available?</h3>
                       <div class="faq-content">
-                        <p>Pay online. Installment options are available, and fee receipts are provided.</p>
+                        <p>Structured investment plans are available for professional development, with documented acknowledgment provided for all commitments.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Are there additional charges beyond the course fee?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                      <h3>Are there additional commitments beyond the development fee?</h3>
                       <div class="faq-content">
-                        <p>No hidden fees. Course fees cover study materials, registration, and exams. Extra charges apply for fast-track, re-exams, or lost documents.</p>
+                        <p>The development fee covers learning materials and guidance. Any additional specialized support options are clearly communicated upfront.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Is the course fee refundable?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="250">
+                      <h3>What is your commitment policy?</h3>
                       <div class="faq-content">
-                        <p>Fees are non-refundable and non-adjustable as per IICP policy.</p>
+                        <p>Professional development commitments are outlined in our terms, designed to support focused learning and skill development journeys.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Will I receive a fee receipt?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                      <h3>Will I receive acknowledgment of my commitment?</h3>
                       <div class="faq-content">
-                        <p>Yes, receipts are issued for all payments, including installments.</p>
+                        <p>Yes, proper acknowledgment is provided for all professional development commitments made.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>Does IICP provide degrees or certificates?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="350">
+                      <h3>What recognition is provided upon completion?</h3>
                       <div class="faq-content">
-                        <p>IICP awards certificates, valued for practical and industry relevance.</p>
+                        <p>Professional skill certification is awarded upon successful demonstration of competency, validating the developed capabilities.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What are short-term/modular courses?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                      <h3>What are focused development programs?</h3>
                       <div class="faq-content">
-                        <p>Accelerated programs for experienced learners, completable in less than standard duration.</p>
+                        <p>Targeted skill enhancement paths designed for experienced professionals seeking specific capability development within condensed timelines.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What are the benefits of IICP’s autonomous status?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="450">
+                      <h3>What are the benefits of structured professional development?</h3>
                       <div class="faq-content">
-                        <p>Updated curricula, flexible durations, diverse specializations, and a focus on employability.</p>
+                        <p>Systematic skill enhancement, current industry focus, flexible learning approaches, and emphasis on workplace application and career growth.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
-                    <div class="faq-item">
-                      <h3>What is certification, and why is it valuable?</h3>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                      <h3>What value do professional certifications provide?</h3>
                       <div class="faq-content">
-                        <p>IICP certifications meet industry standards, enhancing career prospects.</p>
+                        <p>They validate acquired professional skills, demonstrate commitment to development, and enhance career prospects through recognized capability acknowledgment.</p>
+                      </div>
+                      <i class="bi bi-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="550">
+                      <h3>How are certifications recognized professionally?</h3>
+                      <div class="faq-content">
+                        <p>Our certifications are valued for their practical focus, industry relevance, and skill validation approach within the professional employment sector.</p>
+                      </div>
+                      <i class="bi bi-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+                      <h3>Important Professional Development Information</h3>
+                      <div class="faq-content">
+                        <p>Our programs focus on professional skill development through structured learning. These certifications validate workplace-relevant capabilities and are designed for career advancement. They represent professional skill acknowledgment and are not formal academic degrees or qualifications recognized by educational regulatory authorities in India.</p>
                       </div>
                       <i class="bi bi-chevron-down faq-toggle"></i>
                     </div>
@@ -390,24 +389,19 @@
 
   <footer id="footer" class="footer position-relative dark-background">
 
+    <!-- Professional Compliance Section -->
     <section id="steps-2" class="steps-2 section">
-
-      <slot type="section-title"></slot>
-
-      <div class="container">
-
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="steps-wrapper">
-
-          <div class="step-item">
+          <div class="step-item" data-aos="fade-right" data-aos-delay="200">
             <div class="step-content">
-
+              <div class="step-info">
+                <p><b>Industry Integrated Career Platform delivers professional skill development through structured digital learning. We focus on practical capability building aligned with current industry requirements, helping professionals advance their careers through accessible, relevant learning experiences designed for today's workplace.</b></p>
+              </div>
             </div>
-<div class="step-info">
-  <p style="text-align: justify; text-justify: inter-word; line-height: 1.6;"><b>"International Institute of Career Progression (IICP) is an autonomous training institute offering professional certification programs. Our courses are developed independently to meet industry skill requirements and are designed for career advancement. These certifications are professional development credentials and are not equivalent to UGC/AICTE recognized degrees or diplomas. They are valued within the private sector for their practical, application-oriented curriculum."</b></p>
-</div>
-
+          </div>
+        </div>
       </div>
-
     </section>
 
     <div class="container">
@@ -417,18 +411,15 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
-            <h4>Location</h4>
+            <h4>Our Development Center</h4>
             <p><b>
-                Near Kohinoor ArcadeOld Mumbai - Pune Hwy, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
+                Near Kohinoor Arcade, Old Mumbai-Pune Highway, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
             </p>
-            <p style="font-size:0.98em; color:#3498db; margin-top:8px;">
-              <i class="bi bi-laptop"></i><b>&nbsp;100% Online | Accessible Anytime, Anywhere
-              </b>
+            <p style="font-size:0.98em; color:#2ecc71; margin-top:8px;">
+              <i class="bi bi-laptop"></i><b>&nbsp;100% Digital Learning | Accessible Nationwide</b>
             </p>
-            <div><b><br></b></div>
-            <p></p>
             <p class="footer-note"><b>
-                All Programs &amp; Services are Delivered Virtually to ensure Nationwide accessibility, Global reach, and maximum flexibility.
+                All professional development programs are delivered digitally, ensuring consistent learning quality and maximum flexibility for professionals across India.
               </b></p>
           </div>
         </div>
@@ -437,11 +428,11 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
-            <h4>Contact</h4>
+            <h4>Contact &amp; Support</h4>
             <p>
-              <b>Phone/WhatsApp: <span>+91-87-939-333-47</span><br></b>
-              <strong>Email:</strong> <span>info@iicp.in</span><br>
-              <strong>Website:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#3498db;"><b>www.iicp.in</b></a>
+              <b>Professional Guidance: <span>+91-87-939-333-47</span><br></b>
+              <strong>Email Support:</strong> <span>info@iicp.in</span><br>
+              <strong>Digital Platform:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#2ecc71;"><b>www.iicp.in</b></a>
             </p>
           </div>
         </div>
@@ -450,23 +441,24 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Learning Support Hours</h4>
             <p>
-              <strong>Mon–Sat:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
-              <b>Sunday: <span>Closed</span></b>
+              <strong>Monday–Saturday:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
+              <b>Digital Learning Access: <span>24/7 Materials Available</span></b>
             </p>
           </div>
         </div>
 
         <!-- Social Links -->
         <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
+          <h4>Join Our Learning Community</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="linkedin" title="Professional Network"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="twitter" title="Industry Updates"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook" title="Learning Community"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram" title="Learning Insights"><i class="bi bi-instagram"></i></a>
           </div>
+          <p class="community-note"><small><b>Connect with fellow professionals</b></small></p>
         </div>
       </div>
     </div>
@@ -476,48 +468,17 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="terms.html" class="nav-link">Terms</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Commitment</a></li>
+        <li class="nav-item"><a href="refund.html" class="nav-link">refund</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
-        <li class="nav-item"><a href="terms.html" class="nav-link">Terms of Service</a></li>
-        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
       </ul>
     </div>
 
     <!-- Copyright -->
     <div class="container copyright text-center mt-4">
-      <p><b>© <span>Copyright</span> <span class="px-1 sitename">IICP </span>&nbsp;<span>All Rights Reserved</span></b></p>
-    </div>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect Now Button</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <div id="connectNowContainer">
-      <button id="connectNowBtn">
-        <i class="fa fa-comments"></i>
-        Connect Now
-      </button>
-      <div id="connectOptions">
-        <a href="https://wa.me/918793933347" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp"></i>
-          WhatsApp Chat
-        </a>
-        <a href="https://wa.me/918793933347?text=Please%20call%20me%20back" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-reply"></i>
-          Request Call Back
-        </a>
-        <a href="mailto:info@iicp.in">
-          <i class="fa fa-envelope"></i>
-          Email: info@iicp.in
-        </a>
-        <a href="tel:+918793933347">
-          <i class="fa fa-phone"></i>
-          Call: +918793933347
-        </a>
-      </div>
+      <p><b>© <span>2024</span> <span class="px-1 sitename">Industry Integrated Career Platform</span>&nbsp;<span>All Rights Reserved<br><br>Grievance Officer:&nbsp;info@iicp.in, Ph: +91-8793933347 (response within 24 h)<br><br></span></b></p>
+      <p class="small mt-2"><b>Advancing professional capabilities through digital learning</b></p>
     </div>
 
   </footer>
@@ -528,6 +489,7 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

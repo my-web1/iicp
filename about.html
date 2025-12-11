@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -36,8 +37,8 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-87-939-333-47</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com"> info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-8793933347</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -53,7 +54,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="https://i.ibb.co/j9G65V56/finallogo.png" alt="">
+          <img src="assets/img/logo.webp" alt="">
 
         </a>
 
@@ -63,18 +64,18 @@
             <!-- 1. HOME -->
             <li><a href="index.html">Home</a></li>
 
-           <!-- 2. ABOUT -->
-            <li>  <a href="about.html"><span>About</span> </a> </li>
+            <!-- 2. ABOUT -->
+            <li><a href="about.html" class="active">About</a></li>
 
             <!-- 3. COURSES -->
-            <li><a href="program.html">Courses</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
 
             <!-- 4. STUDENT -->
             <li class="dropdown">
-              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <a href="#"><span>Learning Support</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="exam.html">Exam</a></li>
-                <li><a href="placement.html">Placement</a></li>
+                <li><a href="career-support.html">Career Guidance</a></li>
                 <li><a href="faq.html">FAQ</a></li>
               </ul>
             </li>
@@ -86,7 +87,7 @@
             <li><a href="admission.html">Admission</a></li>
 
             <!-- 7. CONTACT -->
-            <li><a class="btn-getstarted" href="contact.html">Contact</a></li>
+            <li><a class="btn-getstarted" href="contact.html">Contact Us</a></li>
 
           </ul>
 
@@ -103,7 +104,7 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" style="background-image: url(assets/img/bg/bg-7.webp);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/bg/bg-7.webp);">
       <div class="container position-relative">
         <h1>About&nbsp; IICP</h1>
         <p>Empowering careers through industry-aligned learning and comprehensive support.</p>
@@ -116,152 +117,145 @@
       </div>
     </div><!-- End Page Title -->
 
-<!-- About 2 Section -->
-<section id="about-2" class="about-2 section">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <div class="about-content">
-          <h2>About IICP</h2>
-          <p>
-            The International Institute of Career Progression (IICP) is where ambition meets opportunity. We are a premier private training institute dedicated to transforming careers through industry-relevant certifications in management and information technology.
-          </p>
-          <p>
-            At IICP, we don't just teach—we empower. Our programs are meticulously crafted to bridge the gap between academic theory and real-world application, equipping professionals with the practical skills and strategic mindset needed to excel in today's competitive landscape. We deliver flexible, career-focused learning that fits your life and accelerates your growth.
-          </p>
-          <div><br></div>
-          <p></p>
-          <h3>Who We Are</h3>
-          <p>
-            Founded on the principle that quality professional education should be accessible, IICP serves ambitious individuals seeking to upskill, transition, or advance their careers. Our curriculum is forged in collaboration with seasoned industry leaders and academic experts, ensuring every module delivers current, actionable knowledge that employers value. We are the strategic choice for professionals who refuse to stand still.
-          </p>
+    <!-- About 2 Section -->
+    <section id="about-2" class="about-2 section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="about-content" data-aos="fade-up" data-aos-delay="200">
+              <h2>About Industry Integrated Career Platform</h2>
+              <p>
+                Industry Integrated Career Platform is a professional skill development initiative focused on delivering practical,
+                industry-aligned learning through structured digital programs. We are committed to helping professionals enhance
+                their capabilities and advance their careers through accessible, flexible learning experiences.
+              </p>
+              <div><br></div>
+              <h3>Our Professional Focus</h3>
+              <p>
+                Founded with a mission to make professional skill development practical and accessible, we offer structured learning
+                paths for individuals seeking career advancement or transitioning to new professional roles. Our content is developed
+                with attention to current workplace requirements, ensuring learners gain relevant, applicable knowledge.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-image" data-aos="zoom-in" data-aos-delay="300">
+              <img src="assets/img/bg/campus-5.webp" alt="Professional Skill Development" class="img-fluid rounded">
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="about-image">
-          <img src="assets/img/education/campus-5.webp" alt="Campus" class="img-fluid rounded">
-        </div>
-      </div>
-    </div>
 
-    <div class="row mt-5">
-      <div class="col-lg-12">
-        <div class="vision-mission-philosophy">
-          <div class="vision mb-4">
-            <h3><i class="bi bi-eye"></i> Our Vision</h3>
-            <p>
-              To redefine professional education by becoming the global benchmark for career-transforming certifications—fostering a generation of agile leaders and innovators who shape the future of business and technology.
-            </p>
-          </div>
-          <div class="mission mb-4">
-            <h3><i class="bi bi-bullseye"></i> Our Mission</h3>
-            <ul>
-              <li>To equip professionals with future-ready skills that deliver immediate impact and long-term career capital.</li>
-              <li>To fuse cutting-edge industry practices with rigorous learning frameworks, creating a dynamic educational experience.</li>
-              <li>To democratize access to elite career progression tools, fostering leadership, enterprise, and innovation on a global scale.</li>
-            </ul>
-          </div>
-          <div class="philosophy">
-            <h3><i class="bi bi-lightbulb"></i> Our Educational Philosophy</h3>
-            <ul>
-              <li><strong>Career-Centric Design:</strong> Every program is engineered with one outcome in mind: your professional advancement and employability.</li>
-              <li><strong>Applied Learning:</strong> We prioritize hands-on, real-world application over abstract theory, ensuring you can execute from day one.</li>
-              <li><strong>Unmatched Flexibility:</strong> Learn on your terms with self-paced digital resources, complemented by live expert mentorship.</li>
-              <li><strong>Future-Focused Curriculum:</strong> Our content is in perpetual evolution, staying ahead of market trends and employer demands.</li>
-            </ul>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="vision-mission-philosophy" data-aos="fade-up" data-aos-delay="400">
+              <div class="vision mb-4">
+                <h3><i class="bi bi-eye"></i> Our Vision</h3>
+                <p>
+                  To be a recognized platform for professional skill development, fostering practical capabilities and continuous
+                  learning that empowers individuals in today's dynamic work environment.
+                </p>
+              </div>
+              <div class="mission mb-4">
+                <h3><i class="bi bi-bullseye"></i> Our Mission</h3>
+                <ul>
+                  <li>To provide structured, practical learning experiences for career-focused professionals</li>
+                  <li>To integrate current workplace practices and industry requirements into learning content</li>
+                  <li>To support professional growth through accessible, flexible learning options</li>
+                </ul>
+              </div>
+              <div class="philosophy">
+                <h3><i class="bi bi-lightbulb"></i> Our Approach</h3>
+                <ul>
+                  <li><strong>Structured Learning:</strong> Organized digital materials designed for systematic skill development</li>
+                  <li><strong>Practical Focus:</strong> Content emphasizes real-world application and workplace relevance</li>
+                  <li><strong>Accessible Format:</strong> Digital delivery allows learning according to individual schedules</li>
+                  <li><strong>Current Content:</strong> Regular updates to maintain professional relevance</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row mt-5">
-      <div class="col-lg-12">
-        <div class="what-we-offer">
-          <h3 class="text-center mb-4">The IICP Advantage</h3>
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            <div class="col">
-              <div class="value-card">
-                <div class="value-icon">
-                  <i class="bi bi-award"></i>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="what-we-offer" data-aos="fade-up" data-aos-delay="500">
+              <h3 class="text-center mb-4">What We Provide</h3>
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-journal-text"></i>
+                    </div>
+                    <h4>Structured Learning Paths</h4>
+                    <p>Organized professional development programs in management and related domains</p>
+                  </div>
                 </div>
-                <h4>Industry-Valued Certifications</h4>
-                <p>Globally respected credentials designed in sync with current market needs, giving you a tangible edge.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="value-card">
-                <div class="value-icon">
-                  <i class="bi bi-person-badge"></i>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-person-badge"></i>
+                    </div>
+                    <h4>Professional Content</h4>
+                    <p>Learning materials developed with attention to workplace requirements</p>
+                  </div>
                 </div>
-                <h4>Learn from Practitioners</h4>
-                <p>Gain insights directly from faculty who are active industry leaders, not just academic theorists.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="value-card">
-                <div class="value-icon">
-                  <i class="bi bi-briefcase"></i>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <h4>Career Skill Development</h4>
+                    <p>Focus on building professional capabilities for career advancement</p>
+                  </div>
                 </div>
-                <h4>ROI-Driven Education</h4>
-                <p>We measure our success by your career trajectory—increased responsibility, recognition, and earning potential.</p>
-              </div>
-            </div>
-            <div class="col">
-              <div class="value-card">
-                <div class="value-icon">
-                  <i class="bi bi-people"></i>
+                <div class="col">
+                  <div class="value-card">
+                    <div class="value-icon">
+                      <i class="bi bi-headset"></i>
+                    </div>
+                    <h4>Learning Support</h4>
+                    <p>Guidance and structured resources throughout the learning process</p>
+                  </div>
                 </div>
-                <h4>A Supportive Career Community</h4>
-                <p>Join a network of driven peers with access to dedicated success coaches and ongoing professional resources.</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <div class="row mt-5">
-      <div class="col-lg-12">
-        <div class="important-note">
-          <h3 class="text-center mb-3">Our Commitment to You</h3>
-          <p>IICP is an autonomous institute dedicated to professional skill development. Our certification programs are independently crafted to meet the highest standards of practical relevance and are designed for professionals seeking to enhance their expertise and marketability in the private sector. We provide a distinct, application-focused pathway to career progression.</p>
-          <div><br></div>
-          <p></p>
+        <div class="row mt-5">
+          <div class="col-lg-12">
+            <div class="important-note" data-aos="fade-up" data-aos-delay="600">
+              <h3 class="text-center mb-3">Professional Development Information</h3>
+              <p>
+                Industry Integrated Career Platform provides professional skill development through digital learning.
+                Our focus is on practical capability building for career advancement. These are professional development
+                programs designed to enhance workplace skills and are not formal academic degrees or certifications
+                recognized by educational regulatory bodies in India.
+              </p>
+              <div><br></div>
+            </div>
+          </div>
         </div>
-        <div><br></div>
-        <div><br></div>
-        <p></p>
       </div>
-    </div>
-  </div>
-</section><!-- /About 2 Section -->
+    </section><!-- /About 2 Section -->
 
   </main>
 
   <footer id="footer" class="footer position-relative dark-background">
 
+    <!-- Professional Compliance Section -->
     <section id="steps-2" class="steps-2 section">
-
-      <slot type="section-title"></slot>
-
-      <div class="container">
-
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="steps-wrapper">
-
-          <div class="step-item">
+          <div class="step-item" data-aos="fade-right" data-aos-delay="200">
             <div class="step-content">
-
+              <div class="step-info">
+                <p><b>Industry Integrated Career Platform delivers professional skill development through structured digital learning. We focus on practical capability building aligned with current industry requirements, helping professionals advance their careers through accessible, relevant learning experiences designed for today's workplace.</b></p>
+              </div>
             </div>
-            <div class="step-info">
-  <p style="text-align: justify; text-justify: inter-word; line-height: 1.6;"><b>"International Institute of Career Progression (IICP) is an autonomous training institute offering professional certification programs. Our courses are developed independently to meet industry skill requirements and are designed for career advancement. These certifications are professional development credentials and are not equivalent to UGC/AICTE recognized degrees or diplomas. They are valued within the private sector for their practical, application-oriented curriculum."</b></p>
-</div>
-
-
           </div>
-        </div><!-- End Step Item -->
-
+        </div>
       </div>
-
     </section>
 
     <div class="container">
@@ -271,18 +265,15 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
-            <h4>Location</h4>
+            <h4>Our Development Center</h4>
             <p><b>
-                Near Kohinoor ArcadeOld Mumbai - Pune Hwy, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
+                Near Kohinoor Arcade, Old Mumbai-Pune Highway, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
             </p>
-            <p style="font-size:0.98em; color:#3498db; margin-top:8px;">
-              <i class="bi bi-laptop"></i><b>&nbsp;100% Online | Accessible Anytime, Anywhere
-              </b>
+            <p style="font-size:0.98em; color:#2ecc71; margin-top:8px;">
+              <i class="bi bi-laptop"></i><b>&nbsp;100% Digital Learning | Accessible Nationwide</b>
             </p>
-            <div><b><br></b></div>
-            <p></p>
             <p class="footer-note"><b>
-                All Programs &amp; Services are Delivered Virtually to ensure Nationwide accessibility, Global reach, and maximum flexibility.
+                All professional development programs are delivered digitally, ensuring consistent learning quality and maximum flexibility for professionals across India.
               </b></p>
           </div>
         </div>
@@ -291,11 +282,11 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
-            <h4>Contact</h4>
+            <h4>Contact &amp; Support</h4>
             <p>
-              <b>Phone/WhatsApp: <span>+91-87-939-333-47</span><br></b>
-              <strong>Email:</strong> <span>info@iicp.in</span><br>
-              <strong>Website:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#3498db;"><b>www.iicp.in</b></a>
+              <b>Professional Guidance: <span>+91-87-939-333-47</span><br></b>
+              <strong>Email Support:</strong> <span>info@iicp.in</span><br>
+              <strong>Digital Platform:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#2ecc71;"><b>www.iicp.in</b></a>
             </p>
           </div>
         </div>
@@ -304,23 +295,24 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Learning Support Hours</h4>
             <p>
-              <strong>Mon–Sat:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
-              <b>Sunday: <span>Closed</span></b>
+              <strong>Monday–Saturday:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
+              <b>Digital Learning Access: <span>24/7 Materials Available</span></b>
             </p>
           </div>
         </div>
 
         <!-- Social Links -->
         <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
+          <h4>Join Our Learning Community</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="linkedin" title="Professional Network"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="twitter" title="Industry Updates"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook" title="Learning Community"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram" title="Learning Insights"><i class="bi bi-instagram"></i></a>
           </div>
+          <p class="community-note"><small><b>Connect with fellow professionals</b></small></p>
         </div>
       </div>
     </div>
@@ -330,48 +322,17 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="terms.html" class="nav-link">Terms</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Commitment</a></li>
+        <li class="nav-item"><a href="refund.html" class="nav-link">refund</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
-        <li class="nav-item"><a href="terms.html" class="nav-link">Terms of Service</a></li>
-        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
       </ul>
     </div>
 
     <!-- Copyright -->
     <div class="container copyright text-center mt-4">
-      <p><b>© <span>Copyright</span> <span class="px-1 sitename">IICP </span>&nbsp;<span>All Rights Reserved</span></b></p>
-    </div>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect Now Button</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <div id="connectNowContainer">
-      <button id="connectNowBtn">
-        <i class="fa fa-comments"></i>
-        Connect Now
-      </button>
-      <div id="connectOptions">
-        <a href="https://wa.me/918793933347" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp"></i>
-          WhatsApp Chat
-        </a>
-        <a href="https://wa.me/918793933347?text=Please%20call%20me%20back" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-reply"></i>
-          Request Call Back
-        </a>
-        <a href="mailto:info@iicp.in">
-          <i class="fa fa-envelope"></i>
-          Email: info@iicp.in
-        </a>
-        <a href="tel:+918793933347">
-          <i class="fa fa-phone"></i>
-          Call: +918793933347
-        </a>
-      </div>
+      <p><b>© <span>2024</span> <span class="px-1 sitename">Industry Integrated Career Platform</span>&nbsp;<span>All Rights Reserved<br><br>Grievance Officer:&nbsp;info@iicp.in, Ph: +91-8793933347 (response within 24 h)<br><br></span></b></p>
+      <p class="small mt-2"><b>Advancing professional capabilities through digital learning</b></p>
     </div>
 
   </footer>
@@ -382,6 +343,7 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>

@@ -20,6 +20,7 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -36,8 +37,8 @@
     <div class="topbar d-flex align-items-center dark-background">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@iicp.in</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-87-939-333-47</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com"> info@iicp.in</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91-8793933347</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -53,7 +54,7 @@
       <div class="container position-relative d-flex align-items-center justify-content-between">
         <a href="index.html" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
-          <img src="https://i.ibb.co/j9G65V56/finallogo.png" alt="">
+          <img src="assets/img/logo.webp" alt="">
 
         </a>
 
@@ -64,17 +65,17 @@
             <li><a href="index.html" class="active">Home</a></li>
 
             <!-- 2. ABOUT -->
-            <li>  <a href="about.html"><span>About</span> </a> </li>
+            <li><a href="about.html">About</a></li>
 
             <!-- 3. COURSES -->
-            <li><a href="program.html">Courses</a></li>
+            <li><a href="certifications.html">Certifications</a></li>
 
             <!-- 4. STUDENT -->
             <li class="dropdown">
-              <a href="#"><span>Student</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <a href="#"><span>Learning Support</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="exam.html">Exam</a></li>
-                <li><a href="placement.html">Placement</a></li>
+                <li><a href="career-support.html">Career Guidance</a></li>
                 <li><a href="faq.html">FAQ</a></li>
               </ul>
             </li>
@@ -86,7 +87,7 @@
             <li><a href="admission.html">Admission</a></li>
 
             <!-- 7. CONTACT -->
-            <li><a class="btn-getstarted" href="contact.html">Contact</a></li>
+            <li><a class="btn-getstarted" href="contact.html">Contact Us</a></li>
 
           </ul>
 
@@ -107,137 +108,175 @@
 
       <!-- Hero Container -->
       <div class="hero-container">
-        <div class="hero-content">
-          <h1>Empowering Careers, Transforming Futures</h1>
-          <p>Advance your professional journey with IICP’s flexible, industry-relevant Management and IT certification programs. Learn online, upskill at your pace, and unlock new career opportunities—anytime, anywhere.</p>
+        <div class="hero-content" data-aos="zoom-out" data-aos-delay="100">
+          <h1>Professional Skills. Delivered Effectively.</h1>
+          <p>“Build workplace-ready skills that open new career doors.”
+            Non-UGC/AICTE private certificates—your effort drives success.</p>
+
           <div class="cta-buttons">
-            <a href="admission.html" class="btn-apply">Apply Now</a>
-            <a href="program.html" class="btn-tour">&nbsp;Programs</a>
+            <a href="admission.html" class="btn-apply">Enquire Now</a>
+            <a href="certifications.html" class="btn-tour">training</a>
+
           </div>
 
-          
+          <!-- Updated Trust Indicators (Accurate & Legal) -->
+          <div class="announcement accreditation-info mt-4">
+            <div class="trust-badges">
+              <div class="trust-item">
+                <i class="bi bi-laptop"></i>
+                <span><strong>Digital Learning Delivery</strong> – Access structured learning materials through convenient digital channels</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-clock-history"></i>
+                <span><strong>Self-Paced &amp; Flexible</strong> – Study according to your schedule with adaptable learning timelines</span>
+              </div>
+              <div class="trust-item">
+                <i class="bi bi-currency-rupee"></i>
+                <span><strong>Accessible Professional Development</strong> – Quality skill development at reasonable investment</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Highlight Cards -->
-      <div class="highlights-container container">
+      <!-- Highlight Cards (Updated for Professional Development) -->
+      <div class="highlights-container container" data-aos="fade-up" data-aos-delay="200">
         <div class="row gy-4">
           <div class="col-md-4">
             <div class="highlight-item">
               <div class="icon">
-                <i class="bi bi-laptop-fill"></i>
+                <i class="bi bi-file-earmark-text"></i>
               </div>
-              <h3>100% Online &amp; Flexible</h3>
-              <p>Study at your own pace with self-directed online learning and expert support.</p>
+              <h3>Structured Learning Materials</h3>
+              <p>Access comprehensive study resources organized for systematic professional skill development.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="highlight-item">
               <div class="icon">
-                <i class="bi bi-briefcase-fill"></i>
+                <i class="bi bi-briefcase"></i>
               </div>
-              <h3>Career-Focused Programs</h3>
-              <p>Industry-aligned courses designed for real-world skills and job readiness.</p>
+              <h3>Industry-Aligned Content</h3>
+              <p>Practical learning materials focused on current professional requirements and workplace applications.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="highlight-item">
               <div class="icon">
-                <i class="bi bi-award-fill"></i>
+                <i class="bi bi-people"></i>
               </div>
-              <h3>Recognized Certification</h3>
-              <p>Earn valued certificates that enhance your employability and career growth.</p>
+              <h3>Professional Guidance</h3>
+              <p>Receive support and clarification through dedicated channels for your learning journey.</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- LEGAL DISCLAIMER (Optional but recommended) -->
+      <div class="container mt-4">
+        <div class="legal-note text-center">
+          <p class="small text-muted">
+            <i class="bi bi-info-circle me-1"></i>
+            Industry Integrated Career Platform provides professional skill development through distance learning.
+            We focus on practical knowledge enhancement for career growth.
+          </p>
         </div>
       </div>
 
     </section><!-- /Hero 2 Section -->
 
-
     <!-- About Section -->
     <section id="about" class="about section">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>About</h2>
-        <div><span>About</span> <span class="description-title">Us</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="content">
-              <h2>Welcome to International Institute of Career Progression (IICP)</h2>
+              <h2>Industry Integrated Career Platform</h2>
               <p class="description">
-                In a rapidly changing world, professional success demands adaptability, expertise, and lifelong learning. At IICP, we deliver flexible, industry-relevant online programs in management and IT, empowering ambitious individuals to balance work, study, and personal growth. Our courses blend practical skills with academic rigor, preparing you to excel in dynamic industries and seize emerging opportunities.
+                We are a professional skill development initiative focused on bridging the gap between industry requirements
+                and individual capabilities. Through structured digital learning, we help working professionals and career
+                aspirants enhance their practical skills and advance their professional journey across India.
               </p>
 
               <div class="benefits">
-                <div class="benefit-item">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
                   <div class="icon">
-                    <i class="bi bi-calendar3"></i>
+                    <i class="bi bi-laptop"></i>
                   </div>
                   <div class="text">
-                    <h4>Flexible Online Learning</h4>
+                    <h4>Structured Digital Learning</h4>
                     <p>
-                      Study at your own pace with self-directed online programs designed for working professionals and aspiring leaders.
+                      Access organized learning materials through digital channels designed for professional development.
                     </p>
                   </div>
                 </div>
 
-                <div class="benefit-item">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">
                   <div class="icon">
-                    <i class="bi bi-journal-text"></i>
+                    <i class="bi bi-briefcase"></i>
                   </div>
                   <div class="text">
-                    <h4>Industry-Relevant Curriculum</h4>
+                    <h4>Industry-Relevant Skill Building</h4>
                     <p>
-                      Engage with up-to-date content and real-world projects that reflect current industry needs and future trends.
+                      Content focused on practical workplace applications and current professional requirements.
                     </p>
                   </div>
                 </div>
 
-                <div class="benefit-item">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">
                   <div class="icon">
-                    <i class="bi bi-person-workspace"></i>
+                    <i class="bi bi-calendar-check"></i>
                   </div>
                   <div class="text">
-                    <h4>Supportive Learning Environment</h4>
+                    <h4>Flexible Learning Schedule</h4>
                     <p>
-                      Benefit from expert faculty, peer collaboration, and a vibrant alumni network to enhance your educational journey.
+                      Study according to your availability with self-paced learning timelines that respect your commitments.
                     </p>
                   </div>
                 </div>
 
-                <div class="benefit-item">
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">
                   <div class="icon">
-                    <i class="bi bi-briefcase-fill"></i>
+                    <i class="bi bi-graph-up"></i>
                   </div>
                   <div class="text">
-                    <h4>Career Advancement</h4>
+                    <h4>Professional Growth Focus</h4>
                     <p>
-                      Unlock new opportunities with recognized certifications and strong industry connections that boost your employability.
+                      Development paths designed to enhance your professional capabilities and career prospects.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div class="cta">
-                <a href="program.html" class="btn btn-primary">View All Programs</a>
-
+              <div class="cta" data-aos="fade-up" data-aos-delay="600">
+                <a href="certifications.html" class="btn btn-primary">View Professional Development Paths</a>
               </div>
 
             </div>
           </div>
 
           <div class="col-lg-6">
-            <div class="image">
-              <img src="assets/img/education/students-1.webp" alt="IICP students" class="img-fluid">
+            <div class="image" data-aos="zoom-in" data-aos-delay="200">
+              <img src="assets/img/education/students-1.webp" alt="Professionals engaged in skill development" class="img-fluid">
+              <div class="image-caption">
+                <small>Professional skill enhancement for career advancement</small>
+              </div>
             </div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- Optional Legal Note -->
+      <div class="container mt-5">
+        <div class="legal-disclaimer">
+          <p class="small">
+            <i class="bi bi-info-circle me-2"></i>
+            <strong>Note:</strong> Industry Integrated Career Platform provides professional skill development through distance learning.
+            We focus on practical knowledge enhancement and professional capability building. Our learning paths are designed
+            for career growth and do not constitute formal academic education or UGC/AICTE-recognized programs.
+          </p>
         </div>
       </div>
 
@@ -246,13 +285,13 @@
     <!-- Testimonials 2 Section -->
     <section id="testimonials-2" class="testimonials section testimonials-2">
 
-      <div class="container section-title">
-        <h2>Student Success Stories</h2>
-        <p>Hear from our graduates about their transformative learning experiences</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Professional Feedback</h2>
+        <p>Experiences shared by individuals using our skill development resources</p>
       </div>
 
-      <div class="container">
-        <div class="swiper init-swiper">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
           <script type="application/json" class="swiper-config">
             {
               "loop": true,
@@ -278,330 +317,540 @@
               }
             }
           </script>
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="swiper-wrapper-14cb02045a06a822" aria-live="off" style="transition-duration: 0ms; transform: translate3d(-870.667px, 0px, 0px); transition-delay: 0ms;">
 
             <!-- Testimonial 1 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://i.ibb.co/d4vPtQzk/Untitled-design.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Arjun Mehta</h3>
-                <h4>CEO, Transformative Solutions Ltd.</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  The comprehensive program at IICP completely transformed my professional approach. The practical knowledge I gained helped me implement groundbreaking strategies that significantly improved our organizational performance.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
 
             <!-- Testimonial 2 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://i.ibb.co/HTqDFPx4/Untitled-design-1.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Priya Sharma</h3>
-                <h4>Operations Director, Global Ventures Inc.</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  IICP's programs gave me comprehensive knowledge that was immediately applicable in my role. The skills I developed helped me improve our company's operational efficiency and contributed directly to my career advancement.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
 
             <!-- Testimonial 3 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://i.ibb.co/d4vPtQzk/Untitled-design.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Rahul Kapoor</h3>
-                <h4>CFO, FinTech Innovations</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  The practical, industry-relevant approach at IICP helped me implement systems that increased our company's profitability significantly. The knowledge gained has been invaluable for my professional growth.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
 
             <!-- Testimonial 4 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://i.ibb.co/HTqDFPx4/Untitled-design-1.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Anita Desai</h3>
-                <h4>Branch Manager, National Commerce Bank</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  IICP provided deep insights and practical knowledge that I've successfully applied in leading our organization's transformation. The learning experience has been instrumental in my career progression.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div>
 
             <!-- Testimonial 5 -->
-            <div class="swiper-slide">
+
+            <div class="swiper-slide" style="width: 425.333px; margin-right: 10px;" role="group" aria-label="2 / 5" data-swiper-slide-index="1">
               <div class="testimonial-item">
-                <img src="https://i.ibb.co/d4vPtQzk/Untitled-design.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Vikram Singh</h3>
-                <h4>CTO, TechSolutions Enterprise</h4>
+                <div class="learner-avatar">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h3>Professional from Mumbai</h3>
+                <h4>Marketing Domain</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  The structured learning approach helped me apply new concepts effectively in my professional work.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="testimonial-meta">
+                  <small>Professional Development Path</small>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-prev" style="width: 425.333px; margin-right: 10px;" role="group" aria-label="3 / 5" data-swiper-slide-index="2">
+              <div class="testimonial-item">
+                <div class="learner-avatar">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h3>Professional from Delhi</h3>
+                <h4>Finance Background</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  Flexible learning options allowed me to enhance my skills alongside my work responsibilities.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="testimonial-meta">
+                  <small>Skill Enhancement Program</small>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-active" style="width: 425.333px; margin-right: 10px;" role="group" aria-label="4 / 5" data-swiper-slide-index="3">
+              <div class="testimonial-item">
+                <div class="learner-avatar">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h3>Professional from Pune</h3>
+                <h4>IT Sector</h4>
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                </div>
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  The self-paced format worked well with my schedule and allowed steady skill development.
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <div class="testimonial-meta">
+                  <small>Digital Learning Experience</small>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide swiper-slide-next" style="width: 425.333px; margin-right: 10px;" role="group" aria-label="5 / 5" data-swiper-slide-index="4">
+              <div class="testimonial-item">
+                <div class="learner-avatar">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h3>Professional from Bangalore</h3>
+                <h4>Management Role</h4>
                 <div class="stars">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  The strategic knowledge I gained from IICP helped me lead major organizational projects successfully. The practical frameworks have been particularly valuable for implementing effective systems.
+                  Practical content focused on workplace applications was valuable for my professional growth.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
+                <div class="testimonial-meta">
+                  <small>Professional Capability Building</small>
+                </div>
               </div>
             </div>
-
-            <!-- Testimonial 6 -->
-            <div class="swiper-slide">
+            <div class="swiper-slide" style="width: 425.333px; margin-right: 10px;" role="group" aria-label="1 / 5" data-swiper-slide-index="0">
               <div class="testimonial-item">
-                <img src="https://i.ibb.co/HTqDFPx4/Untitled-design-1.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Neha Patel</h3>
-                <h4>HR Director, PeopleFirst Corp</h4>
+                <div class="learner-avatar">
+                  <i class="bi bi-person-circle"></i>
+                </div>
+                <h3>Professional from Hyderabad</h3>
+                <h4>Career Development</h4>
                 <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                 </div>
                 <p>
                   <i class="bi bi-quote quote-icon-left"></i>
-                  The programs at IICP transformed our approach from administrative to strategic. The knowledge and skills I acquired have been crucial for making effective, data-driven decisions in my role.
+                  Industry-aligned learning materials provided relevant insights for my professional advancement.
                   <i class="bi bi-quote quote-icon-right"></i>
                 </p>
-              </div>
-            </div>
-
-            <!-- Testimonial 7 -->
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="https://i.ibb.co/d4vPtQzk/Untitled-design.png" alt="Testimonial" class="testimonial-img" style="width:90px;height:90px;object-fit:cover;border-radius:50%;margin:auto;display:block;">
-                <h3>Sanjay Malhotra</h3>
-                <h4>Investment Director, Capital Growth Partners</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <div class="testimonial-meta">
+                  <small>Industry-Relevant Learning</small>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  IICP gave me advanced skills that directly contributed to identifying excellent opportunities for our clients. The practical knowledge has been invaluable for both my professional growth and career advancement.
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
             </div>
-
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 5" aria-current="true"></span></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+
+      <!-- LEGAL DISCLAIMER -->
+      <div class="container mt-4">
+        <div class="legal-notice text-center">
+          <p class="small text-muted">
+            <i class="bi bi-info-circle me-1"></i>
+            <strong>Note:</strong>“These are individual experiences only, not typical; past performance does not guarantee future results.”
+          </p>
         </div>
       </div>
     </section><!-- /Testimonials 2 Section -->
 
     <!-- Services 5 Section -->
-    <section id="services-5" class="services-5 section">
+    <section id="services-5" class="distance-programs section services-5">
       <!-- Font Awesome 6 CDN -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
       <div class="section-title">
-        <h2>Our  Programs</h2>
-        <p>Comprehensive Certifications</p>
+        <h2>Professional Development Paths</h2>
+        <p>Industry-aligned skill enhancement programs through structured digital learning</p>
       </div>
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center g-5">
 
-<!-- 1. Distinguished Program (Keep as is) -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Distinguished Program in Strategic Leadership Research (DPSLR)</a></h3>
-      <p>A flexible, research-driven executive engagement crafted for senior leaders who want to apply doctoral-level thinking to real-world organizational challenges — without stepping away from their careers.</p>
-      <p><small><strong>Note:</strong> This is a professional leadership development program. It is not a Ph.D. or a UGC-recognized doctoral degree.</small></p>
-      <a href="program.html" class="service-link"><span>Explore Program</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+          <!-- 1. Leadership Development Path -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-users"></i></div>
+                <h3><a href="certifications.html">Leadership Development Path</a></h3>
+                <span class="program-level">Senior Professional Level</span>
+              </div>
+              <div class="program-content">
+                <p class="program-description">Strategic leadership and management capability development for experienced professionals.</p>
 
-<!-- 2. Management Programs -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-chart-line"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Executive Management Programs</a></h3>
-      <ul style="margin-left:0; padding-left:1.2em;">
-        <li><strong>EC-BM</strong> – Executive Certification in Business Management</li>
-        <li><strong>EC-DSM</strong> – Executive Certification in Digital Systems Management</li>
-        <li><strong>EC-SL</strong> – Executive Certification in Strategic Leadership</li>
-      </ul>
-      <p><small><strong>Professional development certifications for working executives.</strong></small></p>
-      <a href="program.html" class="service-link"><span>Explore All</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+                <div class="program-features">
+                  <h6>Learning Components:</h6>
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Comprehensive Learning Materials</li>
+                    <li><i class="bi bi-check-circle"></i> Practical Case Analysis</li>
+                    <li><i class="bi bi-check-circle"></i> Professional Application Projects</li>
+                    <li><i class="bi bi-check-circle"></i> Strategic Thinking Exercises</li>
+                  </ul>
+                </div>
 
-<!-- 3. HR Programs -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-users-gear"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Executive Certification Programs in HRM</a></h3>
-      <ul style="margin-left:0; padding-left:1.2em;">
-        <li><strong>EC-SHRM</strong> – Executive Certification in Strategic HR Management</li>
-        <li><strong>EC-HRPA</strong> – Executive Certification in HR Policy & Administration</li>
-        <li><strong>EC-STA</strong> – Executive Certification in Strategic Talent Acquisition</li>
-        <li><strong>EC-LLIR</strong> – Executive Certification in Labour Law & Industrial Relations</li>
-        <li><strong>EC-IPOB</strong> – Executive Certification in Industrial Psychology & Organisational Behaviour</li>
-        <li><strong>EC-HLT</strong> – Executive Certification in HR Leadership & Transformation</li>
-        <li><strong>EC-HAWP</strong> – Executive Certification in HR Analytics & Workforce Planning</li>
-        <li><strong>EC-CRD</strong> – Executive Certification in Compensation & Rewards Design</li>
-        <li><strong>EC-PMS</strong> – Executive Certification in Performance Management Systems</li>
-        <li><strong>EC-TD</strong> – Executive Certification in Training & Development</li>
-        <li><strong>EC-EEC</strong> – Executive Certification in Employee Engagement & Culture</li>
-      </ul>
-      <p><small><strong>Professional skill development for HR leaders and practitioners.</strong></small></p>
-      <a href="program.html" class="service-link"><span>Explore All</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>5-7 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-laptop"></i>
+                    <span>Digital Delivery</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Completion Acknowledgment</span>
+                  </div>
+                </div>
 
-<!-- 4. Finance & Banking Programs -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Finance & Banking Certification Programs</a></h3>
-      <ul style="margin-left:0; padding-left:1.2em;">
-        <li><strong>EC-FM</strong> – Executive Certification in Financial Management</li>
-        <li><strong>EC-IPM</strong> – Executive Certification in Investment & Portfolio Management</li>
-        <li><strong>EC-BRC</strong> – Executive Certification in Banking, Risk & Compliance</li>
-        <li><strong>EC-FDB</strong> – Executive Certification in FinTech & Digital Banking</li>
-        <li><strong>EC-CCA</strong> – Executive Certification in Corporate Credit Analysis</li>
-        <li><strong>EC-WMFP</strong> – Executive Certification in Wealth Management & Financial Planning</li>
-        <li><strong>EC-AT</strong> – Executive Certification in Accounting & Taxation</li>
-      </ul>
-      <p><small><strong>Advanced financial skill certifications for professionals.</strong></small></p>
-      <a href="program.html" class="service-link"><span>Explore All</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+                <a href="certifications.html" class="program-link"><span>View Learning Path</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
 
-<!-- 5. Marketing Programs -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Marketing & Operations Certification Programs</a></h3>
-      <ul style="margin-left:0; padding-left:1.2em;">
-        <li><strong>EC-DMA</strong> – Executive Certification in Digital Marketing & Analytics</li>
-        <li><strong>EC-SMM</strong> – Executive Certification in Strategic Marketing Management</li>
-        <li><strong>EC-SBD</strong> – Executive Certification in Sales & Business Development</li>
-        <li><strong>EC-SCOM</strong> – Executive Certification in Supply Chain & Operations Management</li>
-        <li><strong>EC-PM</strong> – Executive Certification in Project Management</li>
-      </ul>
-      <p><small><strong>Industry-relevant marketing and operations certifications.</strong></small></p>
-      <a href="program.html" class="service-link"><span>Explore All</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+          <!-- 2. Management Skill Development -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h3><a href="management-skills.html">Management Skill Development</a></h3>
+                <span class="program-level">Professional Level</span>
+              </div>
+              <div class="program-content">
+                <div class="specializations">
+                  <h6>Focus Areas:</h6>
+                  <div class="specialization-grid">
+                    <div class="spec-item">
+                      <h5>Business Management</h5>
+                      <p>Comprehensive organizational leadership</p>
+                    </div>
+                    <div class="spec-item">
+                      <h5>Digital Systems Management</h5>
+                      <p>Technology leadership concepts</p>
+                    </div>
+                    <div class="spec-item">
+                      <h5>Strategic Planning</h5>
+                      <p>Advanced decision-making frameworks</p>
+                    </div>
+                  </div>
+                </div>
 
-<!-- 6. Specialized Programs -->
-<div class="col-md-6">
-  <div class="service-item">
-    <div class="service-icon"><i class="fa-solid fa-gears"></i></div>
-    <div class="service-content">
-      <h3><a href="program.html">Specialized Executive Programs</a></h3>
-      <ul style="margin-left:0; padding-left:1.2em;">
-        <li><strong>EC-BA</strong> – Executive Certification in Business Analytics</li>
-        <li><strong>EC-CS</strong> – Executive Certification in Corporate Strategy</li>
-        <li><strong>EC-ENT</strong> – Executive Certification in Entrepreneurship</li>
-        <li><strong>EC-CM</strong> – Executive Certification in Compliance Management</li>
-        <li><strong>EC-DT</strong> – Executive Certification in Digital Transformation</li>
-      </ul>
-      <p><small><strong>Focused certifications for specialized career paths.</strong></small></p>
-      <a href="program.html" class="service-link"><span>Explore All</span><i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</div>
+                <div class="program-features">
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Industry-relevant content</li>
+                    <li><i class="bi bi-check-circle"></i> Structured learning materials</li>
+                    <li><i class="bi bi-check-circle"></i> Practical application focus</li>
+                  </ul>
+                </div>
 
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>4-6 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-journal-text"></i>
+                    <span>Case Studies Included</span>
+                  </div>
+                </div>
+
+                <a href="certifications.html" class="program-link"><span>Explore Management Paths</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. HR Professional Development -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h3><a href="hr-development.html">HR Professional Development</a></h3>
+                <span class="program-level">Specialized Skill Level</span>
+              </div>
+              <div class="program-content">
+                <div class="specializations">
+                  <h6>Key Development Areas:</h6>
+                  <div class="spec-badges">
+                    <span class="spec-badge">HR Strategy</span>
+                    <span class="spec-badge">Talent Management</span>
+                    <span class="spec-badge">People Analytics</span>
+                    <span class="spec-badge">Compensation Systems</span>
+                    <span class="spec-badge">Learning Development</span>
+                    <span class="spec-badge">Performance Systems</span>
+                  </div>
+                </div>
+
+                <div class="program-features">
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Multiple specialization options</li>
+                    <li><i class="bi bi-check-circle"></i> Practical HR frameworks</li>
+                    <li><i class="bi bi-check-circle"></i> Workplace application focus</li>
+                    <li><i class="bi bi-check-circle"></i> Industry-relevant practices</li>
+                  </ul>
+                </div>
+
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>3-5 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-play-circle"></i>
+                    <span>Reference Resources</span>
+                  </div>
+                </div>
+
+                <a href="certifications.html" class="program-link"><span>View HR Development</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Finance & Banking Skills -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <h3><a href="finance-skills.html">Finance &amp; Banking Skills</a></h3>
+                <span class="program-level">Technical Skill Level</span>
+              </div>
+              <div class="program-content">
+                <div class="specializations">
+                  <h6>Skill Development Areas:</h6>
+                  <ul class="program-list">
+                    <li>Financial Management Concepts</li>
+                    <li>Investment Principles</li>
+                    <li>Banking Operations Understanding</li>
+                    <li>FinTech Applications</li>
+                    <li>Wealth Management Basics</li>
+                    <li>Corporate Finance Fundamentals</li>
+                  </ul>
+                </div>
+
+                <div class="program-features">
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Financial analysis exercises</li>
+                    <li><i class="bi bi-check-circle"></i> Banking scenario studies</li>
+                    <li><i class="bi bi-check-circle"></i> Investment concept applications</li>
+                  </ul>
+                </div>
+
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>4-6 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-calculator"></i>
+                    <span>Practical Applications</span>
+                  </div>
+                </div>
+
+                <a href="certifications.html" class="program-link"><span>Explore Finance Skills</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Marketing & Operations Development -->
+          <div class="col-md-6" data-aos="fade-right" data-aos-delay="300">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <h3><a href="marketing-development.html">Marketing &amp; Operations Development</a></h3>
+                <span class="program-level">Growth-Oriented</span>
+              </div>
+              <div class="program-content">
+                <div class="specializations">
+                  <h6>Development Focus Areas:</h6>
+                  <ul class="program-list">
+                    <li>Digital Marketing Fundamentals</li>
+                    <li>Strategic Marketing Concepts</li>
+                    <li>Sales Development Principles</li>
+                    <li>Supply Chain Understanding</li>
+                    <li>Project Management Basics</li>
+                  </ul>
+                </div>
+
+                <div class="program-features">
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Marketing application projects</li>
+                    <li><i class="bi bi-check-circle"></i> Analytics understanding</li>
+                    <li><i class="bi bi-check-circle"></i> Operational scenario analysis</li>
+                  </ul>
+                </div>
+
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>3-5 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-bar-chart"></i>
+                    <span>Analytical Skill Focus</span>
+                  </div>
+                </div>
+
+                <a href="certifications.html" class="program-link"><span>View Marketing Development</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Specialized Professional Skills -->
+          <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="program-card">
+              <div class="program-header">
+                <div class="program-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3><a href="specialized-skills.html">Specialized Professional Skills</a></h3>
+                <span class="program-level">Niche Expertise</span>
+              </div>
+              <div class="program-content">
+                <div class="specializations">
+                  <h6>Emerging Skill Areas:</h6>
+                  <ul class="program-list">
+                    <li>Business Analytics Fundamentals</li>
+                    <li>Corporate Strategy Concepts</li>
+                    <li>Entrepreneurship Principles</li>
+                    <li>Compliance Understanding</li>
+                    <li>Digital Transformation Basics</li>
+                  </ul>
+                </div>
+
+                <div class="program-features">
+                  <ul>
+                    <li><i class="bi bi-check-circle"></i> Data analysis applications</li>
+                    <li><i class="bi bi-check-circle"></i> Strategic thinking frameworks</li>
+                    <li><i class="bi bi-check-circle"></i> Digital adaptation concepts</li>
+                  </ul>
+                </div>
+
+                <div class="program-details">
+                  <div class="detail-item">
+                    <i class="bi bi-clock"></i>
+                    <span>3-4 Months</span>
+                  </div>
+                  <div class="detail-item">
+                    <i class="bi bi-gear"></i>
+                    <span>Innovation Focus</span>
+                  </div>
+                </div>
+
+                <a href="certifications.html" class="program-link"><span>Explore Specialized Skills</span><i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
 
         </div><!-- /row -->
       </div><!-- /container -->
+
+      <!-- LEARNING APPROACH SECTION -->
+      <div class="container mt-5">
+        <div class="delivery-method">
+          <h4 class="text-center mb-4">Our Professional Development Approach</h4>
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="delivery-content">
+                <h5>Structured Skill Development Experience</h5>
+                <p>Our professional development paths are delivered through organized digital learning:</p>
+                <ul>
+                  <li><strong>Organized Learning Materials:</strong> Comprehensive professional content</li>
+                  <li><strong>Reference Resources:</strong> Supplementary learning aids</li>
+                  <li><strong>Practical Scenarios:</strong> Real-world professional situations</li>
+                  <li><strong>Application Exercises:</strong> Skill practice opportunities</li>
+                  <li><strong>Professional Guidance:</strong> Support throughout development</li>
+                  <li><strong>Completion Recognition:</strong> Acknowledgment of skill development</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="delivery-visual">
+                <img src="assets/img/education/features-2.webp" alt="Professional Skill Development" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE INFORMATION SECTION -->
+      <div class="container mt-5">
+        <div class="compliance-notice">
+          <div class="compliance-header">
+            <i class="bi bi-info-circle"></i>
+            <h5>Important Professional Development Information</h5>
+          </div>
+          <div class="compliance-content">
+            <p><strong>These are professional skill development paths offered through distance learning.</strong></p>
+            <ul>
+              <li>Focus on <strong>practical skill enhancement</strong> for professional growth</li>
+              <li>Completion acknowledgment for <strong>professional development</strong> participation</li>
+              <li>Content aligned with <strong>industry practice standards</strong></li>
+              <li>Operated in compliance with <strong>Indian professional training guidelines</strong></li>
+              <li>All learning materials protected by <strong>intellectual property rights</strong></li>
+            </ul>
+            <p class="small mt-3"><em>Note: These are professional development paths, not formal academic programs affiliated with educational regulatory bodies.</em></p>
+          </div>
+        </div>
+      </div>
     </section><!-- /Services 5 Section -->
 
     <!-- Hero 3 Section -->
     <section id="hero-3" class="hero-3 section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-center mb-5">
           <div class="col-lg-12 mb-4 mb-lg-0">
             <div class="badge-wrapper mb-3">
               <div class="d-inline-flex align-items-center rounded-pill border border-accent-light">
                 <div class="icon-circle me-2">
-                  <i class="bi bi-mortarboard"></i>
+                  <i class="bi bi-award"></i>
                 </div>
-                <span class="badge-text me-3">Why Choose Us</span>
+                <span class="badge-text me-3">Our Professional Approach</span>
               </div>
             </div>
 
-            <h1 class="hero-title mb-4">Shape Your Future with IICP</h1>
+            <h1 class="hero-title mb-4">Develop Your Professional Capabilities</h1>
 
             <p class="hero-description mb-4">
-              Discover the IICP advantage: flexible, self-paced online and distance learning, trending management and IT specializations, and a curriculum regularly updated to match industry demands. Enjoy 24/7 support, affordable fees, and free study material delivery—plus 100% placement support and a strong alumni network to guide your professional journey.
+              Experience structured professional development through accessible digital learning. Choose from current management
+              and IT skill paths with content regularly reviewed for industry relevance. Benefit from organized learning support
+              and professional guidance throughout your development journey.
             </p>
 
             <div class="cta-wrapper">
-              <a href="program.html" class="btn btn-primary">Explore Programs</a>
+              <a href="learning-paths.html" class="btn btn-primary">View Development Paths</a>
             </div>
           </div>
         </div>
 
         <div class="row feature-boxes">
-          <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-journal-check"></i>
+                <i class="bi bi-journal-text"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Diverse Learning Resources</h3>
+                <h3 class="feature-title">Comprehensive Learning Resources</h3>
                 <p class="feature-text">
-                  Access eBooks, study notes, video tutorials, practice exams, and more for comprehensive, flexible learning. Enjoy free study material delivery upon enrollment.
+                  Access organized study materials, reference guides, and practical applications for systematic skill development.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-globe"></i>
+                <i class="bi bi-briefcase"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Industry-Relevant &amp; Trending</h3>
+                <h3 class="feature-title">Industry-Aligned Skill Paths</h3>
                 <p class="feature-text">
-                  Choose from up-to-date management and IT specializations. Our curriculum is regularly refreshed to reflect the latest market trends and employer needs.
+                  Select from current professional specializations with content reviewed for workplace relevance and application.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-people"></i>
+                <i class="bi bi-person-badge"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Placement &amp; Support</h3>
+                <h3 class="feature-title">Professional Development Support</h3>
                 <p class="feature-text">
-                  100% placement support with job alerts, resume building, interview prep, and a strong alumni network. Benefit from 24/7 assistance via WhatsApp, email, and digital resources.
+                  Guidance for resume enhancement, interview preparation, and professional networking throughout your skill development.
                 </p>
               </div>
             </div>
@@ -609,41 +858,41 @@
         </div>
 
         <div class="row feature-boxes mt-4">
-          <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="500">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-file-earmark-text"></i>
+                <i class="bi bi-clipboard-check"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Online Exams &amp; Mock Tests</h3>
+                <h3 class="feature-title">Progress Assessment &amp; Application</h3>
                 <p class="feature-text">
-                  Convenient online assessments and mock tests help you track your progress and prepare effectively for real-world challenges.
+                  Structured assessments and practical applications help track development and prepare for professional challenges.
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 mb-4 mb-lg-0">
+          <div class="col-lg-4 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-cash-coin"></i>
+                <i class="bi bi-currency-exchange"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Affordable Fees</h3>
+                <h3 class="feature-title">Accessible Development Options</h3>
                 <p class="feature-text">
-                  Flexible payment plans and cost-effective tuition make high-quality education accessible to everyone.
+                  Flexible learning paths and reasonable investment options make professional skill enhancement achievable.
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="700">
             <div class="feature-box">
               <div class="feature-icon me-sm-4 mb-3 mb-sm-0">
-                <i class="bi bi-clock-history"></i>
+                <i class="bi bi-calendar2-week"></i>
               </div>
               <div class="feature-content">
-                <h3 class="feature-title">Flexible Study Options</h3>
+                <h3 class="feature-title">Adaptable Learning Schedule</h3>
                 <p class="feature-text">
-                  Study at your own pace with self-paced online and distance learning, tailored to fit your schedule and career goals.
+                  Learn according to your availability with self-paced digital materials that accommodate your professional commitments.
                 </p>
               </div>
             </div>
@@ -657,56 +906,60 @@
     <!-- Stats Section -->
     <section id="stats" class="stats section">
 
-      <!-- Section Title -->
-      <div class="container section-title">
-        <h2>Stats</h2>
-        <div><span>Check Our</span> <span class="description-title">Stats</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <i class="bi bi-person-check color-blue flex-shrink-0"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="1632" data-purecounter-duration="0" class="purecounter">1632</span>
-                <p>Satisfied Students</p>
+                <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="0" class="purecounter">1500</span>
+                <p>Professionals Engaged</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <i class="bi bi-journals color-orange flex-shrink-0"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="1521" data-purecounter-duration="0" class="purecounter">1521</span>
-                <p>Completed Courses</p>
+                <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="0" class="purecounter">25</span>
+                <p>Learning Paths Available</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <i class="bi bi-clock-history color-green flex-shrink-0"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="1863" data-purecounter-duration="0" class="purecounter">1863</span>
-                <p>Hours of Mentoring</p>
+                <span data-purecounter-start="0" data-purecounter-end="1800" data-purecounter-duration="0" class="purecounter">1800</span>
+                <p>Hours of Professional Guidance</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
           <div class="col-lg-3 col-md-6">
             <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <i class="bi bi-briefcase color-pink flex-shrink-0"></i>
               <div>
-                <span data-purecounter-start="0" data-purecounter-end="1085" data-purecounter-duration="0" class="purecounter">1085</span>
-                <p>Placed students</p>
+                <span data-purecounter-start="0" data-purecounter-end="1000" data-purecounter-duration="0" class="purecounter">1000</span>
+                <p>Career Transitions Supported</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
 
+        </div>
+
+        <!-- Optional Legal Note -->
+        <div class="container mt-4">
+          <div class="text-center">
+            <p class="small text-muted">
+              <i class="bi bi-info-circle me-1"></i>
+              “Internal cumulative records FY 20-21 onward; not audited; no job/salary guaranteed.”
+            </p>
+          </div>
         </div>
 
       </div>
@@ -716,7 +969,7 @@
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="cta-wrapper">
           <div class="background-pattern">
@@ -727,84 +980,95 @@
 
           <div class="row align-items-center">
             <div class="col-lg-6 order-lg-2">
-              <div class="image-section">
+              <div class="image-section" data-aos="fade-left" data-aos-delay="200">
                 <div class="main-image-wrapper">
-                  <img src="assets/img/cta/cta-4.webp" alt="IICP Career Platform Image" class="img-fluid main-img">
+                  <img src="assets/img/cta/cta-4.webp" alt="IICP Career Platform" class="img-fluid main-img">
                   <div class="overlay-circle circle-1"></div>
                   <div class="overlay-circle circle-2"></div>
                 </div>
 
-                <div class="stats-card card-1">
+                <div class="stats-card card-1" data-aos="zoom-in" data-aos-delay="400">
                   <div class="stat-icon">
-                    <i class="bi bi-briefcase-fill"></i>
+                    <i class="bi bi-arrow-up-right-square-fill"></i>
                   </div>
                   <div class="stat-content">
-                    <h6>83%</h6>
-                    <span>Placement Rate</span>
+                    <h6>25+</h6>
+                    <span>Professional Paths</span>
                   </div>
                 </div>
 
-                <div class="stats-card card-2">
+                <div class="stats-card card-2" data-aos="zoom-in" data-aos-delay="500">
                   <div class="stat-icon">
-                    <i class="bi bi-person-check-fill"></i>
+                    <i class="bi bi-person-plus-fill"></i>
                   </div>
                   <div class="stat-content">
-                    <h6>1.5K+</h6>
-                    <span>Candidates Trained</span>
+                    <h6>1500+</h6>
+                    <span>Professionals Engaged</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-6 order-lg-1">
-              <div class="content-section">
-                <div class="label-badge">
-                  <i class="bi bi-rocket-takeoff"></i>
-                  <span>Kickstart Your Career</span>
+              <div class="content-section" data-aos="fade-right" data-aos-delay="300">
+                <div class="label-badge" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bi bi-graph-up-arrow"></i>
+                  <span>Advance Your Career</span>
                 </div>
 
-                <h2>Ready to Launch Your Career with IICP?</h2>
-                <p>Join IICP’s Industry Integrated Career Platform to gain in-demand skills, connect with top employers, and secure your dream job. Your future starts here.</p>
+                <h2 data-aos="fade-up" data-aos-delay="450">Ready to Enhance Your Professional Skills?</h2>
+                <p data-aos="fade-up" data-aos-delay="500">Join Industry Integrated Career Platform to develop in-demand capabilities,
+                  access structured learning, and advance your professional journey through focused skill development.</p>
 
-                <div class="features-grid">
+                <div class="features-grid" data-aos="fade-up" data-aos-delay="550">
                   <div class="feature-item">
                     <div class="feature-icon">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
-                    <span>Industry-Aligned Courses</span>
+                    <span>Industry-Relevant Learning</span>
                   </div>
 
                   <div class="feature-item">
                     <div class="feature-icon">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
-                    <span>Structured Career Advancement</span>
+                    <span>Structured Skill Development</span>
                   </div>
 
                   <div class="feature-item">
                     <div class="feature-icon">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
-                    <span>Job Placement Support</span>
+                    <span>Professional Guidance</span>
                   </div>
 
                   <div class="feature-item">
                     <div class="feature-icon">
                       <i class="bi bi-check-circle-fill"></i>
                     </div>
-                    <span>Hands-On Projects</span>
+                    <span>Practical Application Focus</span>
                   </div>
                 </div>
 
-                <div class="cta-actions">
-                  <a href="admission.html" class="btn btn-cta-primary">Enroll Now</a>
+                <div class="cta-actions" data-aos="fade-up" data-aos-delay="600">
+                  <a href="admission.html" class="btn btn-cta-primary">Begin Learning</a>
                   <div class="secondary-action">
-
-                    <span class="note">No upfront fees</span>
+                    <span class="note">Structured development approach</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Optional Legal Note -->
+        <div class="container mt-4">
+          <div class="legal-note text-center">
+            <p class="small">
+              <i class="bi bi-info-circle me-1"></i>
+              Our platform focuses on professional skill development through structured learning.
+              Individual outcomes depend on multiple factors including personal effort and market conditions.
+            </p>
           </div>
         </div>
 
@@ -815,11 +1079,11 @@
     <!-- Contact 4 Section -->
     <section id="contact-4" class="contact-3 section contact contact-4">
 
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row g-4 g-lg-5">
           <div class="col-lg-5">
-            <div class="info-box">
+            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
               <h3>Contact Info</h3>
               <p><b>100% Online | Accessible Anytime, Anywhere</b></p>
 
@@ -828,7 +1092,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.1069951856393!2d73.77438387519503!3d18.659194082461465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9df31e0382b%3A0x3a47aa41d8c0b1d2!2sKohinoor%20Arcade!5e0!3m2!1sen!2sin!4v1764564460877!5m2!1sen!2sin" width="100%" height="240" style="border:0;border-radius:6px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
 
-              <div class="info-item">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
                 </div>
@@ -838,7 +1102,7 @@
                 </div>
               </div>
 
-              <div class="info-item">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
                   <i class="bi bi-telephone"></i>
                 </div>
@@ -848,7 +1112,7 @@
                 </div>
               </div>
 
-              <div class="info-item">
+              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
                   <i class="bi bi-envelope"></i>
                 </div>
@@ -861,10 +1125,10 @@
           </div>
 
           <div class="col-lg-7">
-            <div class="contact-form">
+            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
               <h3>Fill in the form and expect a response from us within 24 hours — we're here to help!</h3>
 
-        <form action="https://api.web3forms.com/submit" method="POST"  id="web3-contact-form">
+              <form action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200" id="web3-contact-form">
                 <input type="hidden" name="access_key" value="54de3e12-0c7f-4bdb-b1c2-3facb18d7b9a">
 
                 <div class="row gy-4">
@@ -882,10 +1146,8 @@
 
                   <div class="col-md-6">
                     <select name="course_interest" class="form-control" id="course_interest" required="">
-                      <option value="" disabled="" selected="">Interested in Course</option>
-                      <option value="UG Level">UG Level</option>
-                      <option value="PG Level">PG Level</option>
-                      <option value="Diploma">Diploma</option>
+                      <option value="" disabled="" selected="">Interested in Training</option>
+                      <option value="UG Level">Management</option>
                       <option value="IT Courses">IT Courses</option>
                       <option value="Other">Other</option>
                     </select>
@@ -896,10 +1158,9 @@
                   </div>
 
                   <div class="col-12 text-center">
-                 
-                    <div class="error-message"></div>
- 
+       
                     <button type="submit" class="btn">Send Message</button>
+                    <br> By sharing details, I consent to the Privacy Policy and agree to receive course information via email, SMS, call, or other modes of communication.
                   </div>
                 </div>
               </form>
@@ -913,24 +1174,19 @@
 
   <footer id="footer" class="footer position-relative dark-background">
 
+    <!-- Professional Compliance Section -->
     <section id="steps-2" class="steps-2 section">
-
-      <slot type="section-title"></slot>
-
-      <div class="container">
-
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="steps-wrapper">
-
-          <div class="step-item">
+          <div class="step-item" data-aos="fade-right" data-aos-delay="200">
             <div class="step-content">
-
+              <div class="step-info">
+                <p><b>Industry Integrated Career Platform delivers professional skill development through structured digital learning. We focus on practical capability building aligned with current industry requirements, helping professionals advance their careers through accessible, relevant learning experiences designed for today's workplace.</b></p>
+              </div>
             </div>
-  <div class="step-info">
-  <p style="text-align: justify; text-justify: inter-word; line-height: 1.6;"><b>"International Institute of Career Progression (IICP) is an autonomous training institute offering professional certification programs. Our courses are developed independently to meet industry skill requirements and are designed for career advancement. These certifications are professional development credentials and are not equivalent to UGC/AICTE recognized degrees or diplomas. They are valued within the private sector for their practical, application-oriented curriculum."</b></p>
-</div>
-
+          </div>
+        </div>
       </div>
-
     </section>
 
     <div class="container">
@@ -940,18 +1196,15 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-geo-alt icon"></i>
           <div class="address">
-            <h4>Location</h4>
+            <h4>Our Development Center</h4>
             <p><b>
-                Near Kohinoor ArcadeOld Mumbai - Pune Hwy, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
+                Near Kohinoor Arcade, Old Mumbai-Pune Highway, Sector No. 24, Pradhikaran, Akurdi, Pimpri-Chinchwad, Maharashtra 411044</b>
             </p>
-            <p style="font-size:0.98em; color:#3498db; margin-top:8px;">
-              <i class="bi bi-laptop"></i><b>&nbsp;100% Online | Accessible Anytime, Anywhere
-              </b>
+            <p style="font-size:0.98em; color:#2ecc71; margin-top:8px;">
+              <i class="bi bi-laptop"></i><b>&nbsp;100% Digital Learning | Accessible Nationwide</b>
             </p>
-            <div><b><br></b></div>
-            <p></p>
             <p class="footer-note"><b>
-                All Programs &amp; Services are Delivered Virtually to ensure Nationwide accessibility, Global reach, and maximum flexibility.
+                All professional development programs are delivered digitally, ensuring consistent learning quality and maximum flexibility for professionals across India.
               </b></p>
           </div>
         </div>
@@ -960,11 +1213,11 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-telephone icon"></i>
           <div>
-            <h4>Contact</h4>
+            <h4>Contact &amp; Support</h4>
             <p>
-              <b>Phone/WhatsApp: <span>+91-87-939-333-47</span><br></b>
-              <strong>Email:</strong> <span>info@iicp.in</span><br>
-              <strong>Website:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#3498db;"><b>www.iicp.in</b></a>
+              <b>Professional Guidance: <span>+91-87-939-333-47</span><br></b>
+              <strong>Email Support:</strong> <span>info@iicp.in</span><br>
+              <strong>Digital Platform:</strong> <a href="https://www.iicp.in" target="_blank" style="color:#2ecc71;"><b>www.iicp.in</b></a>
             </p>
           </div>
         </div>
@@ -973,23 +1226,24 @@
         <div class="col-lg-3 col-md-6 d-flex">
           <i class="bi bi-clock icon"></i>
           <div>
-            <h4>Opening Hours</h4>
+            <h4>Learning Support Hours</h4>
             <p>
-              <strong>Mon–Sat:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
-              <b>Sunday: <span>Closed</span></b>
+              <strong>Monday–Saturday:</strong> <span><b>11:00 AM – 11:00 PM</b></span><br>
+              <b>Digital Learning Access: <span>24/7 Materials Available</span></b>
             </p>
           </div>
         </div>
 
         <!-- Social Links -->
         <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
+          <h4>Join Our Learning Community</h4>
           <div class="social-links d-flex">
-            <a href="#" class="twitter" title="Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="linkedin" title="Professional Network"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="twitter" title="Industry Updates"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook" title="Learning Community"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram" title="Learning Insights"><i class="bi bi-instagram"></i></a>
           </div>
+          <p class="community-note"><small><b>Connect with fellow professionals</b></small></p>
         </div>
       </div>
     </div>
@@ -999,48 +1253,17 @@
       <ul class="nav justify-content-center">
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="terms.html" class="nav-link">Terms</a></li>
+        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Commitment</a></li>
+        <li class="nav-item"><a href="refund.html" class="nav-link">refund</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-        <li class="nav-item"><a href="admission.html" class="nav-link">Admission</a></li>
-        <li class="nav-item"><a href="terms.html" class="nav-link">Terms of Service</a></li>
-        <li class="nav-item"><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
       </ul>
     </div>
 
     <!-- Copyright -->
     <div class="container copyright text-center mt-4">
-      <p><b>© <span>Copyright</span> <span class="px-1 sitename">IICP </span>&nbsp;<span>All Rights Reserved</span></b></p>
-    </div>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Connect Now Button</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-
-    <div id="connectNowContainer">
-      <button id="connectNowBtn">
-        <i class="fa fa-comments"></i>
-        Connect Now
-      </button>
-      <div id="connectOptions">
-        <a href="https://wa.me/918793933347" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-whatsapp"></i>
-          WhatsApp Chat
-        </a>
-        <a href="https://wa.me/918793933347?text=Please%20call%20me%20back" target="_blank" rel="noopener noreferrer">
-          <i class="fa fa-reply"></i>
-          Request Call Back
-        </a>
-        <a href="mailto:info@iicp.in">
-          <i class="fa fa-envelope"></i>
-          Email: info@iicp.in
-        </a>
-        <a href="tel:+918793933347">
-          <i class="fa fa-phone"></i>
-          Call: +918793933347
-        </a>
-      </div>
+      <p><b>© <span>2024</span> <span class="px-1 sitename">Industry Integrated Career Platform</span>&nbsp;<span>All Rights Reserved<br><br>Grievance Officer:&nbsp;info@iicp.in, Ph: +91-8793933347 (response within 24 h)<br><br></span></b></p>
+      <p class="small mt-2"><b>Advancing professional capabilities through digital learning</b></p>
     </div>
 
   </footer>
@@ -1050,7 +1273,8 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+ 
+  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
