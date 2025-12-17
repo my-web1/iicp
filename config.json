@@ -1,0 +1,58 @@
+{
+  "pageTitle": "Secure Payment – {brandName}",
+  "branding": {
+    "brandName": "IICP",
+    "headerIcon": "fa fa-university",
+
+    "tagline": "Industry Integrated Career Platform",
+    "logoUrl": "paymentlogo.jpg",
+    "logoAlt": "{brandName} Logo",
+    "proPlusText": ""
+  },
+  "paymentMethods": {
+    "upi": {
+      "enabled": true,
+      "label": "UPI ID",
+      "icon": "fa-solid fa-paper-plane",
+      "upiId": "8888801437@ptyes",
+      "payeeName": "IICP"
+    },
+    "qr": {
+      "enabled": true,
+      "label": "Scan QR",
+      "icon": "fa-solid fa-qrcode",
+      "qrImageUrl": "qr.jpeg",
+      "qrAltText": "Scan QR Code to Pay {payeeName}",
+      "upiId": "8888801437@ptyes",
+      "payeeName": "IICP"
+    },
+    "bank": {
+      "enabled": true,
+      "label": "Bank Transfer",
+      "icon": "fa-solid fa-building-columns",
+      "accountName": "Sachin Ashok Ambekar",
+      "bankName": "IDBI Bank",
+      "accountNumber": "0778104000013606",
+      "ifscCode": "IBKL0000778",
+      "branch": "Pashan Pune",
+      "accountType": "Saving Account"
+    },
+    "mobile": {
+      "enabled": true,
+      "label": "Mobile No.",
+      "icon": "fa-solid fa-mobile-screen-button",
+      "mobileNumber": "8888801437",
+      "upiId": "8888801437@ptyes",
+      "payeeName": "IICP"
+    }
+  },
+  "confirmation": {
+    "whatsAppNumber": "919284157202",
+    "purposePlaceholder": "Enter purpose (e.g., Legal Consultation, Fee Payment)",
+    "whatsAppBrandName": "IICP"
+  },
+  "footer": {
+    "secureNote": "Secure Transaction Process",
+    "secureIcon": "fa-solid fa-lock"
+  }
+}

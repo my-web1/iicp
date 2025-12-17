@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Secure Payment</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        /* --- CSS Variables (Theme & Layout) --- */
+        :root {
+            /* Professional Color Palette */
+            --color-primary: #2B3A67; /* Deep Blue */
+            --color-primary-dark: #1A2A57;
+            --color-primary-light: #5269a7;
+            --color-secondary: #F9A826; /* Accent Orange */
+            --color-secondary-dark: #e0941a;
+            --color-background: #f7f9fc; /* Light Grayish Blue */
+            --color-surface: #ffffff; /* White */
+            --color-surface-subtle: #f8fafc; /* Slightly off-white */
+            --color-text-primary: #1e293b; /* Dark Gray */
+            --color-text-secondary: #475569; /* Medium Gray */
+            --color-text-muted: #94a3b8; /* Light Gray */
+            --color-text-on-primary: #ffffff;
+            --color-text-on-primary-muted: #c7d2fe;
+            --color-border: #e2e8f0; /* Light Gray Border */
+            --color-border-focus: var(--color-primary-light);
+            --color-border-error: var(--color-error);
+            --color-success: #16a34a; /* Green */
+            --color-success-bg: #f0fdf4;
+            --color-whatsapp: #25D366;
+            --color-whatsapp-dark: #128C7E;
+            --color-error: #dc2626; /* Red */
+            --color-error-bg: #fef2f2;
+            --color-warning-bg: #fffbeb; /* Light yellow for notes */
+            --color-warning-border: var(--color-secondary);
+            --color-info-bg: #eff6ff; /* Light blue for info */
+            --color-info-border: var(--color-primary-light);
+            --color-modal-overlay: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+
+            /* Layout & Styling */
+            --font-family-base: 'Inter', sans-serif;
+            --border-radius-sm: 4px;
+            --border-radius-md: 8px;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --spacing-1: 4px;
+            --spacing-2: 8px;
+            --spacing-3: 12px;
+            --spacing-4: 16px;
+            --spacing-5: 20px;
+            --spacing-6: 24px;
+            --spacing-8: 32px;
+            --spacing-10: 40px;
+            --transition-base: 0.2s ease-in-out;
+            --transition-modal: 0.3s ease-out;
+        }
+
+        /* --- Base & Reset --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+            padding: var(--spacing-6);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        /* Prevent body scroll when modal is open */
+        body.modal-open { overflow: hidden; }
+
+        /* --- Main Payment Container --- */
+        .payment-container {
+            background-color: var(--color-surface);
+            padding: 0;
+            max-width: 550px;
+            width: 100%;
+            margin: var(--spacing-6) auto;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--color-border);
+        }
+
+        /* --- Notification Area --- */
+        .notification-area {
+            padding: var(--spacing-4) var(--spacing-6);
+            margin: var(--spacing-4) var(--spacing-6);
+            border-radius: var(--border-radius-md);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: none;
+            align-items: center;
+            gap: var(--spacing-3);
+            border: 1px solid transparent;
+            animation: fadeIn 0.3s ease-out;
+        }
+        .notification-area.show { display: flex; }
+        .notification-area i { font-size: 1.1em; }
+        .notification-area.error { background-color: var(--color-error-bg); color: var(--color-error); border-color: var(--color-error); }
+        .notification-area.success { background-color: var(--color-success-bg); color: var(--color-success); border-color: var(--color-success); }
+        .notification-area.info { background-color: var(--color-info-bg); color: var(--color-primary); border-color: var(--color-info-border); }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* --- Page Header --- */
+        .page-header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); /* Subtle gradient */
+            color: var(--color-text-on-primary);
+            padding: var(--spacing-5) var(--spacing-6);
+            text-align: center;
+        }
+        .page-header h1 { font-size: 1.6rem; font-weight: 700; margin: 0; line-height: 1.2; }
+        .page-header h1 .pro-plus { font-weight: 500; color: var(--color-secondary); margin-left: var(--spacing-1); }
+        .page-header .tagline { font-size: 0.9rem; color: var(--color-text-on-primary-muted); margin-top: var(--spacing-1); font-weight: 400; }
+
+        /* --- Content Area Padding --- */
+        .payment-content { padding: var(--spacing-6) var(--spacing-8) var(--spacing-8) var(--spacing-8); }
+
+        /* --- Logo Inside Content --- */
+        .content-logo-container { margin-bottom: var(--spacing-6); text-align: center; }
+        .content-logo { max-width: 150px; height: auto; border-radius: var(--border-radius-sm); }
+
+        /* --- Headings & Subtitles --- */
+        .payment-content h2 { color: var(--color-text-primary); margin-bottom: var(--spacing-2); font-weight: 600; font-size: 1.5rem; }
+        .payment-content h3 { color: var(--color-primary); margin-top: var(--spacing-6); margin-bottom: var(--spacing-4); font-weight: 600; font-size: 1.125rem; text-align: left; display: flex; align-items: center; gap: var(--spacing-2); }
+        .payment-content h3 i { color: var(--color-primary-light); }
+        .payment-content .step-subtitle { color: var(--color-text-secondary); font-size: 1rem; margin-bottom: var(--spacing-6); max-width: 95%; margin-left: auto; margin-right: auto; }
+
+        /* --- Step Indicator --- */
+        .step-indicator { display: flex; justify-content: center; align-items: center; margin-bottom: var(--spacing-8); gap: var(--spacing-2); padding-bottom: var(--spacing-4); border-bottom: 1px solid var(--color-border); }
+        .step-indicator .step { display: flex; align-items: center; gap: var(--spacing-2); color: var(--color-text-muted); font-weight: 500; font-size: 0.9rem; padding: var(--spacing-1) var(--spacing-2); border-radius: var(--border-radius-md); transition: all var(--transition-base); }
+        .step-indicator .step .step-number { width: 24px; height: 24px; border: 2px solid var(--color-border); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.8rem; background-color: var(--color-surface); color: var(--color-text-muted); transition: all var(--transition-base); }
+        .step-indicator .step span:not(.step-number) { transition: opacity var(--transition-base); opacity: 0.7; }
+        .step-indicator .step.active { color: var(--color-primary); font-weight: 600; }
+        .step-indicator .step.active .step-number { border-color: var(--color-primary); background-color: var(--color-primary); color: var(--color-surface); }
+        .step-indicator .step.active span:not(.step-number) { opacity: 1; }
+        .step-indicator .step-separator { height: 2px; width: 40px; background-color: var(--color-border); flex-shrink: 0; transition: background-color var(--transition-base); }
+        .step-indicator .step-separator.active { background-color: var(--color-primary); }
+
+        /* --- Step Container & Animation --- */
+        .payment-step { display: none; animation: stepFadeIn 0.4s ease-out; }
+        .payment-step.active-step { display: block; }
+        @keyframes stepFadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- Payment Method Selection Cards --- */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Always two columns */
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-6);
+        }
+        .method-card {
+            border: 2px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-4);
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            background-color: var(--color-surface);
+            position: relative;
+            outline-offset: 2px;
+            display: flex; /* Added for better alignment of icon and text */
+            flex-direction: column; /* Added */
+            align-items: center; /* Added */
+            justify-content: center; /* Added */
+            min-height: 100px; /* Ensure cards have some height */
+        }
+        .method-card:hover, .method-card:focus-visible { border-color: var(--color-primary-light); box-shadow: var(--shadow-sm); transform: translateY(-2px); outline: none; }
+        .method-card.selected { border-color: var(--color-primary); background-color: #eff6ff; box-shadow: var(--shadow-md); }
+        .method-card i { font-size: 1.5rem; color: var(--color-primary); margin-bottom: var(--spacing-2); display: block; }
+        .method-card span { font-size: 0.9rem; font-weight: 500; color: var(--color-text-primary); display: block; }
+        .method-card.selected::after { content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900; position: absolute; top: 6px; right: 6px; color: var(--color-primary); background-color: var(--color-surface); border-radius: 50%; width: 18px; height: 18px; font-size: 10px; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
+        .method-card:empty { display: none; } /* Hide if not generated */
+
+        /* --- Payment Details Display Area --- */
+        .payment-details-area { margin-top: var(--spacing-6); padding: var(--spacing-5); background-color: var(--color-surface-subtle); border-radius: var(--border-radius-md); border: 1px solid var(--color-border); text-align: left; min-height: 150px; display: flex; align-items: center; justify-content: center; transition: background-color var(--transition-base); }
+        .payment-details-area.has-details { background-color: var(--color-surface); justify-content: flex-start; align-items: flex-start; border-color: var(--color-primary-light); }
+        .payment-details-placeholder { color: var(--color-text-muted); font-size: 0.9rem; transition: opacity var(--transition-base); }
+        .payment-details-content { display: none; width: 100%; animation: detailsFadeIn 0.3s ease-out; }
+        .payment-details-content.active { display: block; }
+        @keyframes detailsFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .payment-details-content h4 { font-size: 1rem; font-weight: 600; color: var(--color-primary); margin-bottom: var(--spacing-4); padding-bottom: var(--spacing-2); border-bottom: 1px solid var(--color-border); display: flex; align-items: center; gap: var(--spacing-2); }
+        .payment-details-content p { margin-bottom: var(--spacing-3); font-size: 0.95rem; color: var(--color-text-secondary); display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: var(--spacing-1); position: relative; }
+        .payment-details-content p strong { color: var(--color-text-primary); font-weight: 500; margin-right: var(--spacing-2); flex-shrink: 0; }
+        .payment-details-content p span.value { font-weight: 400; text-align: right; word-break: break-all; color: var(--color-text-primary); display: inline-block; padding-right: 30px; }
+        .payment-details-content img.qr-code { display: block; max-width: 180px; height: auto; margin: var(--spacing-4) auto; border-radius: var(--border-radius-sm); border: 1px solid var(--color-border); }
+        .upi-link { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-2); margin-top: var(--spacing-4); padding: var(--spacing-2) var(--spacing-4); background-color: var(--color-primary-light); color: var(--color-surface); border-radius: var(--border-radius-sm); text-decoration: none; font-weight: 500; transition: all var(--transition-base); font-size: 0.9rem; border: 1px solid transparent; cursor: pointer; text-align: center; width: auto; min-width: 150px; }
+        .upi-link:hover, .upi-link:focus-visible { background-color: var(--color-primary); transform: translateY(-1px); outline: none; border-color: var(--color-primary-dark); }
+        .upi-link i { font-size: 1em; }
+        .center-link { text-align: center; margin-top: var(--spacing-4); }
+
+        /* --- Copy Button --- */
+        .copy-btn { background: none; border: none; color: var(--color-primary-light); cursor: pointer; padding: 0 var(--spacing-1); font-size: 0.9em; position: absolute; right: 0; top: 50%; transform: translateY(-50%); opacity: 0.7; transition: opacity var(--transition-base), color var(--transition-base); }
+        .copy-btn:hover, .copy-btn:focus { color: var(--color-primary); opacity: 1; outline: none; }
+        .copy-btn i { margin-right: 2px; }
+        .copy-btn .copy-text { display: none; }
+        .copy-btn.copied { color: var(--color-success); }
+        .copy-btn.copied .copy-icon { display: none; }
+        .copy-btn.copied .copy-text { display: inline; font-size: 0.9em; font-weight: 500;}
+
+        /* --- Form Styling (Step 2) --- */
+        .form-group { margin-bottom: var(--spacing-5); text-align: left; position: relative; }
+        label { display: block; font-weight: 500; margin-bottom: var(--spacing-2); font-size: 0.9rem; color: var(--color-text-primary); }
+        input[type="text"], select { width: 100%; padding: var(--spacing-3) var(--spacing-4); border: 1px solid var(--color-border); border-radius: var(--border-radius-md); font-family: inherit; font-size: 1rem; transition: border-color var(--transition-base), box-shadow var(--transition-base); background-color: var(--color-surface); color: var(--color-text-primary); }
+        input::placeholder { color: var(--color-text-muted); opacity: 0.9; }
+        input[type="text"]:focus, select:focus { outline: none; border-color: var(--color-border-focus); box-shadow: 0 0 0 3px rgba(43, 58, 103, 0.15); }
+        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right var(--spacing-4) center; background-size: 16px; padding-right: var(--spacing-10); cursor: pointer; }
+
+        /* Inline Form Validation Styles */
+        .form-group .error-message { color: var(--color-error); font-size: 0.8rem; font-weight: 500; margin-top: var(--spacing-1); display: none; }
+        .form-group.invalid input, .form-group.invalid select { border-color: var(--color-border-error); }
+        .form-group.invalid input:focus, .form-group.invalid select:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15); }
+        .form-group.invalid .error-message { display: block; }
+
+        /* --- Buttons --- */
+        .btn {
+            background: linear-gradient(180deg, var(--color-primary), var(--color-primary-dark)); /* Default Gradient */
+            color: var(--color-surface);
+            padding: var(--spacing-3) var(--spacing-6);
+            border: 1px solid var(--color-primary-dark); /* Darker border */
+            border-radius: var(--border-radius-md);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            width: 100%;
+            margin-top: var(--spacing-6);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-2);
+            text-decoration: none;
+            box-shadow: var(--shadow-sm), 0 1px 1px rgba(255, 255, 255, 0.1) inset; /* Subtle inset highlight */
+            outline-offset: 2px;
+        }
+        .btn:hover {
+            background: linear-gradient(180deg, var(--color-primary-light), var(--color-primary)); /* Lighter gradient on hover */
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md), 0 1px 1px rgba(255, 255, 255, 0.1) inset;
+        }
+        .btn:focus-visible { outline: 2px solid var(--color-primary-light); box-shadow: var(--shadow-md), 0 1px 1px rgba(255, 255, 255, 0.1) inset; }
+        .btn:active { transform: translateY(0) scale(0.98); box-shadow: var(--shadow-sm); background: var(--color-primary-dark); }
+        /* Primary Action Button (Accent Color) */
+        .btn-primary-action {
+            background: linear-gradient(180deg, var(--color-secondary), var(--color-secondary-dark));
+            color: var(--color-primary-dark);
+            border-color: var(--color-secondary-dark);
+        }
+        .btn-primary-action:hover {
+            background: linear-gradient(180deg, #ffb94d, var(--color-secondary)); /* Lighter orange */
+            border-color: var(--color-secondary-dark);
+            box-shadow: var(--shadow-md), 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+        }
+        .btn-primary-action:focus-visible { outline-color: var(--color-secondary-dark); }
+        .btn-primary-action:active { background: var(--color-secondary-dark); }
+        /* WhatsApp Button */
+        .btn-whatsapp {
+            background: linear-gradient(180deg, var(--color-whatsapp), #1ebe5b); /* WhatsApp gradient */
+            color: var(--color-surface);
+            border-color: var(--color-whatsapp-dark);
+        }
+        .btn-whatsapp:hover {
+            background: linear-gradient(180deg, #2cf574, var(--color-whatsapp));
+            border-color: var(--color-whatsapp-dark);
+            box-shadow: var(--shadow-md), 0 1px 1px rgba(255, 255, 255, 0.2) inset;
+        }
+        .btn-whatsapp:focus-visible { outline-color: var(--color-whatsapp-dark); }
+        .btn-whatsapp:active { background: var(--color-whatsapp-dark); }
+        .btn i { font-size: 1.1em; }
+        /* Secondary Button (Back/Cancel) */
+        .btn-secondary {
+            background: var(--color-surface); /* No gradient */
+            color: var(--color-primary);
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+            font-weight: 500;
+        }
+        .btn-secondary:hover, .btn-secondary:focus-visible {
+            background-color: var(--color-background);
+            border-color: var(--color-primary-light);
+            box-shadow: var(--shadow-sm);
+            outline-color: var(--color-primary-light);
+            transform: translateY(-1px); /* Add hover effect */
+        }
+         .btn-secondary:active {
+            transform: translateY(0) scale(0.98);
+            background: var(--color-border);
+        }
+
+        /* --- Confirmation Step Specific --- */
+        .confirmation-note { font-size: 0.9rem; color: var(--color-text-secondary); margin-bottom: var(--spacing-6); background-color: var(--color-warning-bg); padding: var(--spacing-4); border-radius: var(--border-radius-md); border-left: 4px solid var(--color-warning-border); text-align: left; }
+        .confirmation-note strong { color: var(--color-text-primary); }
+        .confirmation-note i { color: var(--color-secondary); margin-right: var(--spacing-2); font-size: 1.1em; vertical-align: middle; }
+
+        /* --- Footer Note --- */
+        .footer-note { font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--spacing-8); border-top: 1px solid var(--color-border); padding-top: var(--spacing-4); }
+        .footer-note i { margin-right: var(--spacing-1); color: var(--color-success); }
+
+        /* --- Custom Modal Styles --- */
+        .modal-overlay {
+            position: fixed;
+            inset: 0; /* top, right, bottom, left = 0 */
+            background-color: var(--color-modal-overlay);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity var(--transition-modal), visibility var(--transition-modal);
+            z-index: 1000;
+        }
+        .modal-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            background-color: var(--color-surface);
+            padding: var(--spacing-8);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-lg);
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: transform var(--transition-modal), opacity var(--transition-modal);
+        }
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .modal-content h3 {
+            color: var(--color-primary);
+            margin-top: 0; /* Reset margin for modal */
+            margin-bottom: var(--spacing-4);
+            font-size: 1.25rem;
+            justify-content: center; /* Center heading */
+        }
+         .modal-content h3 i {
+             color: var(--color-secondary); /* Use accent color for icon */
+             margin-right: var(--spacing-2);
+         }
+        .modal-content p {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--spacing-6);
+            font-size: 1rem;
+            /* Reset flex properties from details view */
+            display: block;
+            text-align: center;
+        }
+        .modal-actions {
+            display: flex;
+            gap: var(--spacing-4);
+            justify-content: center; /* Center buttons */
+            margin-top: var(--spacing-6);
+        }
+        .modal-actions .btn {
+            width: auto; /* Allow buttons to size naturally */
+            min-width: 100px;
+            margin-top: 0; /* Reset margin */
+            padding: var(--spacing-2) var(--spacing-5); /* Slightly smaller padding */
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 600px) {
+            body { padding: var(--spacing-4); }
+            .payment-container { margin: var(--spacing-4) auto; }
+            .payment-content { padding: var(--spacing-4) var(--spacing-6) var(--spacing-6) var(--spacing-6); }
+            .notification-area { margin-left: var(--spacing-4); margin-right: var(--spacing-4); }
+            .payment-content h2 { font-size: 1.3rem; }
+            .payment-methods { gap: var(--spacing-3); }
+            .method-card { padding: var(--spacing-3); }
+            .method-card i { font-size: 1.3rem; }
+            .method-card span { font-size: 0.85rem; }
+            .btn { padding: var(--spacing-3) var(--spacing-4); font-size: 0.95rem; }
+            .step-indicator { font-size: 0.8rem; }
+            .step-indicator .step-separator { width: 20px; }
+            .page-header { padding: var(--spacing-5); }
+            .page-header h1 { font-size: 1.4rem; }
+            .page-header .tagline { font-size: 0.85rem; }
+            .modal-content { padding: var(--spacing-6); }
+            .modal-actions { flex-direction: column; }
+            .modal-actions .btn { width: 100%; }
+        }
+        @media (max-width: 400px) {
+             .payment-content { padding: var(--spacing-4); }
+             .notification-area { margin-left: var(--spacing-2); margin-right: var(--spacing-2); }
+             .page-header { padding: var(--spacing-4); }
+             .payment-details-content p { font-size: 0.9rem; }
+             .payment-details-content p span.value { padding-right: 25px; }
+             .copy-btn { font-size: 0.8em; }
+             .modal-content h3 { font-size: 1.1rem; }
+             .modal-content p { font-size: 0.9rem; }
+        }
+        /* Style for loading state */
+        .loading-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1100;
+            font-size: 1.2rem;
+            color: var(--color-primary);
+            flex-direction: column;
+            gap: var(--spacing-4);
+        }
+         .loading-overlay .fa-spinner {
+            font-size: 2rem;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <div id="loadingOverlay" class="loading-overlay">
+             <i class="fas fa-spinner fa-spin"></i>
+             <span>Loading Payment Details...</span>
+        </div>
+
+        <div class="page-header">
+            <h1><i id="headerIcon"></i> <span id="brandNameHeader"></span> <span id="proPlusText" class="pro-plus"></span></h1>
+            <p class="tagline"><i id="taglineIcon"></i> <span id="taglineText"></span></p>
+        </div>
+
+        <div id="notificationArea" class="notification-area" role="alert" aria-live="assertive">
+             <i id="notificationIcon" class="fa-solid"></i> <span id="notificationMessage">Notification message goes here.</span>
+        </div>
+
+        <div class="payment-content">
+
+            <div class="step-indicator">
+                <div class="step active" id="indicator-step1">
+                    <span class="step-number">1</span>
+                    <span>Select Method</span>
+                </div>
+                <div class="step-separator" id="indicator-separator"></div>
+                <div class="step" id="indicator-step2">
+                    <span class="step-number">2</span>
+                    <span>Confirm Details</span>
+                </div>
+            </div>
+
+            <div id="step1" class="payment-step active-step">
+                <div class="content-logo-container">
+                     <img id="contentLogo" alt="" class="content-logo" onerror="this.style.display='none'; this.parentElement.innerHTML = '<div style=\'text-align:center; color: var(--color-text-muted);\'>Logo not available</div>'">
+                </div>
+
+                <h2>Choose Your Payment Method</h2>
+                <p class="step-subtitle">Select how you'd like to pay below.</p>
+
+                <div class="payment-methods" id="paymentMethods"></div>
+
+                <div class="payment-details-area" id="paymentDetailsArea">
+                    <div class="payment-details-placeholder" id="detailsPlaceholder"> Select a payment method above to see details. </div>
+
+                    <div id="upi-details" class="payment-details-content">
+                         <h4><i class="fa-solid fa-paper-plane"></i> Pay via UPI ID</h4>
+                         <p> <strong>UPI ID:</strong> <span class="value" id="upiIdValue"></span> <button class="copy-btn" aria-label="Copy UPI ID" data-clipboard-target="#upiIdValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                         <div class="center-link"> <a id="upiLink" href="#" target="_blank" class="upi-link" rel="noopener noreferrer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> Open UPI App </a> </div>
+                    </div>
+
+                    <div id="qr-details" class="payment-details-content">
+                        <h4><i class="fa-solid fa-qrcode"></i> Scan QR Code</h4>
+                        <p>Scan this code using another device OR click below to pay:</p>
+                         <img id="qrCodeImage" alt="" class="qr-code" onerror="this.alt='QR Code Image Unavailable'; this.style.border='1px dashed #ccc'; this.style.width='100px'; this.style.height='100px'; this.src=''; this.parentElement.insertAdjacentHTML('beforeend', '<p style=\'text-align:center; color: var(--color-text-muted);\'>QR unavailable</p>');">
+                         <div class="center-link"> <a id="qrUpiLink" href="#" target="_blank" class="upi-link" rel="noopener noreferrer"> <i class="fa-solid fa-mobile-screen-button"></i> Pay with UPI App </a> </div>
+                    </div>
+
+                    <div id="bank-details" class="payment-details-content">
+                        <h4><i class="fa-solid fa-building-columns"></i> Bank Transfer Details</h4>
+                        <p> <strong>Account Name:</strong> <span class="value" id="accountNameValue"></span> <button class="copy-btn" aria-label="Copy Account Name" data-clipboard-target="#accountNameValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                        <p> <strong>Bank Name:</strong> <span class="value" id="bankNameValue"></span> <button class="copy-btn" aria-label="Copy Bank Name" data-clipboard-target="#bankNameValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                        <p> <strong>Account No:</strong> <span class="value" id="accountNoValue"></span> <button class="copy-btn" aria-label="Copy Account Number" data-clipboard-target="#accountNoValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                        <p> <strong>IFSC Code:</strong> <span class="value" id="ifscCodeValue"></span> <button class="copy-btn" aria-label="Copy IFSC Code" data-clipboard-target="#ifscCodeValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                        <p> <strong>Branch:</strong> <span class="value" id="branchValue"></span> <button class="copy-btn" aria-label="Copy Branch" data-clipboard-target="#branchValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                        <p> <strong>Account Type:</strong> <span class="value" id="accountTypeValue"></span> <button class="copy-btn" aria-label="Copy Account Type" data-clipboard-target="#accountTypeValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                    </div>
+
+                     <div id="mobile-details" class="payment-details-content">
+                         <h4><i class="fa-solid fa-mobile-screen-button"></i> Pay to Mobile Number</h4>
+                         <p>You can pay directly using GPay, PhonePe, Paytm, etc., to the mobile number:</p>
+                         <p style="text-align:center; margin-top: var(--spacing-4); font-size: 1.2em; font-weight: 600; color: var(--color-primary); position: relative;"> <i class="fa-solid fa-mobile-screen"></i> <span id="mobileNoValue" style="padding-right: 30px;"></span> <button class="copy-btn" aria-label="Copy Mobile Number" data-clipboard-target="#mobileNoValue"> <i class="fa-regular fa-copy copy-icon"></i><span class="copy-text">Copied!</span> </button> </p>
+                         <div class="center-link"> <a id="mobileUpiLink" href="#" target="_blank" class="upi-link" rel="noopener noreferrer"> <i class="fa-solid fa-arrow-up-right-from-square"></i> Open UPI App (via Mobile No) </a> </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary-action" onclick="openConfirmModal()">
+                    Next: Confirm Details <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div id="step2" class="payment-step">
+                 <h2>Confirm Your Payment Details</h2>
+                 <p class="step-subtitle">Enter the information below and send via WhatsApp for verification.</p>
+
+                <form class="confirmation-form" id="confirmationForm" novalidate>
+                    <h3><i class="fa-solid fa-receipt"></i> Your Information</h3>
+                    <div class="form-group">
+                        <label for="name">Your Full Name</label>
+                        <input type="text" id="name" placeholder="Enter the name used for payment" required aria-required="true" aria-describedby="name-error" inputmode="text">
+                        <div class="error-message" id="name-error" aria-live="polite"></div>
+                    </div>
+                   <div class="form-group">
+                        <label for="purpose">Purpose of Payment</label>
+                        <input type="text" id="purpose" required aria-required="false" aria-describedby="purpose-error" placeholder=""> <div class="error-message" id="purpose-error" aria-live="polite"></div>
+                    </div>
+                    <div class="form-group">
+                         <label for="txnid">Transaction ID / Reference No.</label>
+                        <input type="text" id="txnid" placeholder="Enter the successful transaction ID" required aria-required="true" aria-describedby="txnid-error" inputmode="verbatim">
+                        <div class="error-message" id="txnid-error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="confirmation-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>After clicking below, please <strong>attach the payment screenshot</strong> in the WhatsApp chat that opens.</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-whatsapp"> <i class="fab fa-whatsapp"></i> Send Confirmation via WhatsApp </button>
+                </form>
+
+                <button type="button" class="btn btn-secondary" style="margin-top: var(--spacing-4);" onclick="goToStep(1)"> <i class="fa-solid fa-arrow-left"></i> Back to Payment Methods </button>
+            </div>
+
+            <p class="footer-note"> <i id="footerIcon"></i> <span id="footerText"></span> </p>
+
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal-overlay" aria-labelledby="modalTitle" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <h3 id="modalTitle"><i class="fa-solid fa-circle-question"></i> Confirm Payment</h3>
+            <p id="modalMessage">Have you completed the payment using [Payment Method]? You will be asked for transaction details next.</p>
+            <div class="modal-actions">
+                <button type="button" class="btn btn-secondary" data-action="cancel">Cancel</button>
+                <button type="button" class="btn btn-primary-action" data-action="confirm">Yes, Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Global Config Variable ---
+        let configData = null;
+
+        // --- DOM Element References ---
+        const step1Div = document.getElementById('step1');
+        const step2Div = document.getElementById('step2');
+        const indicatorStep1 = document.getElementById('indicator-step1');
+        const indicatorStep2 = document.getElementById('indicator-step2');
+        const indicatorSeparator = document.getElementById('indicator-separator');
+        const paymentMethodsContainer = document.getElementById('paymentMethods');
+        const paymentDetailsArea = document.getElementById('paymentDetailsArea');
+        const detailsPlaceholder = document.getElementById('detailsPlaceholder');
+        const confirmationForm = document.getElementById('confirmationForm');
+        const copyButtons = document.querySelectorAll('.copy-btn');
+        const notificationArea = document.getElementById('notificationArea');
+        const notificationIcon = document.getElementById('notificationIcon');
+        const notificationMessage = document.getElementById('notificationMessage');
+        const nameInput = document.getElementById("name");
+        const purposeInput = document.getElementById("purpose"); // Changed from select
+        const txnidInput = document.getElementById("txnid");
+        const confirmationModal = document.getElementById('confirmationModal');
+        const modalMessage = document.getElementById('modalMessage');
+        const modalConfirmButton = confirmationModal.querySelector('[data-action="confirm"]');
+        const modalCancelButton = confirmationModal.querySelector('[data-action="cancel"]');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        // --- State Variables ---
+        let selectedPaymentMethod = null;
+        let selectedPaymentMethodName = '';
+        let notificationTimeout = null;
+
+        // --- Helper Functions ---
+
+        function showNotification(message, type = 'info', duration = 5000) {
+            if (notificationTimeout) clearTimeout(notificationTimeout);
+            notificationMessage.textContent = message;
+            notificationIcon.className = 'fa-solid'; // Reset icons
+            notificationArea.className = 'notification-area'; // Reset classes
+
+            if (type === 'error') { notificationIcon.classList.add('fa-circle-exclamation'); notificationArea.classList.add('error'); }
+            else if (type === 'success') { notificationIcon.classList.add('fa-check-circle'); notificationArea.classList.add('success'); }
+            else { notificationIcon.classList.add('fa-circle-info'); notificationArea.classList.add('info'); }
+
+            notificationArea.classList.add('show');
+            if (type === 'error') {
+                notificationArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            if (duration > 0) { notificationTimeout = setTimeout(() => notificationArea.classList.remove('show'), duration); }
+        }
+
+        function hideNotification() {
+             if (notificationTimeout) clearTimeout(notificationTimeout);
+             notificationArea.classList.remove('show');
+        }
+
+        async function copyToClipboard(button) {
+            const targetSelector = button.dataset.clipboardTarget;
+            const targetElement = document.querySelector(targetSelector);
+            if (!targetElement || !navigator.clipboard) {
+                showNotification('Could not copy text. Clipboard API not available or element not found.', 'error');
+                return;
+            }
+            const textToCopy = targetElement.innerText || targetElement.textContent;
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                const originalLabel = button.getAttribute('aria-label');
+                button.classList.add('copied');
+                const itemName = originalLabel.replace('Copy ', '');
+                showNotification(`${itemName} copied to clipboard!`, 'success', 2000);
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                }, 1500);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                showNotification('Failed to copy text. Check browser permissions.', 'error');
+            }
+        }
+
+        function clearValidationError(inputElement) {
+            const formGroup = inputElement.closest('.form-group');
+            if (formGroup) {
+                formGroup.classList.remove('invalid');
+                const errorMsgElement = formGroup.querySelector('.error-message');
+                if (errorMsgElement) errorMsgElement.textContent = '';
+            }
+        }
+
+        function setValidationError(inputElement, message) {
+             const formGroup = inputElement.closest('.form-group');
+             if (formGroup) {
+                formGroup.classList.add('invalid');
+                const errorMsgElement = formGroup.querySelector('.error-message');
+                if (errorMsgElement) errorMsgElement.textContent = message;
+             }
+        }
+
+        function openConfirmModal() {
+            hideNotification();
+            if (!selectedPaymentMethod) {
+                showNotification("Please select a payment method first.", 'error');
+                paymentMethodsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                paymentMethodsContainer.style.outline = '2px dashed var(--color-error)';
+                setTimeout(() => { paymentMethodsContainer.style.outline = 'none'; }, 2000);
+                return;
+            }
+
+            modalMessage.textContent = `Have you completed the payment using ${selectedPaymentMethodName}? You will be asked for transaction details next.`;
+            confirmationModal.classList.add('show');
+            document.body.classList.add('modal-open');
+            modalConfirmButton.focus();
+        }
+
+        function closeConfirmModal() {
+            confirmationModal.classList.remove('show');
+            document.body.classList.remove('modal-open');
+        }
+
+        function handleModalAction(event) {
+            const action = event.target.dataset.action;
+            if (action === 'confirm') {
+                closeConfirmModal();
+                goToStep(2);
+            } else if (action === 'cancel') {
+                closeConfirmModal();
+            }
+        }
+
+        // --- Core Logic Functions ---
+
+        function selectPaymentMethod(method) {
+            hideNotification();
+            selectedPaymentMethod = method;
+            const methodCards = paymentMethodsContainer.querySelectorAll('.method-card'); // Get current cards
+            methodCards.forEach(card => {
+                card.classList.toggle('selected', card.dataset.method === method);
+                card.setAttribute('aria-pressed', card.dataset.method === method);
+                if (card.dataset.method === method) {
+                    selectedPaymentMethodName = card.querySelector('span').textContent.trim();
+                }
+            });
+            detailsPlaceholder.style.display = 'none';
+            let detailsShown = false;
+            const detailContents = paymentDetailsArea.querySelectorAll('.payment-details-content');
+            detailContents.forEach(content => {
+                 const isActive = content.id === (method + '-details');
+                 content.classList.toggle('active', isActive);
+                 if (isActive) detailsShown = true;
+            });
+            paymentDetailsArea.classList.toggle('has-details', detailsShown);
+            if (!detailsShown) detailsPlaceholder.style.display = 'block';
+        }
+
+
+        function goToStep(stepNum) {
+            hideNotification();
+            const isStep1 = stepNum === 1;
+            step1Div.classList.toggle("active-step", isStep1);
+            step2Div.classList.toggle("active-step", !isStep1);
+
+            indicatorStep1.classList.toggle('active', isStep1);
+            indicatorStep2.classList.toggle('active', !isStep1);
+            indicatorSeparator.classList.toggle('active', !isStep1);
+
+
+            if (!isStep1) {
+                 if (!selectedPaymentMethod && !step1Div.classList.contains('active-step')) {
+                     console.error("Cannot proceed to step 2 without selecting a payment method from step 1.");
+                     showNotification("An error occurred. Please select a payment method again from Step 1.", 'error');
+                     goToStep(1);
+                     return;
+                 }
+                clearValidationError(nameInput);
+                clearValidationError(purposeInput);
+                clearValidationError(txnidInput);
+                nameInput.focus();
+            }
+
+             setTimeout(() => {
+                const containerTop = document.querySelector('.payment-container').getBoundingClientRect().top + window.scrollY;
+                 window.scrollTo({ top: containerTop - 20, behavior: 'smooth' });
+            }, 100);
+        }
+
+        function handleConfirmationSubmit(event) {
+             event.preventDefault();
+             hideNotification();
+             if (validateConfirmationForm()) {
+                sendWhatsApp();
+             } else {
+                showNotification("Please correct the errors in the form before submitting.", 'error');
+             }
+        }
+
+         function validateConfirmationForm() {
+            let isValid = true;
+            let firstErrorElement = null;
+
+            [nameInput, purposeInput, txnidInput].forEach(input => clearValidationError(input));
+
+            if (!nameInput.value.trim()) {
+                setValidationError(nameInput, "Your Full Name is required.");
+                if (!firstErrorElement) firstErrorElement = nameInput;
+                isValid = false;
+            }
+            if (!purposeInput.value.trim()) { // Check trim for input
+                setValidationError(purposeInput, "Please enter the Purpose of Payment.");
+                if (!firstErrorElement) firstErrorElement = purposeInput;
+                isValid = false;
+            }
+            if (!txnidInput.value.trim()) {
+                setValidationError(txnidInput, "Transaction ID / Reference No. is required.");
+                if (!firstErrorElement) firstErrorElement = txnidInput;
+                isValid = false;
+            } else if (txnidInput.value.trim().length < 5) {
+                 setValidationError(txnidInput, "Transaction ID seems too short. Please check.");
+                if (!firstErrorElement) firstErrorElement = txnidInput;
+                isValid = false;
+            }
+
+            if (!selectedPaymentMethod) {
+                showNotification("Error: No payment method was selected. Please go back to Step 1.", 'error');
+                goToStep(1);
+                isValid = false;
+            }
+
+            if (!isValid && firstErrorElement) {
+                firstErrorElement.focus();
+                firstErrorElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return isValid;
+        }
+
+
+        function sendWhatsApp() {
+            const name = nameInput.value.trim();
+            const purpose = purposeInput.value.trim();
+            const txnid = txnidInput.value.trim();
+            const mode = selectedPaymentMethod;
+            const orderId = "ORD" + Date.now() + Math.random().toString(36).substring(2, 7).toUpperCase();
+            let modeDisplay = selectedPaymentMethodName || (mode ? mode.charAt(0).toUpperCase() + mode.slice(1) : 'N/A');
+
+            const messageBody = `🧾 *Payment Confirmation - ${configData.confirmation.whatsAppBrandName}*\n\n` +
+                                `👤 *Name:* ${name}\n` +
+                                `💼 *Purpose:* ${purpose}\n` +
+                                `💳 *Mode Used:* ${modeDisplay}\n` +
+                                `📎 *Txn ID/Ref:* ${txnid}\n` +
+                                `🆔 *Internal Order ID:* ${orderId}\n\n` +
+                                `------------------------------------\n` +
+                                `*Please attach payment screenshot here in chat.* 🙏`;
+
+            const encodedMsg = encodeURIComponent(messageBody);
+            const phone = configData.confirmation.whatsAppNumber;
+            const url = `https://wa.me/${phone}?text=${encodedMsg}`;
+
+            const submitButton = confirmationForm.querySelector('button[type="submit"]');
+            const originalButtonHTML = submitButton.innerHTML;
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening WhatsApp...';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                try {
+                    const whatsappWindow = window.open(url, "_blank", "noopener,noreferrer");
+                    if (whatsappWindow) {
+                        showNotification("Redirecting to WhatsApp... Please attach your screenshot.", 'info', 4000);
+                    } else {
+                        showNotification("Could not open WhatsApp. Please check if pop-ups are blocked and try again.", 'error', 6000);
+                    }
+                }
+                catch (e) {
+                    console.error("Could not open WhatsApp link:", e);
+                    showNotification("An error occurred while trying to open WhatsApp. Please try again or contact support.", 'error', 6000);
+                }
+                finally {
+                    setTimeout(() => {
+                        submitButton.innerHTML = originalButtonHTML;
+                        submitButton.disabled = false;
+                    }, 2000);
+                }
+            }, 300);
+        }
+
+       // --- Data Population Function ---
+        function populateData(config) {
+            const brandName = config.branding.brandName;
+            const replaceBrand = (text) => text.replace(/{brandName}/g, brandName);
+
+            // Page Title
+            document.getElementById('pageTitle').textContent = replaceBrand(config.pageTitle);
+
+            // Header
+            document.getElementById('headerIcon').className = config.branding.headerIcon;
+            document.getElementById('brandNameHeader').textContent = brandName;
+            document.getElementById('proPlusText').textContent = config.branding.proPlusText;
+            document.getElementById('taglineIcon').className = config.branding.taglineIcon;
+            document.getElementById('taglineText').textContent = config.branding.tagline;
+
+            // Logo
+            const logo = document.getElementById('contentLogo');
+            logo.src = config.branding.logoUrl;
+            logo.alt = replaceBrand(config.branding.logoAlt);
+
+            // Payment Methods & Details
+            const methods = config.paymentMethods;
+            paymentMethodsContainer.innerHTML = ''; // Clear existing
+            const detailContents = paymentDetailsArea.querySelectorAll('.payment-details-content');
+            // detailContents.forEach(c => c.style.display = 'none'); // REMOVE THIS LINE TOO
+
+            Object.keys(methods).forEach(key => {
+                const method = methods[key];
+                if (method.enabled) {
+                    // Create Method Card
+                    const card = document.createElement('div');
+                    card.className = 'method-card';
+                    card.dataset.method = key;
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('tabindex', '0');
+                    card.innerHTML = `<i class="${method.icon}"></i> <span>${method.label}</span>`;
+                    paymentMethodsContainer.appendChild(card);
+
+                    const payeeName = method.payeeName || brandName;
+                    const upiLink = (id, name) => `upi://pay?pa=${id}&pn=${encodeURIComponent(name)}&cu=INR`;
+
+                    // Populate Details Section
+                    const detailsDiv = document.getElementById(`${key}-details`);
+                    if (detailsDiv) {
+                        // detailsDiv.style.display = 'block'; // <<< REMOVE THIS LINE
+                        switch (key) {
+                            case 'upi':
+                                document.getElementById('upiIdValue').textContent = method.upiId;
+                                document.getElementById('upiLink').href = upiLink(method.upiId, payeeName);
+                                break;
+                            case 'qr':
+                                document.getElementById('qrCodeImage').src = method.qrImageUrl;
+                                document.getElementById('qrCodeImage').alt = method.qrAltText.replace(/{payeeName}/g, payeeName);
+                                document.getElementById('qrUpiLink').href = upiLink(method.upiId, payeeName);
+                                break;
+                            case 'bank':
+                                document.getElementById('accountNameValue').textContent = method.accountName;
+                                document.getElementById('bankNameValue').textContent = method.bankName;
+                                document.getElementById('accountNoValue').textContent = method.accountNumber;
+                                document.getElementById('ifscCodeValue').textContent = method.ifscCode;
+                                document.getElementById('branchValue').textContent = method.branch;
+                                document.getElementById('accountTypeValue').textContent = method.accountType;
+                                break;
+                            case 'mobile':
+                                document.getElementById('mobileNoValue').textContent = method.mobileNumber;
+                                document.getElementById('mobileUpiLink').href = upiLink(method.upiId, payeeName);
+                                break;
+                        }
+                         // detailsDiv.style.display = 'none'; // <<< REMOVE THIS LINE
+                    }
+                } else {
+                    const detailsDiv = document.getElementById(`${key}-details`);
+                    // We don't need to explicitly hide here, CSS handles it if the card isn't selected.
+                    // If you want to *completely remove* disabled methods' details:
+                    // if (detailsDiv) detailsDiv.remove();
+                }
+            });
+
+            // Confirmation Form
+            document.getElementById('purpose').placeholder = config.confirmation.purposePlaceholder;
+
+            // Footer
+            document.getElementById('footerIcon').className = config.footer.secureIcon;
+            document.getElementById('footerText').textContent = config.footer.secureNote;
+        }
+
+
+        // --- Event Listeners Setup ---
+        function initializePage() {
+            // Fetch and populate data first
+            fetch('config.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    configData = data; // Store config globally
+                    populateData(configData);
+                    addEventListeners(); // Add listeners *after* populating
+                    loadingOverlay.style.display = 'none'; // Hide loading overlay
+                })
+                .catch(error => {
+                    console.error('Error loading config:', error);
+                    loadingOverlay.innerHTML = '<i class="fas fa-exclamation-triangle"></i><span>Failed to load configuration. Please try again.</span>';
+                    loadingOverlay.style.color = 'var(--color-error)';
+                });
+        }
+
+        function addEventListeners() {
+            const methodCards = paymentMethodsContainer.querySelectorAll('.method-card'); // Get newly created cards
+            methodCards.forEach(card => {
+                card.addEventListener('click', () => selectPaymentMethod(card.dataset.method));
+                card.addEventListener('keydown', (event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault();
+                        selectPaymentMethod(card.dataset.method);
+                        card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+            });
+
+            document.querySelectorAll('.copy-btn').forEach(button => button.addEventListener('click', (e) => {
+                 e.stopPropagation();
+                 copyToClipboard(button);
+            }));
+
+            confirmationForm.addEventListener('submit', handleConfirmationSubmit);
+
+            [nameInput, purposeInput, txnidInput].forEach(input => {
+                input.addEventListener('input', () => clearValidationError(input));
+            });
+
+            modalConfirmButton.addEventListener('click', handleModalAction);
+            modalCancelButton.addEventListener('click', handleModalAction);
+            confirmationModal.addEventListener('click', (event) => {
+                 if (event.target === confirmationModal) {
+                     closeConfirmModal();
+                 }
+            });
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && confirmationModal.classList.contains('show')) {
+                    closeConfirmModal();
+                }
+            });
+
+            detailsPlaceholder.style.display = 'block';
+            paymentDetailsArea.querySelectorAll('.payment-details-content').forEach(content => content.classList.remove('active'));
+            paymentDetailsArea.classList.remove('has-details');
+            hideNotification();
+            closeConfirmModal();
+        }
+
+        // --- Start the process ---
+        document.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>
